@@ -1,0 +1,34 @@
+name: allergen_scanner
+description: Escáner de alérgenos en etiquetas de alimentos, todo en el dispositivo.
+publish_to: none
+version: 0.1.0+1
+resolution: workspace
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  core_i18n:
+    path: ../../packages/core_i18n
+  core_ocr:
+    path: ../../packages/core_ocr
+  core_billing:
+    path: ../../packages/core_billing
+  flutter_riverpod: ^3.4.3
+  go_router: ^18.0.2
+  intl: any
+  shared_preferences: ^2.5.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.5
+
+flutter:
+  uses-material-design: true
+  generate: true

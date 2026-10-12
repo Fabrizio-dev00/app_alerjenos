@@ -1,0 +1,22 @@
+{
+  "@@locale": "es",
+  "appTitle": "Escáner de alérgenos",
+  "navScan": "Escanear",
+  "navHistory": "Historial",
+  "navProfiles": "Perfiles",
+  "navSettings": "Ajustes",
+  "scanHeadline": "Revisa una etiqueta",
+  "scanDescription": "Toma una foto de la lista de ingredientes y te ayudamos a revisar si tiene algo de tu perfil.",
+  "scanTakePhoto": "Tomar foto",
+  "scanFromGallery": "Elegir de la galería",
+  "safetyNotice": "\"No detectado\" no significa seguro. El reconocimiento de texto puede fallar: la etiqueta física siempre manda.",
+  "historyEmpty": "Aún no tienes escaneos.",
+  "profilesEmpty": "Crea tu perfil para elegir tus alérgenos.",
+  "settingsLanguage": "Idioma de la app",
+  "settingsLanguageSystem": "Usar el del sistema",
+  "paywallTitle": "Escáner Pro",
+  "paywallDescription": "Escaneos ilimitados y perfiles para toda la familia con un solo pago.",
+  "resultContains": "Contiene",
+  "resultMayContain": "Puede contener trazas",
+  "resultNotDetected": "No detectado"
+}

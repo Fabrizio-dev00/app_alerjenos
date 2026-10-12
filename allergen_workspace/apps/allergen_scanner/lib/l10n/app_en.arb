@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appTitle": "Allergen Scanner",
+  "navScan": "Scan",
+  "navHistory": "History",
+  "navProfiles": "Profiles",
+  "navSettings": "Settings",
+  "scanHeadline": "Check a label",
+  "scanDescription": "Take a photo of the ingredient list and we will help you check it against your profile.",
+  "scanTakePhoto": "Take photo",
+  "scanFromGallery": "Choose from gallery",
+  "safetyNotice": "\"Not detected\" does not mean safe. Text recognition can fail: the physical label always comes first.",
+  "historyEmpty": "No scans yet.",
+  "profilesEmpty": "Create your profile to choose your allergens.",
+  "settingsLanguage": "App language",
+  "settingsLanguageSystem": "Use system language",
+  "paywallTitle": "Scanner Pro",
+  "paywallDescription": "Unlimited scans and profiles for the whole family with a single payment.",
+  "resultContains": "Contains",
+  "resultMayContain": "May contain traces",
+  "resultNotDetected": "Not detected"
+}

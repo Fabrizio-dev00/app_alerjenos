@@ -1,0 +1,30 @@
+name: allergen_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.12.0
+
+workspace:
+  - apps/allergen_scanner
+  - packages/core_ocr
+  - packages/core_billing
+  - packages/core_i18n
+
+dev_dependencies:
+  melos: ^8.9.0
+
+melos:
+  scripts:
+    analyze:
+      run: dart analyze .
+    test:
+      exec:
+        command: flutter test
+        concurrency: 1
+      packageFilters:
+        dirExists: test
+    gen-l10n:
+      exec:
+        command: flutter gen-l10n
+      packageFilters:
+        scope: allergen_scanner
