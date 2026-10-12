@@ -35,5 +35,20 @@
   "previewHint": "Comprueba que la lista de ingredientes se lea completa y nítida.",
   "previewAnalyze": "Analizar etiqueta",
   "previewRetake": "Usar otra foto",
-  "previewImageMissing": "No encontramos la imagen. Vuelve a tomar la foto."
+  "previewImageMissing": "No encontramos la imagen. Vuelve a tomar la foto.",
+  "ocrTitle": "Texto detectado",
+  "ocrReading": "Leyendo la etiqueta…",
+  "ocrNoText": "No encontramos texto. Prueba con más luz y con la lista de ingredientes bien enfocada.",
+  "ocrFailed": "No pudimos leer la imagen. Inténtalo de nuevo.",
+  "ocrBlocksFound": "{count, plural, =1{1 bloque de texto detectado} other{{count} bloques de texto detectados}}",
+  "@ocrBlocksFound": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "ocrTapHint": "Toca un recuadro para ver el texto que leímos ahí.",
+  "ocrShowAllText": "Ver todo el texto",
+  "ocrImageUnavailable": "No se pudo mostrar la imagen."
 }

@@ -6,4 +6,5 @@ abstract final class AppRoutes {
   static const paywall = '/paywall';
   static const camera = '/camera';
   static const preview = '/preview';
+  static const ocr = '/ocr';
 }

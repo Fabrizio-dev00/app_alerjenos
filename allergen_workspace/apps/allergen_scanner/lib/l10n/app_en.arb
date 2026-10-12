@@ -35,5 +35,13 @@
   "previewHint": "Make sure the whole ingredient list is sharp and readable.",
   "previewAnalyze": "Analyze label",
   "previewRetake": "Use another photo",
-  "previewImageMissing": "We could not find the image. Please take the photo again."
+  "previewImageMissing": "We could not find the image. Please take the photo again.",
+  "ocrTitle": "Detected text",
+  "ocrReading": "Reading the label…",
+  "ocrNoText": "We could not find any text. Try with more light and the ingredient list in focus.",
+  "ocrFailed": "We could not read the image. Please try again.",
+  "ocrBlocksFound": "{count, plural, =1{1 text block detected} other{{count} text blocks detected}}",
+  "ocrTapHint": "Tap a box to see the text we read there.",
+  "ocrShowAllText": "Show all text",
+  "ocrImageUnavailable": "The image could not be displayed."
 }

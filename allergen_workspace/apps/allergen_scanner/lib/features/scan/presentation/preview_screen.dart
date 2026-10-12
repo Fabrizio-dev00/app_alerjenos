@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../app/routes.dart';
 import '../../../l10n/generated/app_localizations.dart';
 import '../../../shared/empty_state.dart';
 
@@ -48,7 +49,7 @@ class PreviewScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               FilledButton.icon(
-                onPressed: null,
+                onPressed: () => context.push(AppRoutes.ocr, extra: file.path),
                 icon: const Icon(Icons.manage_search),
                 label: Text(l10n.previewAnalyze),
               ),

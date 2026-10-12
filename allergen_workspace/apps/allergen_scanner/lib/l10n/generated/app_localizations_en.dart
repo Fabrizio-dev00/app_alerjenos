@@ -123,4 +123,37 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get previewImageMissing =>
       'We could not find the image. Please take the photo again.';
+
+  @override
+  String get ocrTitle => 'Detected text';
+
+  @override
+  String get ocrReading => 'Reading the label…';
+
+  @override
+  String get ocrNoText =>
+      'We could not find any text. Try with more light and the ingredient list in focus.';
+
+  @override
+  String get ocrFailed => 'We could not read the image. Please try again.';
+
+  @override
+  String ocrBlocksFound(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count text blocks detected',
+      one: '1 text block detected',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get ocrTapHint => 'Tap a box to see the text we read there.';
+
+  @override
+  String get ocrShowAllText => 'Show all text';
+
+  @override
+  String get ocrImageUnavailable => 'The image could not be displayed.';
 }

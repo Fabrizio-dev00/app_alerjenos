@@ -313,6 +313,54 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No encontramos la imagen. Vuelve a tomar la foto.'**
   String get previewImageMissing;
+
+  /// No description provided for @ocrTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Texto detectado'**
+  String get ocrTitle;
+
+  /// No description provided for @ocrReading.
+  ///
+  /// In es, this message translates to:
+  /// **'Leyendo la etiqueta…'**
+  String get ocrReading;
+
+  /// No description provided for @ocrNoText.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos texto. Prueba con más luz y con la lista de ingredientes bien enfocada.'**
+  String get ocrNoText;
+
+  /// No description provided for @ocrFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos leer la imagen. Inténtalo de nuevo.'**
+  String get ocrFailed;
+
+  /// No description provided for @ocrBlocksFound.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{1 bloque de texto detectado} other{{count} bloques de texto detectados}}'**
+  String ocrBlocksFound(int count);
+
+  /// No description provided for @ocrTapHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Toca un recuadro para ver el texto que leímos ahí.'**
+  String get ocrTapHint;
+
+  /// No description provided for @ocrShowAllText.
+  ///
+  /// In es, this message translates to:
+  /// **'Ver todo el texto'**
+  String get ocrShowAllText;
+
+  /// No description provided for @ocrImageUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo mostrar la imagen.'**
+  String get ocrImageUnavailable;
 }
 
 class _AppLocalizationsDelegate

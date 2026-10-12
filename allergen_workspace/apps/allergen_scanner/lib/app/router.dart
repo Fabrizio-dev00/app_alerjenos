@@ -6,6 +6,7 @@ import '../features/history/presentation/history_screen.dart';
 import '../features/paywall/presentation/paywall_screen.dart';
 import '../features/profiles/presentation/profiles_screen.dart';
 import '../features/scan/presentation/camera_screen.dart';
+import '../features/scan/presentation/ocr_screen.dart';
 import '../features/scan/presentation/preview_screen.dart';
 import '../features/scan/presentation/scan_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
@@ -43,6 +44,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.preview,
         builder: (context, state) => PreviewScreen(imagePath: state.extra as String?),
+      ),
+      GoRoute(
+        path: AppRoutes.ocr,
+        builder: (context, state) => OcrScreen(imagePath: state.extra as String?),
       ),
       GoRoute(
         path: AppRoutes.paywall,
