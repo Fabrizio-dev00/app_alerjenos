@@ -1,10 +1,11 @@
-import 'package:core_ocr/core_ocr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../l10n/generated/app_localizations.dart';
 import '../../../shared/empty_state.dart';
+import '../../settings/presentation/translation_models_controller.dart';
+import '../domain/label_analysis.dart';
 import 'ocr_overlay.dart';
 import 'ocr_providers.dart';
 
@@ -19,6 +20,7 @@ class OcrScreen extends ConsumerStatefulWidget {
 
 class _OcrScreenState extends ConsumerState<OcrScreen> {
   int? _selectedBlock;
+  bool _showTranslation = true;
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +32,18 @@ class _OcrScreenState extends ConsumerState<OcrScreen> {
       body: SafeArea(
         child: path == null
             ? EmptyState(icon: Icons.broken_image_outlined, message: l10n.previewImageMissing)
-            : switch (ref.watch(ocrResultProvider(path))) {
-                AsyncData(:final value) when value.isEmpty => _Problem(
+            : switch (ref.watch(labelAnalysisProvider(path))) {
+                AsyncData(:final value) when value.ocr.isEmpty => _Problem(
                     icon: Icons.text_fields,
                     message: l10n.ocrNoText,
                   ),
                 AsyncData(:final value) => _Recognized(
                     imagePath: path,
-                    result: value,
+                    analysis: value,
                     selectedBlock: _selectedBlock,
+                    showTranslation: _showTranslation,
                     onBlockTap: (index) => setState(() => _selectedBlock = index),
+                    onShowTranslation: (show) => setState(() => _showTranslation = show),
                   ),
                 AsyncError() => _Problem(
                     icon: Icons.error_outline,
@@ -65,17 +69,24 @@ class _OcrScreenState extends ConsumerState<OcrScreen> {
 class _Recognized extends StatelessWidget {
   const _Recognized({
     required this.imagePath,
-    required this.result,
+    required this.analysis,
     required this.selectedBlock,
+    required this.showTranslation,
     required this.onBlockTap,
+    required this.onShowTranslation,
   });
 
   final String imagePath;
-  final OcrResult result;
+  final LabelAnalysis analysis;
   final int? selectedBlock;
+  final bool showTranslation;
   final ValueChanged<int?> onBlockTap;
+  final ValueChanged<bool> onShowTranslation;
+
+  bool get _translating => showTranslation && analysis.outcome == TranslationOutcome.translated;
 
   void _showAllText(BuildContext context) {
+    final text = _translating ? analysis.translatedText! : analysis.ocr.text;
     showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -86,7 +97,7 @@ class _Recognized extends StatelessWidget {
         builder: (context, controller) => SingleChildScrollView(
           controller: controller,
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-          child: SelectableText(result.text),
+          child: SelectableText(text),
         ),
       ),
     );
@@ -97,6 +108,10 @@ class _Recognized extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final textTheme = Theme.of(context).textTheme;
     final selected = selectedBlock;
+    final ocr = analysis.ocr;
+    final selectedText = selected == null
+        ? null
+        : (_translating ? analysis.translatedBlock(selected) : null) ?? ocr.blocks[selected].text;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -109,7 +124,7 @@ class _Recognized extends StatelessWidget {
               child: Center(
                 child: OcrOverlay(
                   imagePath: imagePath,
-                  result: result,
+                  result: ocr,
                   selectedBlock: selected,
                   onBlockTap: onBlockTap,
                   imageErrorLabel: l10n.ocrImageUnavailable,
@@ -118,21 +133,23 @@ class _Recognized extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+        SizedBox(
+          height: 300,
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
             children: [
-              Text(l10n.ocrBlocksFound(result.blocks.length), style: textTheme.titleMedium),
+              Text(l10n.ocrBlocksFound(ocr.blocks.length), style: textTheme.titleMedium),
               const SizedBox(height: 8),
-              ConstrainedBox(
-                constraints: const BoxConstraints(maxHeight: 120),
-                child: SingleChildScrollView(
-                  child: selected == null
-                      ? Text(l10n.ocrTapHint, style: textTheme.bodyMedium)
-                      : SelectableText(result.blocks[selected].text, style: textTheme.bodyLarge),
-                ),
+              _LanguageStatus(
+                imagePath: imagePath,
+                analysis: analysis,
+                showTranslation: showTranslation,
+                onShowTranslation: onShowTranslation,
               ),
+              const SizedBox(height: 12),
+              selectedText == null
+                  ? Text(l10n.ocrTapHint, style: textTheme.bodyMedium)
+                  : SelectableText(selectedText, style: textTheme.bodyLarge),
               const SizedBox(height: 16),
               OutlinedButton.icon(
                 onPressed: () => _showAllText(context),
@@ -144,6 +161,73 @@ class _Recognized extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class _LanguageStatus extends ConsumerWidget {
+  const _LanguageStatus({
+    required this.imagePath,
+    required this.analysis,
+    required this.showTranslation,
+    required this.onShowTranslation,
+  });
+
+  final String imagePath;
+  final LabelAnalysis analysis;
+  final bool showTranslation;
+  final ValueChanged<bool> onShowTranslation;
+
+  Future<void> _downloadAndTranslate(WidgetRef ref) async {
+    final ok = await ref.read(translationModelsProvider.notifier).downloadAll(analysis.missingModels);
+    if (ok) ref.invalidate(labelAnalysisProvider(imagePath));
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
+    final textTheme = Theme.of(context).textTheme;
+    final detected = analysis.detectedLanguage?.nativeName;
+    final downloading = analysis.missingModels.any(
+      (language) => ref.watch(translationModelsProvider).value?.isBusy(language) ?? false,
+    );
+
+    Widget note(String text) => Text(text, style: textTheme.bodyMedium);
+
+    return switch (analysis.outcome) {
+      TranslationOutcome.notNeeded => note(l10n.detectedLanguage(detected!)),
+      TranslationOutcome.translated => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            note(l10n.translatedFrom(detected!, analysis.target.nativeName)),
+            const SizedBox(height: 8),
+            SegmentedButton<bool>(
+              segments: [
+                ButtonSegment(value: false, label: Text(l10n.showOriginal)),
+                ButtonSegment(value: true, label: Text(l10n.showTranslation)),
+              ],
+              selected: {showTranslation},
+              onSelectionChanged: (selection) => onShowTranslation(selection.first),
+            ),
+          ],
+        ),
+      TranslationOutcome.modelMissing => Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            note(l10n.translationModelMissing(detected!)),
+            const SizedBox(height: 8),
+            FilledButton.tonalIcon(
+              onPressed: downloading ? null : () => _downloadAndTranslate(ref),
+              icon: downloading
+                  ? const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2))
+                  : const Icon(Icons.download),
+              label: Text(downloading ? l10n.languageDownloading : l10n.translationDownload),
+            ),
+          ],
+        ),
+      TranslationOutcome.unsupportedLanguage => note(l10n.translationUnsupported(analysis.detectedCode!)),
+      TranslationOutcome.failed => note(l10n.translationFailed),
+      TranslationOutcome.undetermined => note(l10n.languageUndetermined),
+    };
   }
 }
 

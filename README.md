@@ -47,5 +47,5 @@ flutter run
 - [x] Semana 1, día 1: monorepo, esqueleto, tema y localización es/en
 - [x] Semana 1, día 2: cámara, galería, permisos y recorte
 - [x] Semana 1, día 3: OCR con ML Kit y bloques sobre la foto
-- [ ] Semana 1, día 4: detección de idioma y traducción
+- [x] Semana 1, día 4: detección de idioma, traducción y gestión de idiomas descargados
 - [ ] Semana 1, día 5: extraer `core_ocr` y probar con etiquetas reales

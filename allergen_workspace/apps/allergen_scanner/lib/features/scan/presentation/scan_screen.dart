@@ -13,7 +13,9 @@ class ScanScreen extends ConsumerWidget {
   Future<void> _takePhoto(BuildContext context, WidgetRef ref) async {
     final controller = ref.read(scanControllerProvider.notifier);
     final cropTitle = AppLocalizations.of(context).cropTitle;
-    if (!await controller.ensureCameraPermission() || !context.mounted) return;
+    final granted = await controller.ensureCameraPermission();
+    debugPrint('DBG granted=$granted mounted=${context.mounted}');
+    if (!granted || !context.mounted) return;
     final captured = await context.push<String>(AppRoutes.camera);
     if (captured == null || !context.mounted) return;
     final cropped = await controller.crop(captured, title: cropTitle);

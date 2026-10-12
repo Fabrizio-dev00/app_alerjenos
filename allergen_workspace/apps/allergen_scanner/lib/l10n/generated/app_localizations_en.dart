@@ -156,4 +156,76 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ocrImageUnavailable => 'The image could not be displayed.';
+
+  @override
+  String get settingsScanLanguages => 'Scan languages';
+
+  @override
+  String get settingsScanLanguagesSubtitle =>
+      'Download your languages before you travel';
+
+  @override
+  String get languagesIntro =>
+      'To translate labels offline, download the label\'s language and yours. Each language takes about 30 MB and is downloaded only once.';
+
+  @override
+  String get languageDownloaded => 'Downloaded';
+
+  @override
+  String get languageNotDownloaded => 'Not downloaded';
+
+  @override
+  String get languageDownloading => 'Downloading…';
+
+  @override
+  String get languageDownload => 'Download';
+
+  @override
+  String get languageDelete => 'Delete';
+
+  @override
+  String languageDownloadFailed(String language) {
+    return 'We could not download $language. Check your connection and try again.';
+  }
+
+  @override
+  String get languagesLoadFailed =>
+      'We could not check the downloaded languages.';
+
+  @override
+  String detectedLanguage(String language) {
+    return 'Detected language: $language';
+  }
+
+  @override
+  String translatedFrom(String from, String to) {
+    return 'Translated from $from to $to';
+  }
+
+  @override
+  String get showOriginal => 'Original';
+
+  @override
+  String get showTranslation => 'Translation';
+
+  @override
+  String translationModelMissing(String language) {
+    return 'The label is in $language. To translate it offline, download the missing languages (about 30 MB each).';
+  }
+
+  @override
+  String get translationDownload => 'Download and translate';
+
+  @override
+  String translationUnsupported(String code) {
+    return 'The label\'s language ($code) is not supported yet. Showing the original text.';
+  }
+
+  @override
+  String get translationFailed =>
+      'We could not translate. Showing the original text.';
+
+  @override
+  String get languageUndetermined =>
+      'We could not identify the language of the text.';
 }

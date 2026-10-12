@@ -9,6 +9,7 @@ import '../features/scan/presentation/camera_screen.dart';
 import '../features/scan/presentation/ocr_screen.dart';
 import '../features/scan/presentation/preview_screen.dart';
 import '../features/scan/presentation/scan_screen.dart';
+import '../features/settings/presentation/scan_languages_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 import 'home_shell.dart';
 import 'routes.dart';
@@ -32,7 +33,13 @@ final routerProvider = Provider<GoRouter>((ref) {
             GoRoute(path: AppRoutes.profiles, builder: (context, state) => const ProfilesScreen()),
           ]),
           StatefulShellBranch(routes: [
-            GoRoute(path: AppRoutes.settings, builder: (context, state) => const SettingsScreen()),
+            GoRoute(
+              path: AppRoutes.settings,
+              builder: (context, state) => const SettingsScreen(),
+              routes: [
+                GoRoute(path: 'languages', builder: (context, state) => const ScanLanguagesScreen()),
+              ],
+            ),
           ]),
         ],
       ),

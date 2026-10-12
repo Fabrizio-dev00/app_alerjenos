@@ -50,5 +50,62 @@
   },
   "ocrTapHint": "Toca un recuadro para ver el texto que leímos ahí.",
   "ocrShowAllText": "Ver todo el texto",
-  "ocrImageUnavailable": "No se pudo mostrar la imagen."
+  "ocrImageUnavailable": "No se pudo mostrar la imagen.",
+  "settingsScanLanguages": "Idiomas para escanear",
+  "settingsScanLanguagesSubtitle": "Descarga tus idiomas antes de viajar",
+  "languagesIntro": "Para traducir etiquetas sin internet, descarga el idioma de la etiqueta y el tuyo. Cada idioma ocupa unos 30 MB y se descarga una sola vez.",
+  "languageDownloaded": "Descargado",
+  "languageNotDownloaded": "No descargado",
+  "languageDownloading": "Descargando…",
+  "languageDownload": "Descargar",
+  "languageDelete": "Eliminar",
+  "languageDownloadFailed": "No pudimos descargar {language}. Revisa tu conexión e inténtalo de nuevo.",
+  "@languageDownloadFailed": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languagesLoadFailed": "No pudimos revisar los idiomas descargados.",
+  "detectedLanguage": "Idioma detectado: {language}",
+  "@detectedLanguage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "translatedFrom": "Traducido de {from} a {to}",
+  "@translatedFrom": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "showOriginal": "Original",
+  "showTranslation": "Traducción",
+  "translationModelMissing": "La etiqueta está en {language}. Para traducirla sin internet descarga los idiomas que faltan (unos 30 MB cada uno).",
+  "@translationModelMissing": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "translationDownload": "Descargar y traducir",
+  "translationUnsupported": "El idioma de la etiqueta ({code}) todavía no está soportado. Se muestra el texto original.",
+  "@translationUnsupported": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "translationFailed": "No pudimos traducir. Se muestra el texto original.",
+  "languageUndetermined": "No pudimos identificar el idioma del texto."
 }

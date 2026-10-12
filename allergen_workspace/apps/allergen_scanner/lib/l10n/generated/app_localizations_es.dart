@@ -157,4 +157,76 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get ocrImageUnavailable => 'No se pudo mostrar la imagen.';
+
+  @override
+  String get settingsScanLanguages => 'Idiomas para escanear';
+
+  @override
+  String get settingsScanLanguagesSubtitle =>
+      'Descarga tus idiomas antes de viajar';
+
+  @override
+  String get languagesIntro =>
+      'Para traducir etiquetas sin internet, descarga el idioma de la etiqueta y el tuyo. Cada idioma ocupa unos 30 MB y se descarga una sola vez.';
+
+  @override
+  String get languageDownloaded => 'Descargado';
+
+  @override
+  String get languageNotDownloaded => 'No descargado';
+
+  @override
+  String get languageDownloading => 'Descargando…';
+
+  @override
+  String get languageDownload => 'Descargar';
+
+  @override
+  String get languageDelete => 'Eliminar';
+
+  @override
+  String languageDownloadFailed(String language) {
+    return 'No pudimos descargar $language. Revisa tu conexión e inténtalo de nuevo.';
+  }
+
+  @override
+  String get languagesLoadFailed =>
+      'No pudimos revisar los idiomas descargados.';
+
+  @override
+  String detectedLanguage(String language) {
+    return 'Idioma detectado: $language';
+  }
+
+  @override
+  String translatedFrom(String from, String to) {
+    return 'Traducido de $from a $to';
+  }
+
+  @override
+  String get showOriginal => 'Original';
+
+  @override
+  String get showTranslation => 'Traducción';
+
+  @override
+  String translationModelMissing(String language) {
+    return 'La etiqueta está en $language. Para traducirla sin internet descarga los idiomas que faltan (unos 30 MB cada uno).';
+  }
+
+  @override
+  String get translationDownload => 'Descargar y traducir';
+
+  @override
+  String translationUnsupported(String code) {
+    return 'El idioma de la etiqueta ($code) todavía no está soportado. Se muestra el texto original.';
+  }
+
+  @override
+  String get translationFailed =>
+      'No pudimos traducir. Se muestra el texto original.';
+
+  @override
+  String get languageUndetermined =>
+      'No pudimos identificar el idioma del texto.';
 }

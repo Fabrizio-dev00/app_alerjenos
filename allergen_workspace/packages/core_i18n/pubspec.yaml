@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_mlkit_language_id: ^0.15.1
+  google_mlkit_translation: ^0.15.1
 
 dev_dependencies:
   flutter_test:

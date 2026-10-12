@@ -361,6 +361,120 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No se pudo mostrar la imagen.'**
   String get ocrImageUnavailable;
+
+  /// No description provided for @settingsScanLanguages.
+  ///
+  /// In es, this message translates to:
+  /// **'Idiomas para escanear'**
+  String get settingsScanLanguages;
+
+  /// No description provided for @settingsScanLanguagesSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Descarga tus idiomas antes de viajar'**
+  String get settingsScanLanguagesSubtitle;
+
+  /// No description provided for @languagesIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Para traducir etiquetas sin internet, descarga el idioma de la etiqueta y el tuyo. Cada idioma ocupa unos 30 MB y se descarga una sola vez.'**
+  String get languagesIntro;
+
+  /// No description provided for @languageDownloaded.
+  ///
+  /// In es, this message translates to:
+  /// **'Descargado'**
+  String get languageDownloaded;
+
+  /// No description provided for @languageNotDownloaded.
+  ///
+  /// In es, this message translates to:
+  /// **'No descargado'**
+  String get languageNotDownloaded;
+
+  /// No description provided for @languageDownloading.
+  ///
+  /// In es, this message translates to:
+  /// **'Descargando…'**
+  String get languageDownloading;
+
+  /// No description provided for @languageDownload.
+  ///
+  /// In es, this message translates to:
+  /// **'Descargar'**
+  String get languageDownload;
+
+  /// No description provided for @languageDelete.
+  ///
+  /// In es, this message translates to:
+  /// **'Eliminar'**
+  String get languageDelete;
+
+  /// No description provided for @languageDownloadFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos descargar {language}. Revisa tu conexión e inténtalo de nuevo.'**
+  String languageDownloadFailed(String language);
+
+  /// No description provided for @languagesLoadFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos revisar los idiomas descargados.'**
+  String get languagesLoadFailed;
+
+  /// No description provided for @detectedLanguage.
+  ///
+  /// In es, this message translates to:
+  /// **'Idioma detectado: {language}'**
+  String detectedLanguage(String language);
+
+  /// No description provided for @translatedFrom.
+  ///
+  /// In es, this message translates to:
+  /// **'Traducido de {from} a {to}'**
+  String translatedFrom(String from, String to);
+
+  /// No description provided for @showOriginal.
+  ///
+  /// In es, this message translates to:
+  /// **'Original'**
+  String get showOriginal;
+
+  /// No description provided for @showTranslation.
+  ///
+  /// In es, this message translates to:
+  /// **'Traducción'**
+  String get showTranslation;
+
+  /// No description provided for @translationModelMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'La etiqueta está en {language}. Para traducirla sin internet descarga los idiomas que faltan (unos 30 MB cada uno).'**
+  String translationModelMissing(String language);
+
+  /// No description provided for @translationDownload.
+  ///
+  /// In es, this message translates to:
+  /// **'Descargar y traducir'**
+  String get translationDownload;
+
+  /// No description provided for @translationUnsupported.
+  ///
+  /// In es, this message translates to:
+  /// **'El idioma de la etiqueta ({code}) todavía no está soportado. Se muestra el texto original.'**
+  String translationUnsupported(String code);
+
+  /// No description provided for @translationFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos traducir. Se muestra el texto original.'**
+  String get translationFailed;
+
+  /// No description provided for @languageUndetermined.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos identificar el idioma del texto.'**
+  String get languageUndetermined;
 }
 
 class _AppLocalizationsDelegate
