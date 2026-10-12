@@ -18,5 +18,22 @@
   "paywallDescription": "Escaneos ilimitados y perfiles para toda la familia con un solo pago.",
   "resultContains": "Contiene",
   "resultMayContain": "Puede contener trazas",
-  "resultNotDetected": "No detectado"
+  "resultNotDetected": "No detectado",
+  "cameraDenied": "Necesitamos la cámara para leer la etiqueta. También puedes elegir una foto de la galería.",
+  "cameraBlocked": "El permiso de cámara está bloqueado. Actívalo en los ajustes del teléfono.",
+  "openSettings": "Abrir ajustes",
+  "retry": "Reintentar",
+  "galleryFailed": "No pudimos abrir la galería. Inténtalo de nuevo.",
+  "cropFailed": "No pudimos recortar la imagen. Inténtalo de nuevo.",
+  "cropTitle": "Recorta los ingredientes",
+  "cameraUnavailable": "No encontramos una cámara disponible en este dispositivo.",
+  "cameraFailed": "No pudimos usar la cámara. Inténtalo de nuevo.",
+  "cameraHint": "Encuadra la lista de ingredientes con buena luz",
+  "torchOn": "Encender linterna",
+  "torchOff": "Apagar linterna",
+  "previewTitle": "Revisa la foto",
+  "previewHint": "Comprueba que la lista de ingredientes se lea completa y nítida.",
+  "previewAnalyze": "Analizar etiqueta",
+  "previewRetake": "Usar otra foto",
+  "previewImageMissing": "No encontramos la imagen. Vuelve a tomar la foto."
 }

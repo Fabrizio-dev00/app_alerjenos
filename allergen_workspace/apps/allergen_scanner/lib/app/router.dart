@@ -5,17 +5,14 @@ import 'package:go_router/go_router.dart';
 import '../features/history/presentation/history_screen.dart';
 import '../features/paywall/presentation/paywall_screen.dart';
 import '../features/profiles/presentation/profiles_screen.dart';
+import '../features/scan/presentation/camera_screen.dart';
+import '../features/scan/presentation/preview_screen.dart';
 import '../features/scan/presentation/scan_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 import 'home_shell.dart';
+import 'routes.dart';
 
-abstract final class AppRoutes {
-  static const scan = '/scan';
-  static const history = '/history';
-  static const profiles = '/profiles';
-  static const settings = '/settings';
-  static const paywall = '/paywall';
-}
+export 'routes.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   final router = GoRouter(
@@ -37,6 +34,15 @@ final routerProvider = Provider<GoRouter>((ref) {
             GoRoute(path: AppRoutes.settings, builder: (context, state) => const SettingsScreen()),
           ]),
         ],
+      ),
+      GoRoute(
+        path: AppRoutes.camera,
+        pageBuilder: (context, state) =>
+            const MaterialPage(fullscreenDialog: true, child: CameraScreen()),
+      ),
+      GoRoute(
+        path: AppRoutes.preview,
+        builder: (context, state) => PreviewScreen(imagePath: state.extra as String?),
       ),
       GoRoute(
         path: AppRoutes.paywall,

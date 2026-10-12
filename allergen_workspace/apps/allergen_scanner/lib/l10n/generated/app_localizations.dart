@@ -211,6 +211,108 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No detectado'**
   String get resultNotDetected;
+
+  /// No description provided for @cameraDenied.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitamos la cámara para leer la etiqueta. También puedes elegir una foto de la galería.'**
+  String get cameraDenied;
+
+  /// No description provided for @cameraBlocked.
+  ///
+  /// In es, this message translates to:
+  /// **'El permiso de cámara está bloqueado. Actívalo en los ajustes del teléfono.'**
+  String get cameraBlocked;
+
+  /// No description provided for @openSettings.
+  ///
+  /// In es, this message translates to:
+  /// **'Abrir ajustes'**
+  String get openSettings;
+
+  /// No description provided for @retry.
+  ///
+  /// In es, this message translates to:
+  /// **'Reintentar'**
+  String get retry;
+
+  /// No description provided for @galleryFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos abrir la galería. Inténtalo de nuevo.'**
+  String get galleryFailed;
+
+  /// No description provided for @cropFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos recortar la imagen. Inténtalo de nuevo.'**
+  String get cropFailed;
+
+  /// No description provided for @cropTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Recorta los ingredientes'**
+  String get cropTitle;
+
+  /// No description provided for @cameraUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos una cámara disponible en este dispositivo.'**
+  String get cameraUnavailable;
+
+  /// No description provided for @cameraFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos usar la cámara. Inténtalo de nuevo.'**
+  String get cameraFailed;
+
+  /// No description provided for @cameraHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Encuadra la lista de ingredientes con buena luz'**
+  String get cameraHint;
+
+  /// No description provided for @torchOn.
+  ///
+  /// In es, this message translates to:
+  /// **'Encender linterna'**
+  String get torchOn;
+
+  /// No description provided for @torchOff.
+  ///
+  /// In es, this message translates to:
+  /// **'Apagar linterna'**
+  String get torchOff;
+
+  /// No description provided for @previewTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisa la foto'**
+  String get previewTitle;
+
+  /// No description provided for @previewHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Comprueba que la lista de ingredientes se lea completa y nítida.'**
+  String get previewHint;
+
+  /// No description provided for @previewAnalyze.
+  ///
+  /// In es, this message translates to:
+  /// **'Analizar etiqueta'**
+  String get previewAnalyze;
+
+  /// No description provided for @previewRetake.
+  ///
+  /// In es, this message translates to:
+  /// **'Usar otra foto'**
+  String get previewRetake;
+
+  /// No description provided for @previewImageMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos la imagen. Vuelve a tomar la foto.'**
+  String get previewImageMissing;
 }
 
 class _AppLocalizationsDelegate

@@ -18,5 +18,22 @@
   "paywallDescription": "Unlimited scans and profiles for the whole family with a single payment.",
   "resultContains": "Contains",
   "resultMayContain": "May contain traces",
-  "resultNotDetected": "Not detected"
+  "resultNotDetected": "Not detected",
+  "cameraDenied": "We need the camera to read the label. You can also choose a photo from your gallery.",
+  "cameraBlocked": "Camera permission is blocked. Turn it on in your phone settings.",
+  "openSettings": "Open settings",
+  "retry": "Try again",
+  "galleryFailed": "We could not open the gallery. Please try again.",
+  "cropFailed": "We could not crop the image. Please try again.",
+  "cropTitle": "Crop the ingredients",
+  "cameraUnavailable": "No camera is available on this device.",
+  "cameraFailed": "We could not use the camera. Please try again.",
+  "cameraHint": "Frame the ingredient list in good light",
+  "torchOn": "Turn on flashlight",
+  "torchOff": "Turn off flashlight",
+  "previewTitle": "Check the photo",
+  "previewHint": "Make sure the whole ingredient list is sharp and readable.",
+  "previewAnalyze": "Analyze label",
+  "previewRetake": "Use another photo",
+  "previewImageMissing": "We could not find the image. Please take the photo again."
 }

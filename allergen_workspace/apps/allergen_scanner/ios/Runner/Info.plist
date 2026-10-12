@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Usamos la cámara para leer la lista de ingredientes de la etiqueta.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Puedes elegir una foto de una etiqueta guardada en tu galería.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
