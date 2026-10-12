@@ -228,4 +228,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get languageUndetermined =>
       'We could not identify the language of the text.';
+
+  @override
+  String get ingredientsFound => 'Ingredient list found';
+
+  @override
+  String get ingredientsNotFound =>
+      'We could not find the word \"Ingredients\". Move closer to the list or crop just that part to read it better.';
 }

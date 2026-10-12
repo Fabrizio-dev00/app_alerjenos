@@ -107,5 +107,7 @@
     }
   },
   "translationFailed": "No pudimos traducir. Se muestra el texto original.",
-  "languageUndetermined": "No pudimos identificar el idioma del texto."
+  "languageUndetermined": "No pudimos identificar el idioma del texto.",
+  "ingredientsFound": "Lista de ingredientes encontrada",
+  "ingredientsNotFound": "No encontramos la palabra «Ingredientes». Acerca la cámara a la lista o recorta solo esa parte para leerla mejor."
 }

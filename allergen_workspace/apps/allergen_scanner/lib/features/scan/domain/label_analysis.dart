@@ -1,6 +1,8 @@
 import 'package:core_i18n/core_i18n.dart';
 import 'package:core_ocr/core_ocr.dart';
 
+import 'ingredient_section.dart';
+
 enum TranslationOutcome { notNeeded, translated, modelMissing, unsupportedLanguage, undetermined, failed }
 
 class LabelAnalysis {
@@ -12,9 +14,11 @@ class LabelAnalysis {
     this.detectedLanguage,
     this.translatedBlocks,
     this.missingModels = const [],
+    this.section = IngredientSection.none,
   });
 
   final OcrResult ocr;
+  final IngredientSection section;
   final AppLanguage target;
   final TranslationOutcome outcome;
   final String? detectedCode;
@@ -23,6 +27,11 @@ class LabelAnalysis {
   final List<AppLanguage> missingModels;
 
   String? get translatedText => translatedBlocks?.join('\n');
+
+  String sectionText({required bool translated}) {
+    if (!translated || translatedBlocks == null) return section.text;
+    return [for (final i in section.blockIndices) translatedBlock(i) ?? ocr.blocks[i].text].join('\n');
+  }
 
   String? translatedBlock(int index) {
     final blocks = translatedBlocks;
@@ -38,6 +47,7 @@ class AnalyzeLabel {
   final TranslationService translator;
 
   Future<LabelAnalysis> call(OcrResult ocr, {required AppLanguage target}) async {
+    final section = IngredientSectionLocator.locate(ocr);
     LabelAnalysis result(
       TranslationOutcome outcome, {
       String? code,
@@ -53,6 +63,7 @@ class AnalyzeLabel {
           detectedLanguage: language,
           translatedBlocks: translated,
           missingModels: missing,
+          section: section,
         );
 
     if (ocr.isEmpty) return result(TranslationOutcome.undetermined);

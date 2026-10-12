@@ -128,6 +128,7 @@ class _Recognized extends StatelessWidget {
                   selectedBlock: selected,
                   onBlockTap: onBlockTap,
                   imageErrorLabel: l10n.ocrImageUnavailable,
+                  highlighted: analysis.section.blockIndices.toSet(),
                 ),
               ),
             ),
@@ -147,9 +148,14 @@ class _Recognized extends StatelessWidget {
                 onShowTranslation: onShowTranslation,
               ),
               const SizedBox(height: 12),
-              selectedText == null
-                  ? Text(l10n.ocrTapHint, style: textTheme.bodyMedium)
-                  : SelectableText(selectedText, style: textTheme.bodyLarge),
+              _SectionStatus(found: analysis.section.found),
+              const SizedBox(height: 12),
+              if (selectedText != null)
+                SelectableText(selectedText, style: textTheme.bodyLarge)
+              else if (analysis.section.found)
+                SelectableText(analysis.sectionText(translated: _translating), style: textTheme.bodyLarge)
+              else
+                Text(l10n.ocrTapHint, style: textTheme.bodyMedium),
               const SizedBox(height: 16),
               OutlinedButton.icon(
                 onPressed: () => _showAllText(context),
@@ -228,6 +234,47 @@ class _LanguageStatus extends ConsumerWidget {
       TranslationOutcome.failed => note(l10n.translationFailed),
       TranslationOutcome.undetermined => note(l10n.languageUndetermined),
     };
+  }
+}
+
+class _SectionStatus extends StatelessWidget {
+  const _SectionStatus({required this.found});
+
+  final bool found;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final scheme = Theme.of(context).colorScheme;
+
+    if (found) {
+      return Row(
+        children: [
+          Icon(Icons.check_circle_outline, color: scheme.primary, size: 20),
+          const SizedBox(width: 8),
+          Expanded(child: Text(l10n.ingredientsFound)),
+        ],
+      );
+    }
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: scheme.errorContainer,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(Icons.warning_amber_rounded, color: scheme.onErrorContainer),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(l10n.ingredientsNotFound, style: TextStyle(color: scheme.onErrorContainer)),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

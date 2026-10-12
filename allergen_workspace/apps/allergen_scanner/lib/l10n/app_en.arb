@@ -62,5 +62,7 @@
   "translationDownload": "Download and translate",
   "translationUnsupported": "The label's language ({code}) is not supported yet. Showing the original text.",
   "translationFailed": "We could not translate. Showing the original text.",
-  "languageUndetermined": "We could not identify the language of the text."
+  "languageUndetermined": "We could not identify the language of the text.",
+  "ingredientsFound": "Ingredient list found",
+  "ingredientsNotFound": "We could not find the word \"Ingredients\". Move closer to the list or crop just that part to read it better."
 }

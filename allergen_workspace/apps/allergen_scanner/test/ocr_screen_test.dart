@@ -81,6 +81,28 @@ void main() {
 
     expect(find.text('2 bloques de texto detectados'), findsOneWidget);
     expect(find.byType(OcrOverlay), findsOneWidget);
+    expect(find.text('Lista de ingredientes encontrada'), findsOneWidget);
+    expect(find.textContaining('harina de trigo, leche\nPuede contener nueces'), findsOneWidget);
+  });
+
+  testWidgets('sin la palabra Ingredientes pide acercarse a la lista', (tester) async {
+    when(() => recognizer.recognize(_path)).thenAnswer(
+      (_) async => const OcrResult(
+        text: 'Galletas con cobertura sabor a chocolate',
+        blocks: [
+          OcrBlock(
+            text: 'Galletas con cobertura sabor a chocolate',
+            box: OcrBox(left: 0, top: 0, width: 400, height: 100),
+          ),
+        ],
+        imageWidth: 400,
+        imageHeight: 400,
+      ),
+    );
+    await pumpOcr(tester);
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('No encontramos la palabra «Ingredientes»'), findsOneWidget);
     expect(find.textContaining('Toca un recuadro'), findsOneWidget);
   });
 

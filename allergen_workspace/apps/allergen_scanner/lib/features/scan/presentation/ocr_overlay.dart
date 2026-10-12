@@ -10,6 +10,7 @@ class OcrOverlay extends StatelessWidget {
     required this.selectedBlock,
     required this.onBlockTap,
     required this.imageErrorLabel,
+    this.highlighted = const {},
     super.key,
   });
 
@@ -18,6 +19,7 @@ class OcrOverlay extends StatelessWidget {
   final int? selectedBlock;
   final ValueChanged<int?> onBlockTap;
   final String imageErrorLabel;
+  final Set<int> highlighted;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,9 @@ class OcrOverlay extends StatelessWidget {
                   painter: _BlocksPainter(
                     boxes: [for (final block in result.blocks) block.box.scale(scale)],
                     selected: selectedBlock,
-                    color: scheme.primary,
+                    highlighted: highlighted,
+                    color: scheme.outline,
+                    highlightColor: scheme.primary,
                     selectedColor: scheme.tertiary,
                   ),
                 ),
@@ -63,13 +67,17 @@ class _BlocksPainter extends CustomPainter {
   _BlocksPainter({
     required this.boxes,
     required this.selected,
+    required this.highlighted,
     required this.color,
+    required this.highlightColor,
     required this.selectedColor,
   });
 
   final List<OcrBox> boxes;
   final int? selected;
+  final Set<int> highlighted;
   final Color color;
+  final Color highlightColor;
   final Color selectedColor;
 
   @override
@@ -77,19 +85,23 @@ class _BlocksPainter extends CustomPainter {
     for (var i = 0; i < boxes.length; i++) {
       final box = boxes[i];
       final isSelected = i == selected;
-      final base = isSelected ? selectedColor : color;
+      final isHighlighted = highlighted.contains(i);
+      final base = isSelected ? selectedColor : (isHighlighted ? highlightColor : color);
       final rect = RRect.fromRectAndRadius(
         Rect.fromLTWH(box.left, box.top, box.width, box.height).inflate(2),
         const Radius.circular(4),
       );
       canvas
-        ..drawRRect(rect, Paint()..color = base.withValues(alpha: isSelected ? 0.3 : 0.12))
+        ..drawRRect(
+          rect,
+          Paint()..color = base.withValues(alpha: isSelected ? 0.3 : (isHighlighted ? 0.18 : 0.06)),
+        )
         ..drawRRect(
           rect,
           Paint()
             ..color = base
             ..style = PaintingStyle.stroke
-            ..strokeWidth = isSelected ? 3 : 1.5,
+            ..strokeWidth = isSelected || isHighlighted ? 3 : 1,
         );
     }
   }
@@ -98,6 +110,8 @@ class _BlocksPainter extends CustomPainter {
   bool shouldRepaint(_BlocksPainter oldDelegate) =>
       oldDelegate.boxes != boxes ||
       oldDelegate.selected != selected ||
+      oldDelegate.highlighted != highlighted ||
+      oldDelegate.highlightColor != highlightColor ||
       oldDelegate.color != color ||
       oldDelegate.selectedColor != selectedColor;
 }

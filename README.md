@@ -48,4 +48,4 @@ flutter run
 - [x] Semana 1, día 2: cámara, galería, permisos y recorte
 - [x] Semana 1, día 3: OCR con ML Kit y bloques sobre la foto
 - [x] Semana 1, día 4: detección de idioma, traducción y gestión de idiomas descargados
-- [ ] Semana 1, día 5: extraer `core_ocr` y probar con etiquetas reales
+- [x] Semana 1, día 5: localizador de la lista de ingredientes, comparación tolerante a errores de OCR y banco de etiquetas reales (`apps/allergen_scanner/test_labels`)

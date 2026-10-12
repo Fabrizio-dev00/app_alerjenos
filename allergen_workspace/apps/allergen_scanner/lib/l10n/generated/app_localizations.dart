@@ -475,6 +475,18 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No pudimos identificar el idioma del texto.'**
   String get languageUndetermined;
+
+  /// No description provided for @ingredientsFound.
+  ///
+  /// In es, this message translates to:
+  /// **'Lista de ingredientes encontrada'**
+  String get ingredientsFound;
+
+  /// No description provided for @ingredientsNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos la palabra «Ingredientes». Acerca la cámara a la lista o recorta solo esa parte para leerla mejor.'**
+  String get ingredientsNotFound;
 }
 
 class _AppLocalizationsDelegate
