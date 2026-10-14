@@ -5,6 +5,7 @@ import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import '../../../app/routes.dart';
 import '../../../app/theme.dart';
+import '../../../core/telemetry/telemetry.dart';
 import '../../../l10n/generated/app_localizations.dart';
 import '../../profiles/presentation/profiles_providers.dart';
 import 'onboarding_providers.dart';
@@ -60,8 +61,13 @@ class OnboardingTopBar extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: Center(child: StepDots(step: step))),
-          SizedBox(width: 120, child: Align(alignment: Alignment.centerRight, child: trailing)),
+          Expanded(
+            child: Center(child: StepDots(step: step)),
+          ),
+          SizedBox(
+            width: 120,
+            child: Align(alignment: Alignment.centerRight, child: trailing),
+          ),
         ],
       ),
     );
@@ -88,7 +94,10 @@ class SpeechBubble extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (author != null) ...[
-            Text(author!, style: const TextStyle(color: SanoColors.accent, fontWeight: FontWeight.w700, fontSize: 15)),
+            Text(
+              author!,
+              style: const TextStyle(color: SanoColors.accent, fontWeight: FontWeight.w700, fontSize: 15),
+            ),
             const SizedBox(height: 4),
           ],
           Text(text, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600, height: 1.35)),
@@ -103,19 +112,20 @@ Future<void> saveOnboardingProfile(BuildContext context, WidgetRef ref) async {
   final draft = ref.read(onboardingDraftProvider);
   final done = ref.read(onboardingDoneProvider);
   if (!done) {
-    await ref.read(onboardingDoneProvider.notifier).complete(
-          profileName: l10n.defaultProfileName,
-          allergenIds: draft.allergenIds,
-        );
+    ref.read(telemetryProvider).log(TelemetryEvent.onboardingCompleted, {
+      'method': draft.transcript.isEmpty ? 'manual' : 'voice_or_text',
+    });
+    await ref
+        .read(onboardingDoneProvider.notifier)
+        .complete(profileName: l10n.defaultProfileName, allergenIds: draft.allergenIds);
     ref.read(onboardingDraftProvider.notifier).reset();
     if (context.mounted) context.go(AppRoutes.scan);
     return;
   }
   final count = ref.read(profilesProvider).value?.length ?? 0;
-  final profile = await ref.read(profileRepositoryProvider).create(
-        name: l10n.profileDefaultName(count + 1),
-        allergenIds: draft.allergenIds,
-      );
+  final profile = await ref
+      .read(profileRepositoryProvider)
+      .create(name: l10n.profileDefaultName(count + 1), allergenIds: draft.allergenIds);
   await ref.read(activeProfileIdProvider.notifier).select(profile.id);
   ref.read(onboardingDraftProvider.notifier).reset();
   if (context.mounted) context.go(AppRoutes.profileEditor(profile.id));

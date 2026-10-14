@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/allergens/allergen_dictionary.dart';
 import '../../../core/allergens/allergen_dictionary_provider.dart';
+import '../../../core/telemetry/telemetry.dart';
 import '../../history/presentation/history_providers.dart';
 import '../../profiles/presentation/profiles_providers.dart';
 import '../../settings/presentation/app_settings.dart';
@@ -97,6 +98,16 @@ class ScanSessionController extends Notifier<ScanSession> {
       imagePath: imagePath,
       now: ref.read(clockProvider)(),
     );
+    final telemetry = ref.read(telemetryProvider);
+    if (report.verdict == ScanVerdict.unreadable) {
+      telemetry.log(TelemetryEvent.scanUnreadable);
+    } else {
+      telemetry.log(TelemetryEvent.scanCompleted, {
+        'verdict': report.verdict.name,
+        'translated': report.wasTranslated ? 1 : 0,
+        'source_language': report.sourceLanguage ?? 'unknown',
+      });
+    }
     if (report.verdict != ScanVerdict.unreadable) {
       await ref.read(scanQuotaProvider.notifier).consume();
       if (ref.read(appSettingsProvider).saveHistory) {

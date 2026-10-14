@@ -1127,7 +1127,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyMetrics.
   ///
   /// In es, this message translates to:
-  /// **'Solo se registran errores y métricas anónimas para mejorar la app, nunca tus fotos ni tus alérgenos.'**
+  /// **'Si lo permites, se envían errores y métricas anónimas para mejorar la app, nunca tus fotos, alérgenos ni perfiles. Puedes desactivarlo abajo.'**
   String get privacyMetrics;
 
   /// No description provided for @proTagline.
@@ -1519,6 +1519,114 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Guardado'**
   String get saved;
+
+  /// No description provided for @purchasePending.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu pago está pendiente. Pro se activará cuando la tienda lo confirme.'**
+  String get purchasePending;
+
+  /// No description provided for @purchaseNotAllowed.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cuenta de la tienda no permite compras en este teléfono.'**
+  String get purchaseNotAllowed;
+
+  /// No description provided for @purchaseFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos completar la compra. Inténtalo de nuevo.'**
+  String get purchaseFailed;
+
+  /// No description provided for @restoreNothing.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos una compra de Pro para restaurar en esta cuenta.'**
+  String get restoreNothing;
+
+  /// No description provided for @restoreFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos restaurar la compra. Revisa tu conexión e inténtalo de nuevo.'**
+  String get restoreFailed;
+
+  /// No description provided for @proWelcome.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Listo! Ya tienes SanoScan Pro.'**
+  String get proWelcome;
+
+  /// No description provided for @proAlreadyOwned.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya tienes SanoScan Pro. Gracias por apoyar la app.'**
+  String get proAlreadyOwned;
+
+  /// No description provided for @proProcessing.
+  ///
+  /// In es, this message translates to:
+  /// **'Procesando…'**
+  String get proProcessing;
+
+  /// No description provided for @linkFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos abrir el enlace.'**
+  String get linkFailed;
+
+  /// No description provided for @disclaimerTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'SanoScan no reemplaza a un profesional'**
+  String get disclaimerTitle;
+
+  /// No description provided for @disclaimerBody.
+  ///
+  /// In es, this message translates to:
+  /// **'SanoScan te ayuda a revisar etiquetas, pero no es un dispositivo médico. El reconocimiento de texto y la traducción pueden fallar. «No detectado» no significa seguro: revisa siempre la etiqueta física y, ante cualquier duda, consulta a tu médico o alergólogo.'**
+  String get disclaimerBody;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In es, this message translates to:
+  /// **'Política de privacidad'**
+  String get privacyPolicy;
+
+  /// No description provided for @termsOfUse.
+  ///
+  /// In es, this message translates to:
+  /// **'Términos de uso'**
+  String get termsOfUse;
+
+  /// No description provided for @contactSupport.
+  ///
+  /// In es, this message translates to:
+  /// **'Escríbenos'**
+  String get contactSupport;
+
+  /// No description provided for @openSourceLicenses.
+  ///
+  /// In es, this message translates to:
+  /// **'Licencias de código abierto'**
+  String get openSourceLicenses;
+
+  /// No description provided for @madeWithCare.
+  ///
+  /// In es, this message translates to:
+  /// **'Hecho con cuidado para quienes leen cada etiqueta.'**
+  String get madeWithCare;
+
+  /// No description provided for @shareDiagnostics.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar diagnósticos anónimos'**
+  String get shareDiagnostics;
+
+  /// No description provided for @shareDiagnosticsBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Errores y uso general de la app, sin tus fotos, alérgenos ni perfiles. Nos ayuda a arreglar fallos.'**
+  String get shareDiagnosticsBody;
 }
 
 class _AppLocalizationsDelegate

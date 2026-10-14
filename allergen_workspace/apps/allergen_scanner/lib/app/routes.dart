@@ -10,6 +10,7 @@ abstract final class AppRoutes {
   static const settings = '/settings';
   static const scanLanguages = '/settings/languages';
   static const privacy = '/settings/privacy';
+  static const about = '/settings/about';
   static const profiles = '/settings/profiles';
   static const pro = '/pro';
 
@@ -17,5 +18,12 @@ abstract final class AppRoutes {
 }
 
 abstract final class AppInfo {
-  static const version = '0.1.0';
+  static const version = '1.0.0';
+  static const supportEmail = String.fromEnvironment('SUPPORT_EMAIL');
+
+  static const _site = 'https://fabrizio-dev00.github.io/app_alerjenos';
+  static const privacyUrlEs = '$_site/privacidad.html';
+  static const privacyUrlEn = '$_site/privacidad.html#en';
+  static const termsUrlEs = '$_site/terminos.html';
+  static const termsUrlEn = '$_site/terminos.html#en';
 }

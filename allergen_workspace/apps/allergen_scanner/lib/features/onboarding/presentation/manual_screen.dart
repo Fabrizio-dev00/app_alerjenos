@@ -33,21 +33,26 @@ class _ManualScreenState extends ConsumerState<ManualScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: OnboardingTopBar(step: 1)),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(24, 4, 24, 0),
-              child: Text(l10n.onboardingStep(2, 3), style: textTheme.titleSmall),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(24, 6, 24, 16),
-              child: Text(l10n.allergensQuestion, style: textTheme.headlineLarge),
-            ),
             Expanded(
               child: ListView(
-                padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
+                padding: const EdgeInsets.fromLTRB(24, 4, 24, 16),
                 children: [
+                  Text(l10n.onboardingStep(2, 3), style: textTheme.titleSmall),
+                  const SizedBox(height: 6),
+                  Text(l10n.allergensQuestion, style: textTheme.headlineLarge),
+                  const SizedBox(height: 16),
                   AllergenGrid(
                     selected: draft.allergenIds,
                     onChanged: ref.read(onboardingDraftProvider.notifier).setAllergens,
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(LucideIcons.lock, color: SanoColors.muted, size: 20),
+                      const SizedBox(width: 10),
+                      Expanded(child: Text(l10n.profileStoredLocally, style: textTheme.bodySmall)),
+                    ],
                   ),
                 ],
               ),
@@ -56,15 +61,12 @@ class _ManualScreenState extends ConsumerState<ManualScreen> {
               padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
               child: Column(
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Icon(LucideIcons.lock, color: SanoColors.muted, size: 20),
-                      const SizedBox(width: 10),
-                      Text(l10n.allergensSelected(count), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
-                      const SizedBox(width: 8),
-                      Expanded(child: Text(l10n.profileStoredLocally, style: textTheme.bodySmall)),
-                    ],
+                  Semantics(
+                    liveRegion: true,
+                    child: Text(
+                      l10n.allergensSelected(count),
+                      style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                    ),
                   ),
                   const SizedBox(height: 14),
                   GradientButton(

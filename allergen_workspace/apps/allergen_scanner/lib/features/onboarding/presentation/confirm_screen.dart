@@ -23,7 +23,9 @@ class ConfirmScreen extends ConsumerStatefulWidget {
 }
 
 class _ConfirmScreenState extends ConsumerState<ConfirmScreen> {
-  late final List<AllergenChoice> _understood = AllergenChoice.selectedIn(ref.read(onboardingDraftProvider).allergenIds);
+  late final List<AllergenChoice> _understood = AllergenChoice.selectedIn(
+    ref.read(onboardingDraftProvider).allergenIds,
+  );
   bool _saving = false;
 
   @override
@@ -72,7 +74,10 @@ class _ConfirmScreenState extends ConsumerState<ConfirmScreen> {
                           Container(
                             width: 40,
                             height: 40,
-                            decoration: BoxDecoration(gradient: SanoColors.brandGradient, borderRadius: BorderRadius.circular(12)),
+                            decoration: BoxDecoration(
+                              gradient: SanoColors.brandGradient,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                             child: const Icon(LucideIcons.quote, color: SanoColors.card, size: 20),
                           ),
                           const SizedBox(width: 14),
@@ -80,7 +85,10 @@ class _ConfirmScreenState extends ConsumerState<ConfirmScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(l10n.confirmYouSaid, style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w600)),
+                                Text(
+                                  l10n.confirmYouSaid,
+                                  style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w600),
+                                ),
                                 const SizedBox(height: 2),
                                 Text('“${draft.transcript}.”', style: const TextStyle(fontSize: 18, height: 1.35)),
                               ],

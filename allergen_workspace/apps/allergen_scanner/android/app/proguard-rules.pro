@@ -1,0 +1,5 @@
+-keep class com.google.mlkit.** { *; }
+-dontwarn com.google.mlkit.**
+-keep class com.revenuecat.purchases.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-dontwarn com.google.android.play.core.**

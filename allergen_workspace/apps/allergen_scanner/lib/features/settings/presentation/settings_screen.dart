@@ -130,6 +130,7 @@ class SettingsScreen extends ConsumerWidget {
                       icon: LucideIcons.info,
                       title: l10n.settingsAbout,
                       value: l10n.settingsVersion(AppInfo.version),
+                      onTap: () => context.push(AppRoutes.about),
                     ),
                   ],
                 ),

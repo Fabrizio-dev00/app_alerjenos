@@ -42,6 +42,10 @@ cd allergen_workspace/apps/allergen_scanner
 flutter run
 ```
 
+## Lanzamiento
+
+Pasos de cuentas, claves y publicación: [docs/LANZAMIENTO.md](docs/LANZAMIENTO.md).
+
 ## Avance
 
 - [x] Semana 1, día 1: monorepo, esqueleto, tema y localización es/en
@@ -57,4 +61,7 @@ flutter run
 - [x] Semana 2, día 4: escáner en vivo, procesando, resultado con tres niveles, resaltado sobre la foto, regla de calidad y aviso de seguridad
 - [x] Semana 2, día 5: historial (Drift v2 con migración), filtros, límite gratis de 5 escaneos diarios y 30 días de historial
 - [ ] Pasada completa con las etiquetas reales (`test_labels`)
-- [ ] Semana 3: RevenueCat y Pro real, pulido, Crashlytics, ficha de tienda y release
+- [x] Semana 3, días 1-2: RevenueCat en `core_billing`, compra única, restaurar y entitlement cacheado para uso sin internet
+- [x] Semana 3, día 3: accesibilidad (letra grande, contraste, áreas táctiles), ícono adaptativo y splash
+- [x] Semana 3, día 4: Crashlytics y Analytics anónimos (opcionales y desactivables), Acerca de, política de privacidad, términos y ficha de la tienda
+- [x] Semana 3, día 5: build de release firmado (R8) listo; falta configurar cuentas y subir (ver `docs/LANZAMIENTO.md`)

@@ -632,7 +632,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get privacyMetrics =>
-      'Solo se registran errores y métricas anónimas para mejorar la app, nunca tus fotos ni tus alérgenos.';
+      'Si lo permites, se envían errores y métricas anónimas para mejorar la app, nunca tus fotos, alérgenos ni perfiles. Puedes desactivarlo abajo.';
 
   @override
   String get proTagline => 'Escanea sin límites, cuida a toda tu familia.';
@@ -879,4 +879,67 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get saved => 'Guardado';
+
+  @override
+  String get purchasePending =>
+      'Tu pago está pendiente. Pro se activará cuando la tienda lo confirme.';
+
+  @override
+  String get purchaseNotAllowed =>
+      'Tu cuenta de la tienda no permite compras en este teléfono.';
+
+  @override
+  String get purchaseFailed =>
+      'No pudimos completar la compra. Inténtalo de nuevo.';
+
+  @override
+  String get restoreNothing =>
+      'No encontramos una compra de Pro para restaurar en esta cuenta.';
+
+  @override
+  String get restoreFailed =>
+      'No pudimos restaurar la compra. Revisa tu conexión e inténtalo de nuevo.';
+
+  @override
+  String get proWelcome => '¡Listo! Ya tienes SanoScan Pro.';
+
+  @override
+  String get proAlreadyOwned =>
+      'Ya tienes SanoScan Pro. Gracias por apoyar la app.';
+
+  @override
+  String get proProcessing => 'Procesando…';
+
+  @override
+  String get linkFailed => 'No pudimos abrir el enlace.';
+
+  @override
+  String get disclaimerTitle => 'SanoScan no reemplaza a un profesional';
+
+  @override
+  String get disclaimerBody =>
+      'SanoScan te ayuda a revisar etiquetas, pero no es un dispositivo médico. El reconocimiento de texto y la traducción pueden fallar. «No detectado» no significa seguro: revisa siempre la etiqueta física y, ante cualquier duda, consulta a tu médico o alergólogo.';
+
+  @override
+  String get privacyPolicy => 'Política de privacidad';
+
+  @override
+  String get termsOfUse => 'Términos de uso';
+
+  @override
+  String get contactSupport => 'Escríbenos';
+
+  @override
+  String get openSourceLicenses => 'Licencias de código abierto';
+
+  @override
+  String get madeWithCare =>
+      'Hecho con cuidado para quienes leen cada etiqueta.';
+
+  @override
+  String get shareDiagnostics => 'Enviar diagnósticos anónimos';
+
+  @override
+  String get shareDiagnosticsBody =>
+      'Errores y uso general de la app, sin tus fotos, alérgenos ni perfiles. Nos ayuda a arreglar fallos.';
 }

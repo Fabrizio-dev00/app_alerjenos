@@ -27,7 +27,8 @@ class ScannerScreen extends ConsumerStatefulWidget {
   ConsumerState<ScannerScreen> createState() => _ScannerScreenState();
 }
 
-class _ScannerScreenState extends ConsumerState<ScannerScreen> with WidgetsBindingObserver, SingleTickerProviderStateMixin {
+class _ScannerScreenState extends ConsumerState<ScannerScreen>
+    with WidgetsBindingObserver, SingleTickerProviderStateMixin {
   CameraController? _controller;
   CameraDescription? _camera;
   _CameraState _cameraState = _CameraState.starting;
@@ -202,7 +203,10 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen> with WidgetsBindi
               ListTile(
                 leading: CircleAvatar(
                   backgroundColor: SanoColors.cream,
-                  child: Text(profile.initial, style: const TextStyle(fontWeight: FontWeight.w800, color: SanoColors.accent)),
+                  child: Text(
+                    profile.initial,
+                    style: const TextStyle(fontWeight: FontWeight.w800, color: SanoColors.accent),
+                  ),
                 ),
                 title: Text(profile.name, style: const TextStyle(fontWeight: FontWeight.w700)),
                 subtitle: Text(profile.summary(l10n)),
@@ -269,27 +273,43 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen> with WidgetsBindi
                     Row(
                       children: [
                         if (profile != null)
-                          _GlassPill(
-                            onTap: () => _showProfiles(profiles, profile),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                CircleAvatar(
-                                  radius: 18,
-                                  backgroundColor: SanoColors.cream,
-                                  child: Text(
-                                    profile.initial,
-                                    style: const TextStyle(fontWeight: FontWeight.w800, color: SanoColors.accent, fontSize: 18),
+                          Flexible(
+                            child: _GlassPill(
+                              onTap: () => _showProfiles(profiles, profile),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  CircleAvatar(
+                                    radius: 18,
+                                    backgroundColor: SanoColors.cream,
+                                    child: Text(
+                                      profile.initial,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w800,
+                                        color: SanoColors.accent,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(width: 10),
-                                Text(l10n.scanProfile(profile.name), style: const TextStyle(color: SanoColors.card, fontWeight: FontWeight.w700, fontSize: 17)),
-                                const SizedBox(width: 6),
-                                const Icon(LucideIcons.chevronDown, color: SanoColors.card, size: 20),
-                              ],
+                                  const SizedBox(width: 10),
+                                  Flexible(
+                                    child: Text(
+                                      l10n.scanProfile(profile.name),
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(
+                                        color: SanoColors.card,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 6),
+                                  const Icon(LucideIcons.chevronDown, color: SanoColors.card, size: 20),
+                                ],
+                              ),
                             ),
                           ),
-                        const Spacer(),
+                        const SizedBox(width: 12),
                         _GlassCircle(
                           tooltip: _torchOn ? l10n.torchOff : l10n.torchOn,
                           icon: _torchOn ? LucideIcons.zapOff : LucideIcons.zap,
@@ -419,7 +439,11 @@ class _Viewfinder extends StatelessWidget {
                     Center(
                       child: Padding(
                         padding: const EdgeInsets.all(32),
-                        child: Text(problem!, textAlign: TextAlign.center, style: const TextStyle(color: SanoColors.card, fontSize: 16)),
+                        child: Text(
+                          problem!,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: SanoColors.card, fontSize: 16),
+                        ),
                       ),
                     )
                   else if (state == _CameraState.starting)
@@ -438,7 +462,9 @@ class _Viewfinder extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: SanoColors.tangerine,
                           borderRadius: BorderRadius.circular(3),
-                          boxShadow: [BoxShadow(color: SanoColors.amber.withValues(alpha: 0.7), blurRadius: 18, spreadRadius: 4)],
+                          boxShadow: [
+                            BoxShadow(color: SanoColors.amber.withValues(alpha: 0.7), blurRadius: 18, spreadRadius: 4),
+                          ],
                         ),
                       ),
                     ),
@@ -464,7 +490,9 @@ class _Viewfinder extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 14),
-              Flexible(child: Text(hint, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700))),
+              Flexible(
+                child: Text(hint, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
+              ),
             ],
           ),
         ),
@@ -601,7 +629,10 @@ class _GlassCircle extends StatelessWidget {
         child: InkWell(
           customBorder: const CircleBorder(),
           onTap: onTap,
-          child: SizedBox.square(dimension: size, child: Icon(icon, color: SanoColors.card, size: size * 0.42)),
+          child: SizedBox.square(
+            dimension: size,
+            child: Icon(icon, color: SanoColors.card, size: size * 0.42),
+          ),
         ),
       ),
     );
@@ -628,7 +659,10 @@ class _ShutterButton extends StatelessWidget {
           width: 88,
           height: 88,
           padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: SanoColors.cream, width: 4)),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(color: SanoColors.cream, width: 4),
+          ),
           child: DecoratedBox(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -636,7 +670,10 @@ class _ShutterButton extends StatelessWidget {
               color: onPressed == null ? SanoColors.card.withValues(alpha: 0.3) : null,
             ),
             child: busy
-                ? const Padding(padding: EdgeInsets.all(20), child: CircularProgressIndicator(color: SanoColors.coffee))
+                ? const Padding(
+                    padding: EdgeInsets.all(20),
+                    child: CircularProgressIndicator(color: SanoColors.coffee),
+                  )
                 : const Icon(LucideIcons.scan, color: SanoColors.coffee, size: 32),
           ),
         ),

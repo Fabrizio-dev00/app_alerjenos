@@ -22,10 +22,10 @@ class OnboardingDraft {
   final int? editingProfileId;
 
   OnboardingDraft copyWith({Set<String>? allergenIds, String? transcript}) => OnboardingDraft(
-        allergenIds: allergenIds ?? this.allergenIds,
-        transcript: transcript ?? this.transcript,
-        editingProfileId: editingProfileId,
-      );
+    allergenIds: allergenIds ?? this.allergenIds,
+    transcript: transcript ?? this.transcript,
+    editingProfileId: editingProfileId,
+  );
 }
 
 final onboardingDraftProvider = NotifierProvider<OnboardingDraftController, OnboardingDraft>(

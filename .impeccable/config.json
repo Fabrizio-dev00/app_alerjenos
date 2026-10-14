@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "docs/privacidad.html"
+        ],
+        "createdAt": "2026-10-14T03:58:39.457Z",
+        "reason": "Brand token: the user's design guide docs/design/DISENO_SANOSCAN.md sets bg #FFF1D9 for SanoScan; legal pages match the app"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "docs/terminos.html"
+        ],
+        "createdAt": "2026-10-14T03:58:40.209Z",
+        "reason": "Brand token: the user's design guide docs/design/DISENO_SANOSCAN.md sets bg #FFF1D9 for SanoScan; legal pages match the app"
+      }
+    ]
+  }
+}

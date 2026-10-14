@@ -15,6 +15,7 @@ import '../features/scan/domain/scan_report.dart';
 import '../features/scan/presentation/processing_screen.dart';
 import '../features/scan/presentation/result_screen.dart';
 import '../features/scan/presentation/scanner_screen.dart';
+import '../features/settings/presentation/about_screen.dart';
 import '../features/settings/presentation/privacy_screen.dart';
 import '../features/settings/presentation/scan_languages_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
@@ -57,6 +58,7 @@ final routerProvider = Provider<GoRouter>((ref) {
               routes: [
                 GoRoute(path: 'languages', builder: (context, state) => const ScanLanguagesScreen()),
                 GoRoute(path: 'privacy', builder: (context, state) => const PrivacyScreen()),
+                GoRoute(path: 'about', builder: (context, state) => const AboutScreen()),
                 GoRoute(
                   path: 'profiles',
                   builder: (context, state) => const ProfilesScreen(),

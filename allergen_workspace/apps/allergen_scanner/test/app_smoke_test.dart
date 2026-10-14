@@ -89,7 +89,8 @@ void main() {
     await tester.tap(find.text('Ajustes'));
     await tester.pumpAndSettle();
 
-    await tester.scrollUntilVisible(find.text('Vibración al escanear'), 200);
+    await tester.ensureVisible(find.text('Vibración al escanear'));
+    await tester.pumpAndSettle();
     await tester.tap(find.byType(Switch).last);
     await tester.pumpAndSettle();
 

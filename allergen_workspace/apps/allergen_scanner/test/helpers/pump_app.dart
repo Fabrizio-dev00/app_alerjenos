@@ -4,6 +4,7 @@ import 'package:allergen_scanner/app/app.dart';
 import 'package:allergen_scanner/core/preferences_provider.dart';
 import 'package:allergen_scanner/features/history/domain/history_repository.dart';
 import 'package:allergen_scanner/features/history/presentation/history_providers.dart';
+import 'package:allergen_scanner/features/paywall/presentation/pro_controller.dart';
 import 'package:allergen_scanner/features/onboarding/data/speech_service.dart';
 import 'package:allergen_scanner/features/onboarding/presentation/onboarding_providers.dart';
 import 'package:allergen_scanner/features/profiles/domain/profile.dart';
@@ -16,6 +17,7 @@ import 'package:allergen_scanner/features/scan/presentation/scan_controller.dart
 import 'package:allergen_scanner/features/scan/presentation/scan_quota.dart';
 import 'package:allergen_scanner/features/scan/presentation/scan_session.dart';
 import 'package:allergen_scanner/features/scan/presentation/scanner_screen.dart';
+import 'package:core_billing/core_billing.dart';
 import 'package:core_i18n/core_i18n.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -185,7 +187,9 @@ Future<SharedPreferences> pumpApp(
   WidgetTester tester, {
   String language = 'es',
   bool onboarded = true,
-  bool pro = false,
+  bool? pro = false,
+  BillingService? billing,
+  double textScale = 1,
   InMemoryProfileRepository? profiles,
   InMemoryHistoryRepository? history,
   FakePermissions? permissions,
@@ -203,7 +207,9 @@ Future<SharedPreferences> pumpApp(
   final profileRepository = profiles ?? InMemoryProfileRepository(onboarded ? [defaultTestProfile] : []);
   await tester.binding.setSurfaceSize(const Size(430, 932));
   tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
+  tester.platformDispatcher.textScaleFactorTestValue = textScale;
   addTearDown(() {
+    tester.platformDispatcher.clearTextScaleFactorTestValue();
     tester.binding.setSurfaceSize(null);
     tester.platformDispatcher.clearAccessibilityFeaturesTestValue();
   });
@@ -219,7 +225,8 @@ Future<SharedPreferences> pumpApp(
         speechServiceProvider.overrideWithValue(speech ?? FakeSpeech()),
         matchRunnerProvider.overrideWithValue((dictionary, streams) async => AllergenMatcher(dictionary).match(streams)),
         clockProvider.overrideWithValue(() => testNow),
-        isProProvider.overrideWithValue(pro),
+        if (pro != null) isProProvider.overrideWithValue(pro),
+        billingServiceProvider.overrideWithValue(billing ?? const UnavailableBillingService()),
         ...overrides,
       ],
       child: const AllergenScannerApp(),
@@ -227,4 +234,40 @@ Future<SharedPreferences> pumpApp(
   );
   await tester.pumpAndSettle();
   return prefs;
+}
+
+class FakeBilling implements BillingService {
+  FakeBilling({this.owned = false, this.purchaseOutcome = PurchaseOutcome.purchased, this.restoreOutcome = RestoreOutcome.nothingToRestore});
+
+  bool owned;
+  PurchaseOutcome purchaseOutcome;
+  RestoreOutcome restoreOutcome;
+  final _changes = StreamController<bool>.broadcast();
+
+  @override
+  bool get isConfigured => true;
+
+  @override
+  Future<void> configure() async {}
+
+  @override
+  Future<bool> isPro() async => owned;
+
+  @override
+  Stream<bool> watchPro() => _changes.stream;
+
+  @override
+  Future<ProOffer?> loadOffer() async => const ProOffer(priceString: 'S/ 14.90');
+
+  @override
+  Future<PurchaseOutcome> purchasePro() async {
+    if (purchaseOutcome == PurchaseOutcome.purchased) owned = true;
+    return purchaseOutcome;
+  }
+
+  @override
+  Future<RestoreOutcome> restore() async {
+    if (restoreOutcome == RestoreOutcome.restored) owned = true;
+    return restoreOutcome;
+  }
 }

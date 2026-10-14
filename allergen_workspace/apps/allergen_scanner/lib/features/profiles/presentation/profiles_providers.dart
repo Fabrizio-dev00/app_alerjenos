@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/database/app_database.dart';
 import '../../../core/preferences_provider.dart';
+import '../../paywall/presentation/pro_controller.dart';
 import '../data/drift_profile_repository.dart';
 import '../domain/profile.dart';
 
@@ -19,7 +20,7 @@ final profilesProvider = StreamProvider<List<Profile>>(
   (ref) => ref.watch(profileRepositoryProvider).watchAll(),
 );
 
-final isProProvider = Provider<bool>((ref) => false);
+final isProProvider = Provider<bool>((ref) => ref.watch(proControllerProvider).isPro);
 
 final canAddProfileProvider = Provider<bool>((ref) {
   final count = ref.watch(profilesProvider).value?.length ?? 0;

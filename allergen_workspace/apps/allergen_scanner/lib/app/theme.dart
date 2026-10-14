@@ -14,7 +14,7 @@ abstract final class SanoColors {
   static const card = Color(0xFFFFFDF8);
   static const muted = Color(0xFF5B4A40);
   static const accent = Color(0xFFA83F00);
-  static const tabActive = Color(0xFFB84A00);
+  static const tabActive = Color(0xFFA83F00);
   static const line = Color(0x242A160A);
   static const field = Color(0xFFEFDDC2);
   static const blush = Color(0xFFF4B6B0);

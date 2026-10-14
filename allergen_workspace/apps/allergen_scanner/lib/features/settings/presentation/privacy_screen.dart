@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import '../../../app/theme.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import 'app_settings.dart';
 
-class PrivacyScreen extends StatelessWidget {
+class PrivacyScreen extends ConsumerWidget {
   const PrivacyScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
     final textTheme = Theme.of(context).textTheme;
     final points = [
@@ -49,6 +51,18 @@ class PrivacyScreen extends StatelessWidget {
                 ),
               ),
             ),
+          const SizedBox(height: 6),
+          Material(
+            color: SanoColors.card,
+            borderRadius: BorderRadius.circular(22),
+            clipBehavior: Clip.antiAlias,
+            child: SwitchListTile(
+              value: ref.watch(appSettingsProvider).shareDiagnostics,
+              onChanged: ref.read(appSettingsProvider.notifier).setShareDiagnostics,
+              title: Text(l10n.shareDiagnostics, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 17)),
+              subtitle: Text(l10n.shareDiagnosticsBody),
+            ),
+          ),
         ],
       ),
     );

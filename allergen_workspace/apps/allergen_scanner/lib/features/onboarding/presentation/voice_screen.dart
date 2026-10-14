@@ -23,7 +23,10 @@ class VoiceScreen extends ConsumerStatefulWidget {
 
 class _VoiceScreenState extends ConsumerState<VoiceScreen> with SingleTickerProviderStateMixin {
   final _text = TextEditingController();
-  late final AnimationController _pulse = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
+  late final AnimationController _pulse = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1400),
+  );
   String _transcript = '';
   bool _listening = false;
   String? _problem;
@@ -69,11 +72,13 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen> with SingleTickerProv
       _problem = null;
       _transcript = '';
     });
-    final ready = await speech.initialize(onFailure: (failure) {
-      if (!mounted) return;
-      _setListening(false);
-      setState(() => _problem = _failureMessage(failure));
-    });
+    final ready = await speech.initialize(
+      onFailure: (failure) {
+        if (!mounted) return;
+        _setListening(false);
+        setState(() => _problem = _failureMessage(failure));
+      },
+    );
     if (!ready || !mounted) return;
     _setListening(true);
     await speech.listen(
@@ -129,10 +134,8 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen> with SingleTickerProv
                       height: 240,
                       child: AnimatedBuilder(
                         animation: _pulse,
-                        builder: (context, child) => CustomPaint(
-                          painter: _RingsPainter(_listening ? _pulse.value : null),
-                          child: child,
-                        ),
+                        builder: (context, child) =>
+                            CustomPaint(painter: _RingsPainter(_listening ? _pulse.value : null), child: child),
                         child: Center(
                           child: SanoMascot(
                             mood: _listening ? SanoMood.listening : SanoMood.idle,
@@ -169,10 +172,7 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen> with SingleTickerProv
                     ),
                   ],
                   const SizedBox(height: 24),
-                  if (_listening) ...[
-                    Center(child: _SoundWave(animation: _pulse)),
-                    const SizedBox(height: 12),
-                  ],
+                  if (_listening) ...[Center(child: _SoundWave(animation: _pulse)), const SizedBox(height: 12)],
                   Text(
                     _problem ?? (_listening ? l10n.voiceListening : l10n.voiceTapToSpeak),
                     textAlign: TextAlign.center,
@@ -181,17 +181,15 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen> with SingleTickerProv
                       color: _problem != null ? SanoColors.contains : SanoColors.muted,
                     ),
                   ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(24, 0, 24, 12),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(LucideIcons.lock, size: 20, color: SanoColors.muted),
-                  const SizedBox(width: 10),
-                  Expanded(child: Text(l10n.voicePrivacy, style: Theme.of(context).textTheme.bodySmall)),
+                  const SizedBox(height: 24),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(LucideIcons.lock, size: 20, color: SanoColors.muted),
+                      const SizedBox(width: 10),
+                      Expanded(child: Text(l10n.voicePrivacy, style: Theme.of(context).textTheme.bodySmall)),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -239,17 +237,19 @@ class _MicButton extends StatelessWidget {
       excludeSemantics: true,
       child: AnimatedBuilder(
         animation: pulse,
-        builder: (context, child) => Transform.scale(
-          scale: listening ? 1 + math.sin(pulse.value * math.pi * 2) * 0.05 : 1,
-          child: child,
-        ),
+        builder: (context, child) =>
+            Transform.scale(scale: listening ? 1 + math.sin(pulse.value * math.pi * 2) * 0.05 : 1, child: child),
         child: Material(
           shape: const CircleBorder(),
           clipBehavior: Clip.antiAlias,
           child: Ink(
             width: 64,
             height: 64,
-            decoration: const BoxDecoration(shape: BoxShape.circle, gradient: SanoColors.brandGradient, boxShadow: SanoShadows.brand),
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: SanoColors.brandGradient,
+              boxShadow: SanoShadows.brand,
+            ),
             child: InkWell(
               onTap: onPressed,
               child: Icon(listening ? LucideIcons.square : LucideIcons.mic, color: SanoColors.coffee, size: 28),

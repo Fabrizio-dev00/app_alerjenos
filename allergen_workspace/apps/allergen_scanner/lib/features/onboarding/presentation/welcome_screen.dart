@@ -26,79 +26,96 @@ class WelcomeScreen extends ConsumerWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ClipPath(
-            clipper: _WaveClipper(),
-            child: DecoratedBox(
-              decoration: const BoxDecoration(gradient: SanoColors.brandGradient),
-              child: CustomPaint(
-                painter: _OrganicLinesPainter(),
-                child: SafeArea(
-                  bottom: false,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(24, 12, 24, 56),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 52,
-                              height: 52,
-                              decoration: const BoxDecoration(shape: BoxShape.circle, color: SanoColors.paper),
-                              child: const Icon(LucideIcons.searchCheck, color: SanoColors.orange),
-                            ),
-                            const SizedBox(width: 14),
-                            Expanded(
-                              child: Text(
-                                l10n.appTitle,
-                                overflow: TextOverflow.ellipsis,
-                                style: textTheme.headlineSmall?.copyWith(fontSize: 28),
-                              ),
-                            ),
-                            Material(
-                              color: SanoColors.paper,
-                              shape: const StadiumBorder(),
-                              child: InkWell(
-                                customBorder: const StadiumBorder(),
-                                onTap: () => ref.read(localeControllerProvider.notifier).select(next),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-                                  child: Row(
-                                    children: [
-                                      const Icon(LucideIcons.globe, size: 20),
-                                      const SizedBox(width: 8),
-                                      Text(current.toUpperCase(), style: const TextStyle(fontWeight: FontWeight.w700)),
-                                    ],
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                ClipPath(
+                  clipper: _WaveClipper(),
+                  child: DecoratedBox(
+                    decoration: const BoxDecoration(gradient: SanoColors.brandGradient),
+                    child: CustomPaint(
+                      painter: _OrganicLinesPainter(),
+                      child: SafeArea(
+                        bottom: false,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(24, 12, 24, 56),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 52,
+                                    height: 52,
+                                    decoration: const BoxDecoration(shape: BoxShape.circle, color: SanoColors.paper),
+                                    child: const Icon(LucideIcons.searchCheck, color: SanoColors.orange),
                                   ),
-                                ),
+                                  const SizedBox(width: 14),
+                                  Expanded(
+                                    child: Text(
+                                      l10n.appTitle,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: textTheme.headlineSmall?.copyWith(fontSize: 28),
+                                    ),
+                                  ),
+                                  Material(
+                                    color: SanoColors.paper,
+                                    shape: const StadiumBorder(),
+                                    child: InkWell(
+                                      customBorder: const StadiumBorder(),
+                                      onTap: () => ref.read(localeControllerProvider.notifier).select(next),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                                        child: Row(
+                                          children: [
+                                            const Icon(LucideIcons.globe, size: 20),
+                                            const SizedBox(width: 8),
+                                            Text(
+                                              current.toUpperCase(),
+                                              style: const TextStyle(fontWeight: FontWeight.w700),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
+                              const SizedBox(height: 16),
+                              const SanoMascot(mood: SanoMood.idle, size: 140, sway: true),
+                            ],
+                          ),
                         ),
-                        const SizedBox(height: 16),
-                        const SanoMascot(mood: SanoMood.idle, size: 140, sway: true),
-                      ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(24, 12, 24, 16),
-              children: [
-                Text(l10n.tagline, style: textTheme.headlineLarge?.copyWith(fontSize: 40, height: 1.1)),
-                const SizedBox(height: 14),
-                Text(l10n.onboardingIntro, style: textTheme.bodyLarge?.copyWith(color: SanoColors.muted)),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Expanded(child: _Stat(value: '6', label: l10n.statLanguages)),
-                    const SizedBox(width: 12),
-                    Expanded(child: _Stat(value: '0', label: l10n.statAccounts)),
-                    const SizedBox(width: 12),
-                    Expanded(child: _Stat(value: '100%', label: l10n.statOnDevice)),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(l10n.tagline, style: textTheme.headlineLarge?.copyWith(fontSize: 40, height: 1.1)),
+                      const SizedBox(height: 14),
+                      Text(l10n.onboardingIntro, style: textTheme.bodyLarge?.copyWith(color: SanoColors.muted)),
+                      const SizedBox(height: 22),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _Stat(value: '6', label: l10n.statLanguages),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _Stat(value: '0', label: l10n.statAccounts),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _Stat(value: '100%', label: l10n.statOnDevice),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -148,12 +165,23 @@ class _Stat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
-      decoration: BoxDecoration(color: SanoColors.card, borderRadius: BorderRadius.circular(24), boxShadow: SanoShadows.soft),
+      decoration: BoxDecoration(
+        color: SanoColors.card,
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: SanoShadows.soft,
+      ),
       child: Column(
         children: [
-          Text(value, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: SanoColors.accent)),
+          Text(
+            value,
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: SanoColors.accent),
+          ),
           const SizedBox(height: 4),
-          Text(label, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+          ),
         ],
       ),
     );

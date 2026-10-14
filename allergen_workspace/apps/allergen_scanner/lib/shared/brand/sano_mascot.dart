@@ -12,8 +12,11 @@ class SanoMascot extends StatefulWidget {
     this.size = 120,
     this.crowned = false,
     this.sway = false,
+    this.crownDrop = 1,
     super.key,
   });
+
+  final double crownDrop;
 
   final SanoMood mood;
   final double size;
@@ -60,7 +63,7 @@ class _SanoMascotState extends State<SanoMascot> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    final painted = CustomPaint(painter: _SanoPainter(widget.mood, widget.crowned));
+    final painted = CustomPaint(painter: _SanoPainter(widget.mood, widget.crowned, widget.crownDrop));
     return ExcludeSemantics(
       child: SizedBox(
         width: widget.size,
@@ -82,10 +85,11 @@ class _SanoMascotState extends State<SanoMascot> with SingleTickerProviderStateM
 }
 
 class _SanoPainter extends CustomPainter {
-  _SanoPainter(this.mood, this.crowned);
+  _SanoPainter(this.mood, this.crowned, this.crownDrop);
 
   final SanoMood mood;
   final bool crowned;
+  final double crownDrop;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -197,7 +201,7 @@ class _SanoPainter extends CustomPainter {
   void _crown(Canvas canvas) {
     canvas
       ..save()
-      ..translate(50, 6)
+      ..translate(50, 6 - (1 - crownDrop) * 40)
       ..rotate(6 * math.pi / 180);
     final crown = Path()
       ..moveTo(-16, 4)
@@ -219,5 +223,6 @@ class _SanoPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_SanoPainter oldDelegate) => oldDelegate.mood != mood || oldDelegate.crowned != crowned;
+  bool shouldRepaint(_SanoPainter oldDelegate) =>
+      oldDelegate.mood != mood || oldDelegate.crowned != crowned || oldDelegate.crownDrop != crownDrop;
 }

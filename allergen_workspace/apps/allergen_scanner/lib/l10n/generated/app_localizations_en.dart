@@ -632,7 +632,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyMetrics =>
-      'Only anonymous errors and metrics are recorded to improve the app, never your photos or allergens.';
+      'If you allow it, anonymous errors and metrics are sent to improve the app, never your photos, allergens or profiles. You can turn it off below.';
 
   @override
   String get proTagline => 'Scan without limits, look after your whole family.';
@@ -879,4 +879,67 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get saved => 'Saved';
+
+  @override
+  String get purchasePending =>
+      'Your payment is pending. Pro will turn on when the store confirms it.';
+
+  @override
+  String get purchaseNotAllowed =>
+      'Your store account does not allow purchases on this phone.';
+
+  @override
+  String get purchaseFailed =>
+      'We could not complete the purchase. Please try again.';
+
+  @override
+  String get restoreNothing =>
+      'We did not find a Pro purchase to restore on this account.';
+
+  @override
+  String get restoreFailed =>
+      'We could not restore the purchase. Check your connection and try again.';
+
+  @override
+  String get proWelcome => 'Done! You now have SanoScan Pro.';
+
+  @override
+  String get proAlreadyOwned =>
+      'You already have SanoScan Pro. Thanks for supporting the app.';
+
+  @override
+  String get proProcessing => 'Processing…';
+
+  @override
+  String get linkFailed => 'We could not open the link.';
+
+  @override
+  String get disclaimerTitle => 'SanoScan does not replace a professional';
+
+  @override
+  String get disclaimerBody =>
+      'SanoScan helps you check labels, but it is not a medical device. Text recognition and translation can fail. \"Not detected\" does not mean safe: always check the physical label and, if in doubt, ask your doctor or allergist.';
+
+  @override
+  String get privacyPolicy => 'Privacy policy';
+
+  @override
+  String get termsOfUse => 'Terms of use';
+
+  @override
+  String get contactSupport => 'Contact us';
+
+  @override
+  String get openSourceLicenses => 'Open source licenses';
+
+  @override
+  String get madeWithCare =>
+      'Made with care for everyone who reads every label.';
+
+  @override
+  String get shareDiagnostics => 'Send anonymous diagnostics';
+
+  @override
+  String get shareDiagnosticsBody =>
+      'Errors and general app usage, without your photos, allergens or profiles. It helps us fix bugs.';
 }
