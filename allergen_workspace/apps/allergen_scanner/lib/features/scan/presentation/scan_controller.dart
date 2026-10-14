@@ -39,7 +39,7 @@ class ScanController extends Notifier<ScanStatus> {
 
   Future<void> openSettings() => _permissions.openSettings();
 
-  Future<String?> pickFromGallery({required String cropTitle}) async {
+  Future<String?> pickFromGallery({String? cropTitle}) async {
     state = ScanStatus.working;
     final String? picked;
     try {
@@ -49,9 +49,9 @@ class ScanController extends Notifier<ScanStatus> {
       return null;
     }
     if (!ref.mounted) return null;
-    if (picked == null) {
+    if (picked == null || cropTitle == null) {
       state = ScanStatus.idle;
-      return null;
+      return picked;
     }
     return crop(picked, title: cropTitle);
   }

@@ -137,7 +137,7 @@ class AllergenMatcher {
       allergenId: allergen.id,
       kind: kind,
       term: term,
-      matchedText: tokens.map((t) => t.value).join(' '),
+      matchedText: tokens.map((t) => t.raw).where((r) => r.isNotEmpty).join(' '),
       source: stream.source,
       inTraceContext: _all(trace, start, length),
       blocks: {for (final token in tokens) token.block},

@@ -6,6 +6,6 @@ import 'allergen_dictionary.dart';
 const allergenDictionaryAsset = 'assets/allergens.json';
 
 final allergenDictionaryProvider = FutureProvider<AllergenDictionary>((ref) async {
-  final source = await rootBundle.loadString(allergenDictionaryAsset);
+  final source = await rootBundle.loadString(allergenDictionaryAsset, cache: false);
   return AllergenDictionary.parse(source);
 });

@@ -316,7 +316,10 @@
           "cigala",
           "bogavante",
           "krill",
-          "quisquilla"
+          "quisquilla",
+          "mariscos",
+          "marisco",
+          "frutos del mar"
         ],
         "en": [
           "crustacean",
@@ -329,7 +332,9 @@
           "crab",
           "crayfish",
           "krill",
-          "langoustine"
+          "langoustine",
+          "shellfish",
+          "seafood"
         ],
         "fr": [
           "crustaces",
@@ -340,7 +345,8 @@
           "crabe",
           "langouste",
           "langoustine",
-          "ecrevisse"
+          "ecrevisse",
+          "fruits de mer"
         ],
         "de": [
           "krebstiere",
@@ -352,7 +358,8 @@
           "languste",
           "flusskrebs",
           "shrimps",
-          "scampi"
+          "scampi",
+          "meeresfruchte"
         ],
         "it": [
           "crostacei",
@@ -362,7 +369,8 @@
           "astice",
           "granchio",
           "scampi",
-          "mazzancolle"
+          "mazzancolle",
+          "frutti di mare"
         ],
         "pt": [
           "crustaceos",
@@ -371,7 +379,9 @@
           "lagosta",
           "caranguejo",
           "lagostim",
-          "siri"
+          "siri",
+          "frutos do mar",
+          "mariscos"
         ]
       }
     },
@@ -1491,7 +1501,10 @@
           "vieiras",
           "conchas de abanico",
           "berberecho",
-          "chipirones"
+          "chipirones",
+          "mariscos",
+          "marisco",
+          "frutos del mar"
         ],
         "en": [
           "mollusc",
@@ -1513,7 +1526,9 @@
           "scallops",
           "calamari",
           "whelk",
-          "oyster sauce"
+          "oyster sauce",
+          "shellfish",
+          "seafood"
         ],
         "fr": [
           "mollusques",
@@ -1531,7 +1546,8 @@
           "escargot",
           "escargots",
           "coquille saint jacques",
-          "petoncle"
+          "petoncle",
+          "fruits de mer"
         ],
         "de": [
           "weichtiere",
@@ -1546,7 +1562,8 @@
           "oktopus",
           "krake",
           "schnecken",
-          "jakobsmuscheln"
+          "jakobsmuscheln",
+          "meeresfruchte"
         ],
         "it": [
           "molluschi",
@@ -1557,7 +1574,8 @@
           "polpo",
           "seppia",
           "lumache",
-          "capesante"
+          "capesante",
+          "frutti di mare"
         ],
         "pt": [
           "moluscos",
@@ -1572,7 +1590,9 @@
           "polvo",
           "caracol",
           "vieira",
-          "berbigao"
+          "berbigao",
+          "frutos do mar",
+          "mariscos"
         ]
       },
       "excludes": [

@@ -423,4 +423,460 @@ class AppLocalizationsEs extends AppLocalizations {
   String settingsVersion(String version) {
     return 'Versión $version';
   }
+
+  @override
+  String allergenPossible(String name) {
+    return '$name (posible)';
+  }
+
+  @override
+  String allergenTraces(String name) {
+    return '$name (trazas)';
+  }
+
+  @override
+  String get possibleHint =>
+      'El ingrediente no dice su origen. Revisa la etiqueta.';
+
+  @override
+  String get cameraGrant => 'Dar permiso';
+
+  @override
+  String get cameraNeededTitle => 'Necesitamos tu cámara';
+
+  @override
+  String get cameraNeededBody =>
+      'SanoScan la usa solo para leer etiquetas. La foto no sale de tu teléfono.';
+
+  @override
+  String get checkedTitle => 'Lo que revisamos';
+
+  @override
+  String checkedIngredients(int count, String language) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Leímos $count ingredientes en $language',
+      one: 'Leímos 1 ingrediente en $language',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get checkedBothTexts => 'Comparamos el texto original y el traducido';
+
+  @override
+  String get checkedOriginal => 'Revisamos el texto original';
+
+  @override
+  String get checkedQuality => 'Calidad de lectura: buena';
+
+  @override
+  String get confirmTitle => '¿Es esto correcto?';
+
+  @override
+  String confirmUnderstood(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other:
+          'Entendí $count alérgenos. Si falta uno o sobra otro, tócalo para corregir.',
+      one:
+          'Entendí 1 alérgeno. Si falta uno o sobra otro, tócalo para corregir.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get confirmYouSaid => 'Lo que dijiste';
+
+  @override
+  String get confirmAddAnother => 'Añadir otro alérgeno';
+
+  @override
+  String get confirmReviewNote =>
+      'Revisa la lista. SanoScan solo buscará estos alérgenos en las etiquetas.';
+
+  @override
+  String get confirmSave => 'Sí, guardar mi perfil';
+
+  @override
+  String get confirmSpeakAgain => 'Hablar otra vez';
+
+  @override
+  String get confirmFixManually => 'Corregir a mano';
+
+  @override
+  String get editMyAllergens => 'Editar mis alérgenos';
+
+  @override
+  String get filterAll => 'Todos';
+
+  @override
+  String get filterTraces => 'Trazas';
+
+  @override
+  String get historyEmptyTitle => 'Aún no hay escaneos';
+
+  @override
+  String get historyEmptyBody =>
+      'Cuando escanees una etiqueta, aparecerá aquí. Solo se guarda en tu móvil.';
+
+  @override
+  String get historyFilterEmpty => 'No hay escaneos con este resultado.';
+
+  @override
+  String get scanFirstLabel => 'Escanear mi primera etiqueta';
+
+  @override
+  String get langEs => 'español';
+
+  @override
+  String get langEn => 'inglés';
+
+  @override
+  String get langFr => 'francés';
+
+  @override
+  String get langDe => 'alemán';
+
+  @override
+  String get langIt => 'italiano';
+
+  @override
+  String get langPt => 'portugués';
+
+  @override
+  String get langJa => 'japonés';
+
+  @override
+  String get langKo => 'coreano';
+
+  @override
+  String get langZh => 'chino';
+
+  @override
+  String get langNl => 'neerlandés';
+
+  @override
+  String get langUnknown => 'idioma desconocido';
+
+  @override
+  String limitTitle(int count) {
+    return 'Llegaste a $count escaneos hoy';
+  }
+
+  @override
+  String get limitBody =>
+      'Vuelve mañana o pasa a Pro para escanear sin límites.';
+
+  @override
+  String get seePro => 'Ver SanoScan Pro';
+
+  @override
+  String get seeHistory => 'Ver historial';
+
+  @override
+  String listAnd(String first, String last) {
+    return '$first y $last';
+  }
+
+  @override
+  String get noAllergensTitle => 'Elige tus alérgenos';
+
+  @override
+  String get noAllergensBody =>
+      'Tu perfil no tiene alérgenos. Elige al menos uno para empezar a escanear.';
+
+  @override
+  String originalIn(String language) {
+    return 'Original ($language)';
+  }
+
+  @override
+  String translatedIn(String language) {
+    return 'Traducido ($language)';
+  }
+
+  @override
+  String get readText => 'Texto leído';
+
+  @override
+  String readIn(String language) {
+    return 'Leído en $language';
+  }
+
+  @override
+  String readInTranslated(String source, String target) {
+    return 'Leído en $source, traducido al $target';
+  }
+
+  @override
+  String get photoStaysOnPhone => 'Tu foto no sale del teléfono';
+
+  @override
+  String get privacyNoAccount =>
+      'No necesitas cuenta ni registro. SanoScan no sabe quién eres.';
+
+  @override
+  String get privacyOnDevice =>
+      'Tus perfiles, alérgenos e historial se guardan solo en este teléfono.';
+
+  @override
+  String get privacyVoice =>
+      'La voz se reconoce en el teléfono y no se envía a ningún servidor.';
+
+  @override
+  String get privacyPhotos =>
+      'Las fotos se leen en el teléfono. Solo se guardan si guardas el escaneo en el historial.';
+
+  @override
+  String get privacyMetrics =>
+      'Solo se registran errores y métricas anónimas para mejorar la app, nunca tus fotos ni tus alérgenos.';
+
+  @override
+  String get proTagline => 'Escanea sin límites, cuida a toda tu familia.';
+
+  @override
+  String get proFree => 'Gratis';
+
+  @override
+  String get proRowScans => 'Escaneos al día';
+
+  @override
+  String get proRowLanguages => '6 idiomas sin conexión';
+
+  @override
+  String get proUnlimited => 'Sin límite';
+
+  @override
+  String get proUpToSix => 'Hasta 6';
+
+  @override
+  String get proThirtyDays => '30 días';
+
+  @override
+  String get proForever => 'Siempre';
+
+  @override
+  String get yes => 'Sí';
+
+  @override
+  String get proOneTime => 'pago único. Sin suscripción.';
+
+  @override
+  String proUnlock(String price) {
+    return 'Desbloquear Pro por $price';
+  }
+
+  @override
+  String get proRestore => 'Restaurar compra';
+
+  @override
+  String get proNotNow => 'Ahora no';
+
+  @override
+  String get proStoreNote =>
+      'El pago se hace en la tienda de tu móvil. No necesitas crear una cuenta.';
+
+  @override
+  String get purchaseNotReady =>
+      'Las compras se activan antes del lanzamiento.';
+
+  @override
+  String get proActive => 'Activo';
+
+  @override
+  String get proActiveBody => 'Compra única. Escaneos y perfiles sin límite.';
+
+  @override
+  String profileDefaultName(int number) {
+    return 'Perfil $number';
+  }
+
+  @override
+  String profilesCount(int count, int max) {
+    return '$count de $max';
+  }
+
+  @override
+  String profilesIntro(int count, int max) {
+    return '$count de $max perfiles. Cada persona tiene sus propios alérgenos.';
+  }
+
+  @override
+  String get profilesNote =>
+      'El perfil activo es el que usa el escáner. Los alérgenos de cada perfil se guardan solo en este teléfono.';
+
+  @override
+  String quotaRemaining(int remaining, int total) {
+    return 'Te quedan $remaining de $total escaneos hoy ·';
+  }
+
+  @override
+  String resultContainsSubtitle(int count, String profile) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count alérgenos de tu perfil $profile',
+      one: '1 alérgeno de tu perfil $profile',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String resultTracesSubtitle(int count, String profile) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other:
+          'El fabricante avisa de posible contaminación cruzada con $count alérgenos de tu perfil $profile.',
+      one:
+          'El fabricante avisa de posible contaminación cruzada con 1 alérgeno de tu perfil $profile.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String resultNotDetectedSubtitle(String profile) {
+    return 'No encontramos alérgenos de tu perfil $profile en el texto que leímos.';
+  }
+
+  @override
+  String get sanoName => 'Sano';
+
+  @override
+  String get save => 'Guardar';
+
+  @override
+  String get saveScanTitle => 'Guardar en el historial';
+
+  @override
+  String get saveScanHint => 'Nombre del producto (opcional)';
+
+  @override
+  String get savedToHistory => 'Guardado en el historial';
+
+  @override
+  String get scanAnother => 'Escanear otra';
+
+  @override
+  String get scannerHint => 'Acerca la etiqueta y toca';
+
+  @override
+  String get settingsOfflineLanguages => 'Idiomas sin conexión';
+
+  @override
+  String get settingsPrivacy => 'Privacidad';
+
+  @override
+  String get settingsPrivacyValue => 'Solo en tu móvil';
+
+  @override
+  String get settingsSaveHistory => 'Guardar historial';
+
+  @override
+  String get settingsVibrate => 'Vibración al escanear';
+
+  @override
+  String get stepReading => 'Leyendo el texto…';
+
+  @override
+  String get stepRead => 'Texto leído';
+
+  @override
+  String stepReadLanguage(String language) {
+    return 'Texto leído · $language detectado';
+  }
+
+  @override
+  String stepTranslating(String language) {
+    return 'Traduciendo al $language…';
+  }
+
+  @override
+  String stepTranslated(String language) {
+    return 'Traducido al $language';
+  }
+
+  @override
+  String stepAlreadyIn(String language) {
+    return 'Ya está en $language';
+  }
+
+  @override
+  String stepModelMissing(String language) {
+    return 'Sin traducción: falta descargar $language';
+  }
+
+  @override
+  String get stepOriginalOnly => 'Se revisa el texto original';
+
+  @override
+  String get stepMatching => 'Buscando tus alérgenos…';
+
+  @override
+  String get today => 'Hoy';
+
+  @override
+  String get yesterday => 'Ayer';
+
+  @override
+  String get tryAgain => 'Intentar de nuevo';
+
+  @override
+  String get unnamedScan => 'Escaneo sin nombre';
+
+  @override
+  String get unreadableTitle => 'No pudimos leer la etiqueta';
+
+  @override
+  String get unreadableBody =>
+      'Acerca la etiqueta, mejora la luz y evita los reflejos.';
+
+  @override
+  String get voiceChooseManually => 'Elegir a mano';
+
+  @override
+  String get voicePrompt =>
+      'Hola, soy Sano. Cuéntame a qué alérgenos eres sensible. Puedes hablar o escribir.';
+
+  @override
+  String get voiceListening => 'Escuchando… toca el micrófono al terminar';
+
+  @override
+  String get voiceTapToSpeak => 'Toca el micrófono y habla';
+
+  @override
+  String get voicePrivacy =>
+      'La voz se procesa en tu teléfono y no se envía a ningún servidor.';
+
+  @override
+  String get voiceTypeHint => 'O escribe aquí…';
+
+  @override
+  String get voiceMicLabel => 'Micrófono';
+
+  @override
+  String get voiceDenied =>
+      'Sin permiso de micrófono. Puedes escribir o elegir a mano.';
+
+  @override
+  String get voiceNoMatch =>
+      'No te escuché bien. Toca el micrófono e intenta de nuevo.';
+
+  @override
+  String get voiceOfflineUnsupported =>
+      'Tu teléfono no tiene reconocimiento de voz sin conexión para este idioma. Escribe o elige a mano.';
+
+  @override
+  String get voiceUnavailable =>
+      'El reconocimiento de voz no está disponible. Escribe o elige a mano.';
+
+  @override
+  String get voiceNothingFound =>
+      'No reconocí ningún alérgeno. Prueba otra vez o elige a mano.';
+
+  @override
+  String get saved => 'Guardado';
 }

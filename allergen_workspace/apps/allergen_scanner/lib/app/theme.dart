@@ -8,15 +8,54 @@ abstract final class SanoColors {
   static const coffee = Color(0xFF2A160A);
   static const contains = Color(0xFFC4161C);
   static const traces = Color(0xFFA55A00);
+  static const tracesBg = Color(0xFFFFF0D6);
 
-  static const paper = Color(0xFFFFF1DE);
-  static const card = Color(0xFFFFFCF7);
-  static const muted = Color(0xFF6B5546);
-  static const line = Color(0xFFEADCC8);
-  static const field = Color(0xFFF0E1C9);
+  static const paper = Color(0xFFFFF1D9);
+  static const card = Color(0xFFFFFDF8);
+  static const muted = Color(0xFF5B4A40);
+  static const accent = Color(0xFFA83F00);
+  static const tabActive = Color(0xFFB84A00);
+  static const line = Color(0x242A160A);
+  static const field = Color(0xFFEFDDC2);
   static const blush = Color(0xFFF4B6B0);
+  static const darkGlow = Color(0xFF3A2F2A);
+  static const proGlow = Color(0xFF7A3A12);
 
-  static const brandGradient = LinearGradient(colors: [orange, tangerine, amber]);
+  static const brandGradient = LinearGradient(
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    colors: [orange, tangerine, amber],
+  );
+
+  static const darkBackground = RadialGradient(
+    center: Alignment.topCenter,
+    radius: 1.2,
+    colors: [darkGlow, coffee],
+  );
+
+  static const proBackground = RadialGradient(
+    center: Alignment(-0.4, -0.7),
+    radius: 1.1,
+    colors: [proGlow, coffee],
+  );
+}
+
+abstract final class SanoShadows {
+  static const soft = [
+    BoxShadow(color: Color(0x0F2A160A), blurRadius: 2, offset: Offset(0, 1)),
+    BoxShadow(color: Color(0x1A2A160A), blurRadius: 24, offset: Offset(0, 8)),
+  ];
+
+  static const brand = [
+    BoxShadow(color: Color(0x59EA6113), blurRadius: 24, offset: Offset(0, 8)),
+  ];
+}
+
+abstract final class SanoMotion {
+  static const sheet = Cubic(.22, 1, .36, 1);
+  static const pop = Cubic(.34, 1.56, .64, 1);
+
+  static bool reduced(BuildContext context) => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 }
 
 class ResultColors extends ThemeExtension<ResultColors> {
@@ -51,8 +90,6 @@ class ResultColors extends ThemeExtension<ResultColors> {
 }
 
 abstract final class AppTheme {
-  static const fontFamily = 'Inter';
-
   static ThemeData light() {
     const scheme = ColorScheme(
       brightness: Brightness.light,
@@ -82,21 +119,24 @@ abstract final class AppTheme {
       outlineVariant: SanoColors.line,
     );
 
-    final base = ThemeData(colorScheme: scheme, fontFamily: fontFamily);
+    final base = ThemeData(colorScheme: scheme);
     final text = base.textTheme.apply(bodyColor: SanoColors.coffee, displayColor: SanoColors.coffee);
     final pillShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(28));
+    const buttonText = TextStyle(fontSize: 17, fontWeight: FontWeight.w700);
 
     return base.copyWith(
       scaffoldBackgroundColor: SanoColors.paper,
       textTheme: text.copyWith(
-        displaySmall: text.displaySmall?.copyWith(fontWeight: FontWeight.w800, letterSpacing: -1),
-        headlineLarge: text.headlineLarge?.copyWith(fontWeight: FontWeight.w800, letterSpacing: -0.8),
-        headlineMedium: text.headlineMedium?.copyWith(fontWeight: FontWeight.w800, letterSpacing: -0.6),
-        headlineSmall: text.headlineSmall?.copyWith(fontWeight: FontWeight.w700),
-        titleLarge: text.titleLarge?.copyWith(fontWeight: FontWeight.w700),
-        titleMedium: text.titleMedium?.copyWith(fontWeight: FontWeight.w700),
-        bodyLarge: text.bodyLarge?.copyWith(fontSize: 16, height: 1.4),
-        bodyMedium: text.bodyMedium?.copyWith(fontSize: 14, height: 1.4),
+        displaySmall: text.displaySmall?.copyWith(fontSize: 34, fontWeight: FontWeight.w800, letterSpacing: -0.7),
+        headlineLarge: text.headlineLarge?.copyWith(fontSize: 34, fontWeight: FontWeight.w800, letterSpacing: -0.7),
+        headlineMedium: text.headlineMedium?.copyWith(fontSize: 28, fontWeight: FontWeight.w800, letterSpacing: -0.5),
+        headlineSmall: text.headlineSmall?.copyWith(fontSize: 22, fontWeight: FontWeight.w800),
+        titleLarge: text.titleLarge?.copyWith(fontSize: 20, fontWeight: FontWeight.w700),
+        titleMedium: text.titleMedium?.copyWith(fontSize: 18, fontWeight: FontWeight.w700),
+        titleSmall: text.titleSmall?.copyWith(fontSize: 15, fontWeight: FontWeight.w700),
+        bodyLarge: text.bodyLarge?.copyWith(fontSize: 17, height: 1.4),
+        bodyMedium: text.bodyMedium?.copyWith(fontSize: 15, height: 1.4),
+        bodySmall: text.bodySmall?.copyWith(fontSize: 14, height: 1.4, color: SanoColors.muted),
       ),
       appBarTheme: const AppBarTheme(
         centerTitle: false,
@@ -120,7 +160,7 @@ abstract final class AppTheme {
           shape: pillShape,
           backgroundColor: SanoColors.orange,
           foregroundColor: SanoColors.coffee,
-          textStyle: const TextStyle(fontFamily: fontFamily, fontSize: 17, fontWeight: FontWeight.w700),
+          textStyle: buttonText,
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -130,44 +170,42 @@ abstract final class AppTheme {
           backgroundColor: SanoColors.card,
           foregroundColor: SanoColors.coffee,
           side: const BorderSide(color: SanoColors.line),
-          textStyle: const TextStyle(fontFamily: fontFamily, fontSize: 17, fontWeight: FontWeight.w700),
+          textStyle: buttonText,
         ),
       ),
       textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(foregroundColor: SanoColors.traces),
+        style: TextButton.styleFrom(
+          foregroundColor: SanoColors.accent,
+          minimumSize: const Size(48, 48),
+          textStyle: buttonText,
+        ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: SanoColors.field,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
         contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+        hintStyle: const TextStyle(color: SanoColors.muted, fontSize: 17),
       ),
-      navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: SanoColors.card,
-        indicatorColor: SanoColors.cream,
-        surfaceTintColor: Colors.transparent,
-        labelTextStyle: WidgetStateProperty.resolveWith(
-          (states) => TextStyle(
-            fontFamily: fontFamily,
-            fontSize: 13,
-            fontWeight: FontWeight.w600,
-            color: states.contains(WidgetState.selected) ? SanoColors.orange : SanoColors.muted,
-          ),
-        ),
-        iconTheme: WidgetStateProperty.resolveWith(
-          (states) => IconThemeData(
-            color: states.contains(WidgetState.selected) ? SanoColors.orange : SanoColors.muted,
-          ),
-        ),
-      ),
-      dividerTheme: const DividerThemeData(color: SanoColors.line, space: 1),
+      dividerTheme: const DividerThemeData(color: SanoColors.line, space: 1, thickness: 1),
       switchTheme: SwitchThemeData(
         trackColor: WidgetStateProperty.resolveWith(
-          (states) => states.contains(WidgetState.selected) ? SanoColors.orange : SanoColors.line,
+          (states) => states.contains(WidgetState.selected) ? SanoColors.orange : SanoColors.field,
         ),
+        trackOutlineColor: const WidgetStatePropertyAll(Colors.transparent),
         thumbColor: const WidgetStatePropertyAll(Colors.white),
       ),
-      snackBarTheme: const SnackBarThemeData(backgroundColor: SanoColors.coffee),
+      snackBarTheme: const SnackBarThemeData(
+        backgroundColor: SanoColors.coffee,
+        behavior: SnackBarBehavior.floating,
+      ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: SanoColors.paper,
+        showDragHandle: true,
+        dragHandleColor: Color(0x552A160A),
+        dragHandleSize: Size(44, 5),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(36))),
+      ),
       extensions: const [
         ResultColors(
           contains: SanoColors.contains,

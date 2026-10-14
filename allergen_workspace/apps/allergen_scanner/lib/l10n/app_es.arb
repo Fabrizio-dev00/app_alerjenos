@@ -206,5 +206,310 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allergenPossible": "{name} (posible)",
+  "@allergenPossible": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "allergenTraces": "{name} (trazas)",
+  "@allergenTraces": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "possibleHint": "El ingrediente no dice su origen. Revisa la etiqueta.",
+  "cameraGrant": "Dar permiso",
+  "cameraNeededTitle": "Necesitamos tu cámara",
+  "cameraNeededBody": "SanoScan la usa solo para leer etiquetas. La foto no sale de tu teléfono.",
+  "checkedTitle": "Lo que revisamos",
+  "checkedIngredients": "{count, plural, =1{Leímos 1 ingrediente en {language}} other{Leímos {count} ingredientes en {language}}}",
+  "@checkedIngredients": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "checkedBothTexts": "Comparamos el texto original y el traducido",
+  "checkedOriginal": "Revisamos el texto original",
+  "checkedQuality": "Calidad de lectura: buena",
+  "confirmTitle": "¿Es esto correcto?",
+  "confirmUnderstood": "{count, plural, =1{Entendí 1 alérgeno. Si falta uno o sobra otro, tócalo para corregir.} other{Entendí {count} alérgenos. Si falta uno o sobra otro, tócalo para corregir.}}",
+  "@confirmUnderstood": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "confirmYouSaid": "Lo que dijiste",
+  "confirmAddAnother": "Añadir otro alérgeno",
+  "confirmReviewNote": "Revisa la lista. SanoScan solo buscará estos alérgenos en las etiquetas.",
+  "confirmSave": "Sí, guardar mi perfil",
+  "confirmSpeakAgain": "Hablar otra vez",
+  "confirmFixManually": "Corregir a mano",
+  "editMyAllergens": "Editar mis alérgenos",
+  "filterAll": "Todos",
+  "filterTraces": "Trazas",
+  "historyEmptyTitle": "Aún no hay escaneos",
+  "historyEmptyBody": "Cuando escanees una etiqueta, aparecerá aquí. Solo se guarda en tu móvil.",
+  "historyFilterEmpty": "No hay escaneos con este resultado.",
+  "scanFirstLabel": "Escanear mi primera etiqueta",
+  "langEs": "español",
+  "langEn": "inglés",
+  "langFr": "francés",
+  "langDe": "alemán",
+  "langIt": "italiano",
+  "langPt": "portugués",
+  "langJa": "japonés",
+  "langKo": "coreano",
+  "langZh": "chino",
+  "langNl": "neerlandés",
+  "langUnknown": "idioma desconocido",
+  "limitTitle": "Llegaste a {count} escaneos hoy",
+  "@limitTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "limitBody": "Vuelve mañana o pasa a Pro para escanear sin límites.",
+  "seePro": "Ver SanoScan Pro",
+  "seeHistory": "Ver historial",
+  "listAnd": "{first} y {last}",
+  "@listAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "last": {
+        "type": "String"
+      }
+    }
+  },
+  "noAllergensTitle": "Elige tus alérgenos",
+  "noAllergensBody": "Tu perfil no tiene alérgenos. Elige al menos uno para empezar a escanear.",
+  "originalIn": "Original ({language})",
+  "@originalIn": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "translatedIn": "Traducido ({language})",
+  "@translatedIn": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "readText": "Texto leído",
+  "readIn": "Leído en {language}",
+  "@readIn": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "readInTranslated": "Leído en {source}, traducido al {target}",
+  "@readInTranslated": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "photoStaysOnPhone": "Tu foto no sale del teléfono",
+  "privacyNoAccount": "No necesitas cuenta ni registro. SanoScan no sabe quién eres.",
+  "privacyOnDevice": "Tus perfiles, alérgenos e historial se guardan solo en este teléfono.",
+  "privacyVoice": "La voz se reconoce en el teléfono y no se envía a ningún servidor.",
+  "privacyPhotos": "Las fotos se leen en el teléfono. Solo se guardan si guardas el escaneo en el historial.",
+  "privacyMetrics": "Solo se registran errores y métricas anónimas para mejorar la app, nunca tus fotos ni tus alérgenos.",
+  "proTagline": "Escanea sin límites, cuida a toda tu familia.",
+  "proFree": "Gratis",
+  "proRowScans": "Escaneos al día",
+  "proRowLanguages": "6 idiomas sin conexión",
+  "proUnlimited": "Sin límite",
+  "proUpToSix": "Hasta 6",
+  "proThirtyDays": "30 días",
+  "proForever": "Siempre",
+  "yes": "Sí",
+  "proOneTime": "pago único. Sin suscripción.",
+  "proUnlock": "Desbloquear Pro por {price}",
+  "@proUnlock": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proRestore": "Restaurar compra",
+  "proNotNow": "Ahora no",
+  "proStoreNote": "El pago se hace en la tienda de tu móvil. No necesitas crear una cuenta.",
+  "purchaseNotReady": "Las compras se activan antes del lanzamiento.",
+  "proActive": "Activo",
+  "proActiveBody": "Compra única. Escaneos y perfiles sin límite.",
+  "profileDefaultName": "Perfil {number}",
+  "@profileDefaultName": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "profilesCount": "{count} de {max}",
+  "@profilesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "profilesIntro": "{count} de {max} perfiles. Cada persona tiene sus propios alérgenos.",
+  "@profilesIntro": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "profilesNote": "El perfil activo es el que usa el escáner. Los alérgenos de cada perfil se guardan solo en este teléfono.",
+  "quotaRemaining": "Te quedan {remaining} de {total} escaneos hoy ·",
+  "@quotaRemaining": {
+    "placeholders": {
+      "remaining": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "resultContainsSubtitle": "{count, plural, =1{1 alérgeno de tu perfil {profile}} other{{count} alérgenos de tu perfil {profile}}}",
+  "@resultContainsSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "profile": {
+        "type": "String"
+      }
+    }
+  },
+  "resultTracesSubtitle": "{count, plural, =1{El fabricante avisa de posible contaminación cruzada con 1 alérgeno de tu perfil {profile}.} other{El fabricante avisa de posible contaminación cruzada con {count} alérgenos de tu perfil {profile}.}}",
+  "@resultTracesSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "profile": {
+        "type": "String"
+      }
+    }
+  },
+  "resultNotDetectedSubtitle": "No encontramos alérgenos de tu perfil {profile} en el texto que leímos.",
+  "@resultNotDetectedSubtitle": {
+    "placeholders": {
+      "profile": {
+        "type": "String"
+      }
+    }
+  },
+  "sanoName": "Sano",
+  "save": "Guardar",
+  "saveScanTitle": "Guardar en el historial",
+  "saveScanHint": "Nombre del producto (opcional)",
+  "savedToHistory": "Guardado en el historial",
+  "scanAnother": "Escanear otra",
+  "scannerHint": "Acerca la etiqueta y toca",
+  "settingsOfflineLanguages": "Idiomas sin conexión",
+  "settingsPrivacy": "Privacidad",
+  "settingsPrivacyValue": "Solo en tu móvil",
+  "settingsSaveHistory": "Guardar historial",
+  "settingsVibrate": "Vibración al escanear",
+  "stepReading": "Leyendo el texto…",
+  "stepRead": "Texto leído",
+  "stepReadLanguage": "Texto leído · {language} detectado",
+  "@stepReadLanguage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "stepTranslating": "Traduciendo al {language}…",
+  "@stepTranslating": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "stepTranslated": "Traducido al {language}",
+  "@stepTranslated": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "stepAlreadyIn": "Ya está en {language}",
+  "@stepAlreadyIn": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "stepModelMissing": "Sin traducción: falta descargar {language}",
+  "@stepModelMissing": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "stepOriginalOnly": "Se revisa el texto original",
+  "stepMatching": "Buscando tus alérgenos…",
+  "today": "Hoy",
+  "yesterday": "Ayer",
+  "tryAgain": "Intentar de nuevo",
+  "unnamedScan": "Escaneo sin nombre",
+  "unreadableTitle": "No pudimos leer la etiqueta",
+  "unreadableBody": "Acerca la etiqueta, mejora la luz y evita los reflejos.",
+  "voiceChooseManually": "Elegir a mano",
+  "voicePrompt": "Hola, soy Sano. Cuéntame a qué alérgenos eres sensible. Puedes hablar o escribir.",
+  "voiceListening": "Escuchando… toca el micrófono al terminar",
+  "voiceTapToSpeak": "Toca el micrófono y habla",
+  "voicePrivacy": "La voz se procesa en tu teléfono y no se envía a ningún servidor.",
+  "voiceTypeHint": "O escribe aquí…",
+  "voiceMicLabel": "Micrófono",
+  "voiceDenied": "Sin permiso de micrófono. Puedes escribir o elegir a mano.",
+  "voiceNoMatch": "No te escuché bien. Toca el micrófono e intenta de nuevo.",
+  "voiceOfflineUnsupported": "Tu teléfono no tiene reconocimiento de voz sin conexión para este idioma. Escribe o elige a mano.",
+  "voiceUnavailable": "El reconocimiento de voz no está disponible. Escribe o elige a mano.",
+  "voiceNothingFound": "No reconocí ningún alérgeno. Prueba otra vez o elige a mano.",
+  "saved": "Guardado"
 }

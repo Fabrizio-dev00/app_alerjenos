@@ -799,6 +799,726 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Versión {version}'**
   String settingsVersion(String version);
+
+  /// No description provided for @allergenPossible.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} (posible)'**
+  String allergenPossible(String name);
+
+  /// No description provided for @allergenTraces.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} (trazas)'**
+  String allergenTraces(String name);
+
+  /// No description provided for @possibleHint.
+  ///
+  /// In es, this message translates to:
+  /// **'El ingrediente no dice su origen. Revisa la etiqueta.'**
+  String get possibleHint;
+
+  /// No description provided for @cameraGrant.
+  ///
+  /// In es, this message translates to:
+  /// **'Dar permiso'**
+  String get cameraGrant;
+
+  /// No description provided for @cameraNeededTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitamos tu cámara'**
+  String get cameraNeededTitle;
+
+  /// No description provided for @cameraNeededBody.
+  ///
+  /// In es, this message translates to:
+  /// **'SanoScan la usa solo para leer etiquetas. La foto no sale de tu teléfono.'**
+  String get cameraNeededBody;
+
+  /// No description provided for @checkedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo que revisamos'**
+  String get checkedTitle;
+
+  /// No description provided for @checkedIngredients.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{Leímos 1 ingrediente en {language}} other{Leímos {count} ingredientes en {language}}}'**
+  String checkedIngredients(int count, String language);
+
+  /// No description provided for @checkedBothTexts.
+  ///
+  /// In es, this message translates to:
+  /// **'Comparamos el texto original y el traducido'**
+  String get checkedBothTexts;
+
+  /// No description provided for @checkedOriginal.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisamos el texto original'**
+  String get checkedOriginal;
+
+  /// No description provided for @checkedQuality.
+  ///
+  /// In es, this message translates to:
+  /// **'Calidad de lectura: buena'**
+  String get checkedQuality;
+
+  /// No description provided for @confirmTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Es esto correcto?'**
+  String get confirmTitle;
+
+  /// No description provided for @confirmUnderstood.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{Entendí 1 alérgeno. Si falta uno o sobra otro, tócalo para corregir.} other{Entendí {count} alérgenos. Si falta uno o sobra otro, tócalo para corregir.}}'**
+  String confirmUnderstood(int count);
+
+  /// No description provided for @confirmYouSaid.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo que dijiste'**
+  String get confirmYouSaid;
+
+  /// No description provided for @confirmAddAnother.
+  ///
+  /// In es, this message translates to:
+  /// **'Añadir otro alérgeno'**
+  String get confirmAddAnother;
+
+  /// No description provided for @confirmReviewNote.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisa la lista. SanoScan solo buscará estos alérgenos en las etiquetas.'**
+  String get confirmReviewNote;
+
+  /// No description provided for @confirmSave.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí, guardar mi perfil'**
+  String get confirmSave;
+
+  /// No description provided for @confirmSpeakAgain.
+  ///
+  /// In es, this message translates to:
+  /// **'Hablar otra vez'**
+  String get confirmSpeakAgain;
+
+  /// No description provided for @confirmFixManually.
+  ///
+  /// In es, this message translates to:
+  /// **'Corregir a mano'**
+  String get confirmFixManually;
+
+  /// No description provided for @editMyAllergens.
+  ///
+  /// In es, this message translates to:
+  /// **'Editar mis alérgenos'**
+  String get editMyAllergens;
+
+  /// No description provided for @filterAll.
+  ///
+  /// In es, this message translates to:
+  /// **'Todos'**
+  String get filterAll;
+
+  /// No description provided for @filterTraces.
+  ///
+  /// In es, this message translates to:
+  /// **'Trazas'**
+  String get filterTraces;
+
+  /// No description provided for @historyEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún no hay escaneos'**
+  String get historyEmptyTitle;
+
+  /// No description provided for @historyEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuando escanees una etiqueta, aparecerá aquí. Solo se guarda en tu móvil.'**
+  String get historyEmptyBody;
+
+  /// No description provided for @historyFilterEmpty.
+  ///
+  /// In es, this message translates to:
+  /// **'No hay escaneos con este resultado.'**
+  String get historyFilterEmpty;
+
+  /// No description provided for @scanFirstLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Escanear mi primera etiqueta'**
+  String get scanFirstLabel;
+
+  /// No description provided for @langEs.
+  ///
+  /// In es, this message translates to:
+  /// **'español'**
+  String get langEs;
+
+  /// No description provided for @langEn.
+  ///
+  /// In es, this message translates to:
+  /// **'inglés'**
+  String get langEn;
+
+  /// No description provided for @langFr.
+  ///
+  /// In es, this message translates to:
+  /// **'francés'**
+  String get langFr;
+
+  /// No description provided for @langDe.
+  ///
+  /// In es, this message translates to:
+  /// **'alemán'**
+  String get langDe;
+
+  /// No description provided for @langIt.
+  ///
+  /// In es, this message translates to:
+  /// **'italiano'**
+  String get langIt;
+
+  /// No description provided for @langPt.
+  ///
+  /// In es, this message translates to:
+  /// **'portugués'**
+  String get langPt;
+
+  /// No description provided for @langJa.
+  ///
+  /// In es, this message translates to:
+  /// **'japonés'**
+  String get langJa;
+
+  /// No description provided for @langKo.
+  ///
+  /// In es, this message translates to:
+  /// **'coreano'**
+  String get langKo;
+
+  /// No description provided for @langZh.
+  ///
+  /// In es, this message translates to:
+  /// **'chino'**
+  String get langZh;
+
+  /// No description provided for @langNl.
+  ///
+  /// In es, this message translates to:
+  /// **'neerlandés'**
+  String get langNl;
+
+  /// No description provided for @langUnknown.
+  ///
+  /// In es, this message translates to:
+  /// **'idioma desconocido'**
+  String get langUnknown;
+
+  /// No description provided for @limitTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Llegaste a {count} escaneos hoy'**
+  String limitTitle(int count);
+
+  /// No description provided for @limitBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Vuelve mañana o pasa a Pro para escanear sin límites.'**
+  String get limitBody;
+
+  /// No description provided for @seePro.
+  ///
+  /// In es, this message translates to:
+  /// **'Ver SanoScan Pro'**
+  String get seePro;
+
+  /// No description provided for @seeHistory.
+  ///
+  /// In es, this message translates to:
+  /// **'Ver historial'**
+  String get seeHistory;
+
+  /// No description provided for @listAnd.
+  ///
+  /// In es, this message translates to:
+  /// **'{first} y {last}'**
+  String listAnd(String first, String last);
+
+  /// No description provided for @noAllergensTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige tus alérgenos'**
+  String get noAllergensTitle;
+
+  /// No description provided for @noAllergensBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu perfil no tiene alérgenos. Elige al menos uno para empezar a escanear.'**
+  String get noAllergensBody;
+
+  /// No description provided for @originalIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Original ({language})'**
+  String originalIn(String language);
+
+  /// No description provided for @translatedIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Traducido ({language})'**
+  String translatedIn(String language);
+
+  /// No description provided for @readText.
+  ///
+  /// In es, this message translates to:
+  /// **'Texto leído'**
+  String get readText;
+
+  /// No description provided for @readIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Leído en {language}'**
+  String readIn(String language);
+
+  /// No description provided for @readInTranslated.
+  ///
+  /// In es, this message translates to:
+  /// **'Leído en {source}, traducido al {target}'**
+  String readInTranslated(String source, String target);
+
+  /// No description provided for @photoStaysOnPhone.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu foto no sale del teléfono'**
+  String get photoStaysOnPhone;
+
+  /// No description provided for @privacyNoAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'No necesitas cuenta ni registro. SanoScan no sabe quién eres.'**
+  String get privacyNoAccount;
+
+  /// No description provided for @privacyOnDevice.
+  ///
+  /// In es, this message translates to:
+  /// **'Tus perfiles, alérgenos e historial se guardan solo en este teléfono.'**
+  String get privacyOnDevice;
+
+  /// No description provided for @privacyVoice.
+  ///
+  /// In es, this message translates to:
+  /// **'La voz se reconoce en el teléfono y no se envía a ningún servidor.'**
+  String get privacyVoice;
+
+  /// No description provided for @privacyPhotos.
+  ///
+  /// In es, this message translates to:
+  /// **'Las fotos se leen en el teléfono. Solo se guardan si guardas el escaneo en el historial.'**
+  String get privacyPhotos;
+
+  /// No description provided for @privacyMetrics.
+  ///
+  /// In es, this message translates to:
+  /// **'Solo se registran errores y métricas anónimas para mejorar la app, nunca tus fotos ni tus alérgenos.'**
+  String get privacyMetrics;
+
+  /// No description provided for @proTagline.
+  ///
+  /// In es, this message translates to:
+  /// **'Escanea sin límites, cuida a toda tu familia.'**
+  String get proTagline;
+
+  /// No description provided for @proFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Gratis'**
+  String get proFree;
+
+  /// No description provided for @proRowScans.
+  ///
+  /// In es, this message translates to:
+  /// **'Escaneos al día'**
+  String get proRowScans;
+
+  /// No description provided for @proRowLanguages.
+  ///
+  /// In es, this message translates to:
+  /// **'6 idiomas sin conexión'**
+  String get proRowLanguages;
+
+  /// No description provided for @proUnlimited.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin límite'**
+  String get proUnlimited;
+
+  /// No description provided for @proUpToSix.
+  ///
+  /// In es, this message translates to:
+  /// **'Hasta 6'**
+  String get proUpToSix;
+
+  /// No description provided for @proThirtyDays.
+  ///
+  /// In es, this message translates to:
+  /// **'30 días'**
+  String get proThirtyDays;
+
+  /// No description provided for @proForever.
+  ///
+  /// In es, this message translates to:
+  /// **'Siempre'**
+  String get proForever;
+
+  /// No description provided for @yes.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí'**
+  String get yes;
+
+  /// No description provided for @proOneTime.
+  ///
+  /// In es, this message translates to:
+  /// **'pago único. Sin suscripción.'**
+  String get proOneTime;
+
+  /// No description provided for @proUnlock.
+  ///
+  /// In es, this message translates to:
+  /// **'Desbloquear Pro por {price}'**
+  String proUnlock(String price);
+
+  /// No description provided for @proRestore.
+  ///
+  /// In es, this message translates to:
+  /// **'Restaurar compra'**
+  String get proRestore;
+
+  /// No description provided for @proNotNow.
+  ///
+  /// In es, this message translates to:
+  /// **'Ahora no'**
+  String get proNotNow;
+
+  /// No description provided for @proStoreNote.
+  ///
+  /// In es, this message translates to:
+  /// **'El pago se hace en la tienda de tu móvil. No necesitas crear una cuenta.'**
+  String get proStoreNote;
+
+  /// No description provided for @purchaseNotReady.
+  ///
+  /// In es, this message translates to:
+  /// **'Las compras se activan antes del lanzamiento.'**
+  String get purchaseNotReady;
+
+  /// No description provided for @proActive.
+  ///
+  /// In es, this message translates to:
+  /// **'Activo'**
+  String get proActive;
+
+  /// No description provided for @proActiveBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Compra única. Escaneos y perfiles sin límite.'**
+  String get proActiveBody;
+
+  /// No description provided for @profileDefaultName.
+  ///
+  /// In es, this message translates to:
+  /// **'Perfil {number}'**
+  String profileDefaultName(int number);
+
+  /// No description provided for @profilesCount.
+  ///
+  /// In es, this message translates to:
+  /// **'{count} de {max}'**
+  String profilesCount(int count, int max);
+
+  /// No description provided for @profilesIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'{count} de {max} perfiles. Cada persona tiene sus propios alérgenos.'**
+  String profilesIntro(int count, int max);
+
+  /// No description provided for @profilesNote.
+  ///
+  /// In es, this message translates to:
+  /// **'El perfil activo es el que usa el escáner. Los alérgenos de cada perfil se guardan solo en este teléfono.'**
+  String get profilesNote;
+
+  /// No description provided for @quotaRemaining.
+  ///
+  /// In es, this message translates to:
+  /// **'Te quedan {remaining} de {total} escaneos hoy ·'**
+  String quotaRemaining(int remaining, int total);
+
+  /// No description provided for @resultContainsSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{1 alérgeno de tu perfil {profile}} other{{count} alérgenos de tu perfil {profile}}}'**
+  String resultContainsSubtitle(int count, String profile);
+
+  /// No description provided for @resultTracesSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{El fabricante avisa de posible contaminación cruzada con 1 alérgeno de tu perfil {profile}.} other{El fabricante avisa de posible contaminación cruzada con {count} alérgenos de tu perfil {profile}.}}'**
+  String resultTracesSubtitle(int count, String profile);
+
+  /// No description provided for @resultNotDetectedSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos alérgenos de tu perfil {profile} en el texto que leímos.'**
+  String resultNotDetectedSubtitle(String profile);
+
+  /// No description provided for @sanoName.
+  ///
+  /// In es, this message translates to:
+  /// **'Sano'**
+  String get sanoName;
+
+  /// No description provided for @save.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar'**
+  String get save;
+
+  /// No description provided for @saveScanTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar en el historial'**
+  String get saveScanTitle;
+
+  /// No description provided for @saveScanHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombre del producto (opcional)'**
+  String get saveScanHint;
+
+  /// No description provided for @savedToHistory.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardado en el historial'**
+  String get savedToHistory;
+
+  /// No description provided for @scanAnother.
+  ///
+  /// In es, this message translates to:
+  /// **'Escanear otra'**
+  String get scanAnother;
+
+  /// No description provided for @scannerHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Acerca la etiqueta y toca'**
+  String get scannerHint;
+
+  /// No description provided for @settingsOfflineLanguages.
+  ///
+  /// In es, this message translates to:
+  /// **'Idiomas sin conexión'**
+  String get settingsOfflineLanguages;
+
+  /// No description provided for @settingsPrivacy.
+  ///
+  /// In es, this message translates to:
+  /// **'Privacidad'**
+  String get settingsPrivacy;
+
+  /// No description provided for @settingsPrivacyValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Solo en tu móvil'**
+  String get settingsPrivacyValue;
+
+  /// No description provided for @settingsSaveHistory.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar historial'**
+  String get settingsSaveHistory;
+
+  /// No description provided for @settingsVibrate.
+  ///
+  /// In es, this message translates to:
+  /// **'Vibración al escanear'**
+  String get settingsVibrate;
+
+  /// No description provided for @stepReading.
+  ///
+  /// In es, this message translates to:
+  /// **'Leyendo el texto…'**
+  String get stepReading;
+
+  /// No description provided for @stepRead.
+  ///
+  /// In es, this message translates to:
+  /// **'Texto leído'**
+  String get stepRead;
+
+  /// No description provided for @stepReadLanguage.
+  ///
+  /// In es, this message translates to:
+  /// **'Texto leído · {language} detectado'**
+  String stepReadLanguage(String language);
+
+  /// No description provided for @stepTranslating.
+  ///
+  /// In es, this message translates to:
+  /// **'Traduciendo al {language}…'**
+  String stepTranslating(String language);
+
+  /// No description provided for @stepTranslated.
+  ///
+  /// In es, this message translates to:
+  /// **'Traducido al {language}'**
+  String stepTranslated(String language);
+
+  /// No description provided for @stepAlreadyIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya está en {language}'**
+  String stepAlreadyIn(String language);
+
+  /// No description provided for @stepModelMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin traducción: falta descargar {language}'**
+  String stepModelMissing(String language);
+
+  /// No description provided for @stepOriginalOnly.
+  ///
+  /// In es, this message translates to:
+  /// **'Se revisa el texto original'**
+  String get stepOriginalOnly;
+
+  /// No description provided for @stepMatching.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscando tus alérgenos…'**
+  String get stepMatching;
+
+  /// No description provided for @today.
+  ///
+  /// In es, this message translates to:
+  /// **'Hoy'**
+  String get today;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In es, this message translates to:
+  /// **'Ayer'**
+  String get yesterday;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In es, this message translates to:
+  /// **'Intentar de nuevo'**
+  String get tryAgain;
+
+  /// No description provided for @unnamedScan.
+  ///
+  /// In es, this message translates to:
+  /// **'Escaneo sin nombre'**
+  String get unnamedScan;
+
+  /// No description provided for @unreadableTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos leer la etiqueta'**
+  String get unreadableTitle;
+
+  /// No description provided for @unreadableBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Acerca la etiqueta, mejora la luz y evita los reflejos.'**
+  String get unreadableBody;
+
+  /// No description provided for @voiceChooseManually.
+  ///
+  /// In es, this message translates to:
+  /// **'Elegir a mano'**
+  String get voiceChooseManually;
+
+  /// No description provided for @voicePrompt.
+  ///
+  /// In es, this message translates to:
+  /// **'Hola, soy Sano. Cuéntame a qué alérgenos eres sensible. Puedes hablar o escribir.'**
+  String get voicePrompt;
+
+  /// No description provided for @voiceListening.
+  ///
+  /// In es, this message translates to:
+  /// **'Escuchando… toca el micrófono al terminar'**
+  String get voiceListening;
+
+  /// No description provided for @voiceTapToSpeak.
+  ///
+  /// In es, this message translates to:
+  /// **'Toca el micrófono y habla'**
+  String get voiceTapToSpeak;
+
+  /// No description provided for @voicePrivacy.
+  ///
+  /// In es, this message translates to:
+  /// **'La voz se procesa en tu teléfono y no se envía a ningún servidor.'**
+  String get voicePrivacy;
+
+  /// No description provided for @voiceTypeHint.
+  ///
+  /// In es, this message translates to:
+  /// **'O escribe aquí…'**
+  String get voiceTypeHint;
+
+  /// No description provided for @voiceMicLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Micrófono'**
+  String get voiceMicLabel;
+
+  /// No description provided for @voiceDenied.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin permiso de micrófono. Puedes escribir o elegir a mano.'**
+  String get voiceDenied;
+
+  /// No description provided for @voiceNoMatch.
+  ///
+  /// In es, this message translates to:
+  /// **'No te escuché bien. Toca el micrófono e intenta de nuevo.'**
+  String get voiceNoMatch;
+
+  /// No description provided for @voiceOfflineUnsupported.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu teléfono no tiene reconocimiento de voz sin conexión para este idioma. Escribe o elige a mano.'**
+  String get voiceOfflineUnsupported;
+
+  /// No description provided for @voiceUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'El reconocimiento de voz no está disponible. Escribe o elige a mano.'**
+  String get voiceUnavailable;
+
+  /// No description provided for @voiceNothingFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No reconocí ningún alérgeno. Prueba otra vez o elige a mano.'**
+  String get voiceNothingFound;
+
+  /// No description provided for @saved.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardado'**
+  String get saved;
 }
 
 class _AppLocalizationsDelegate

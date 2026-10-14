@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Usamos el micrófono para que puedas decir tus alérgenos. La voz se procesa en el teléfono.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Reconocemos tu voz en el teléfono para entender tus alérgenos.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Usamos la cámara para leer la lista de ingredientes de la etiqueta.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

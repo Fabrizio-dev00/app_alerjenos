@@ -423,4 +423,460 @@ class AppLocalizationsEn extends AppLocalizations {
   String settingsVersion(String version) {
     return 'Version $version';
   }
+
+  @override
+  String allergenPossible(String name) {
+    return '$name (possible)';
+  }
+
+  @override
+  String allergenTraces(String name) {
+    return '$name (traces)';
+  }
+
+  @override
+  String get possibleHint =>
+      'The ingredient does not state its source. Check the label.';
+
+  @override
+  String get cameraGrant => 'Allow camera';
+
+  @override
+  String get cameraNeededTitle => 'We need your camera';
+
+  @override
+  String get cameraNeededBody =>
+      'SanoScan only uses it to read labels. The photo never leaves your phone.';
+
+  @override
+  String get checkedTitle => 'What we checked';
+
+  @override
+  String checkedIngredients(int count, String language) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'We read $count ingredients in $language',
+      one: 'We read 1 ingredient in $language',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get checkedBothTexts =>
+      'We compared the original and the translated text';
+
+  @override
+  String get checkedOriginal => 'We checked the original text';
+
+  @override
+  String get checkedQuality => 'Reading quality: good';
+
+  @override
+  String get confirmTitle => 'Is this right?';
+
+  @override
+  String confirmUnderstood(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other:
+          'I understood $count allergens. If one is missing or extra, tap to fix it.',
+      one:
+          'I understood 1 allergen. If one is missing or extra, tap to fix it.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get confirmYouSaid => 'What you said';
+
+  @override
+  String get confirmAddAnother => 'Add another allergen';
+
+  @override
+  String get confirmReviewNote =>
+      'Review the list. SanoScan will only look for these allergens on labels.';
+
+  @override
+  String get confirmSave => 'Yes, save my profile';
+
+  @override
+  String get confirmSpeakAgain => 'Speak again';
+
+  @override
+  String get confirmFixManually => 'Fix by hand';
+
+  @override
+  String get editMyAllergens => 'Edit my allergens';
+
+  @override
+  String get filterAll => 'All';
+
+  @override
+  String get filterTraces => 'Traces';
+
+  @override
+  String get historyEmptyTitle => 'No scans yet';
+
+  @override
+  String get historyEmptyBody =>
+      'When you scan a label it will show up here. It is only stored on your phone.';
+
+  @override
+  String get historyFilterEmpty => 'No scans with this result.';
+
+  @override
+  String get scanFirstLabel => 'Scan my first label';
+
+  @override
+  String get langEs => 'Spanish';
+
+  @override
+  String get langEn => 'English';
+
+  @override
+  String get langFr => 'French';
+
+  @override
+  String get langDe => 'German';
+
+  @override
+  String get langIt => 'Italian';
+
+  @override
+  String get langPt => 'Portuguese';
+
+  @override
+  String get langJa => 'Japanese';
+
+  @override
+  String get langKo => 'Korean';
+
+  @override
+  String get langZh => 'Chinese';
+
+  @override
+  String get langNl => 'Dutch';
+
+  @override
+  String get langUnknown => 'unknown language';
+
+  @override
+  String limitTitle(int count) {
+    return 'You reached $count scans today';
+  }
+
+  @override
+  String get limitBody => 'Come back tomorrow or go Pro for unlimited scans.';
+
+  @override
+  String get seePro => 'See SanoScan Pro';
+
+  @override
+  String get seeHistory => 'See history';
+
+  @override
+  String listAnd(String first, String last) {
+    return '$first and $last';
+  }
+
+  @override
+  String get noAllergensTitle => 'Choose your allergens';
+
+  @override
+  String get noAllergensBody =>
+      'Your profile has no allergens. Choose at least one to start scanning.';
+
+  @override
+  String originalIn(String language) {
+    return 'Original ($language)';
+  }
+
+  @override
+  String translatedIn(String language) {
+    return 'Translated ($language)';
+  }
+
+  @override
+  String get readText => 'Text read';
+
+  @override
+  String readIn(String language) {
+    return 'Read in $language';
+  }
+
+  @override
+  String readInTranslated(String source, String target) {
+    return 'Read in $source, translated to $target';
+  }
+
+  @override
+  String get photoStaysOnPhone => 'Your photo never leaves the phone';
+
+  @override
+  String get privacyNoAccount =>
+      'No account or sign-up needed. SanoScan does not know who you are.';
+
+  @override
+  String get privacyOnDevice =>
+      'Your profiles, allergens and history are stored only on this phone.';
+
+  @override
+  String get privacyVoice =>
+      'Voice is recognized on the phone and never sent to a server.';
+
+  @override
+  String get privacyPhotos =>
+      'Photos are read on the phone. They are only kept if you save the scan to your history.';
+
+  @override
+  String get privacyMetrics =>
+      'Only anonymous errors and metrics are recorded to improve the app, never your photos or allergens.';
+
+  @override
+  String get proTagline => 'Scan without limits, look after your whole family.';
+
+  @override
+  String get proFree => 'Free';
+
+  @override
+  String get proRowScans => 'Scans per day';
+
+  @override
+  String get proRowLanguages => '6 offline languages';
+
+  @override
+  String get proUnlimited => 'Unlimited';
+
+  @override
+  String get proUpToSix => 'Up to 6';
+
+  @override
+  String get proThirtyDays => '30 days';
+
+  @override
+  String get proForever => 'Forever';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get proOneTime => 'one-time payment. No subscription.';
+
+  @override
+  String proUnlock(String price) {
+    return 'Unlock Pro for $price';
+  }
+
+  @override
+  String get proRestore => 'Restore purchase';
+
+  @override
+  String get proNotNow => 'Not now';
+
+  @override
+  String get proStoreNote =>
+      'Payment happens in your phone store. No account needed.';
+
+  @override
+  String get purchaseNotReady => 'Purchases will be enabled before launch.';
+
+  @override
+  String get proActive => 'Active';
+
+  @override
+  String get proActiveBody =>
+      'One-time purchase. Unlimited scans and profiles.';
+
+  @override
+  String profileDefaultName(int number) {
+    return 'Profile $number';
+  }
+
+  @override
+  String profilesCount(int count, int max) {
+    return '$count of $max';
+  }
+
+  @override
+  String profilesIntro(int count, int max) {
+    return '$count of $max profiles. Each person has their own allergens.';
+  }
+
+  @override
+  String get profilesNote =>
+      'The active profile is the one the scanner uses. Each profile allergens are stored only on this phone.';
+
+  @override
+  String quotaRemaining(int remaining, int total) {
+    return '$remaining of $total scans left today ·';
+  }
+
+  @override
+  String resultContainsSubtitle(int count, String profile) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count allergens from your profile $profile',
+      one: '1 allergen from your profile $profile',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String resultTracesSubtitle(int count, String profile) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other:
+          'The maker warns of possible cross-contamination with $count allergens from your profile $profile.',
+      one:
+          'The maker warns of possible cross-contamination with 1 allergen from your profile $profile.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String resultNotDetectedSubtitle(String profile) {
+    return 'We found no allergens from your profile $profile in the text we read.';
+  }
+
+  @override
+  String get sanoName => 'Sano';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get saveScanTitle => 'Save to history';
+
+  @override
+  String get saveScanHint => 'Product name (optional)';
+
+  @override
+  String get savedToHistory => 'Saved to history';
+
+  @override
+  String get scanAnother => 'Scan another';
+
+  @override
+  String get scannerHint => 'Bring the label closer and tap';
+
+  @override
+  String get settingsOfflineLanguages => 'Offline languages';
+
+  @override
+  String get settingsPrivacy => 'Privacy';
+
+  @override
+  String get settingsPrivacyValue => 'Only on your phone';
+
+  @override
+  String get settingsSaveHistory => 'Save history';
+
+  @override
+  String get settingsVibrate => 'Vibrate on scan';
+
+  @override
+  String get stepReading => 'Reading the text…';
+
+  @override
+  String get stepRead => 'Text read';
+
+  @override
+  String stepReadLanguage(String language) {
+    return 'Text read · $language detected';
+  }
+
+  @override
+  String stepTranslating(String language) {
+    return 'Translating to $language…';
+  }
+
+  @override
+  String stepTranslated(String language) {
+    return 'Translated to $language';
+  }
+
+  @override
+  String stepAlreadyIn(String language) {
+    return 'Already in $language';
+  }
+
+  @override
+  String stepModelMissing(String language) {
+    return 'No translation: $language is not downloaded';
+  }
+
+  @override
+  String get stepOriginalOnly => 'Checking the original text';
+
+  @override
+  String get stepMatching => 'Looking for your allergens…';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get yesterday => 'Yesterday';
+
+  @override
+  String get tryAgain => 'Try again';
+
+  @override
+  String get unnamedScan => 'Unnamed scan';
+
+  @override
+  String get unreadableTitle => 'We could not read the label';
+
+  @override
+  String get unreadableBody =>
+      'Bring the label closer, improve the light and avoid glare.';
+
+  @override
+  String get voiceChooseManually => 'Choose by hand';
+
+  @override
+  String get voicePrompt =>
+      'Hi, I am Sano. Tell me which allergens you react to. You can speak or type.';
+
+  @override
+  String get voiceListening => 'Listening… tap the microphone when you finish';
+
+  @override
+  String get voiceTapToSpeak => 'Tap the microphone and speak';
+
+  @override
+  String get voicePrivacy =>
+      'Your voice is processed on your phone and never sent to a server.';
+
+  @override
+  String get voiceTypeHint => 'Or type here…';
+
+  @override
+  String get voiceMicLabel => 'Microphone';
+
+  @override
+  String get voiceDenied =>
+      'No microphone permission. You can type or choose by hand.';
+
+  @override
+  String get voiceNoMatch =>
+      'I did not catch that. Tap the microphone and try again.';
+
+  @override
+  String get voiceOfflineUnsupported =>
+      'Your phone has no offline speech recognition for this language. Type or choose by hand.';
+
+  @override
+  String get voiceUnavailable =>
+      'Speech recognition is not available. Type or choose by hand.';
+
+  @override
+  String get voiceNothingFound =>
+      'I did not recognize any allergen. Try again or choose by hand.';
+
+  @override
+  String get saved => 'Saved';
 }

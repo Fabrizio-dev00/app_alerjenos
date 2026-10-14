@@ -52,5 +52,9 @@ flutter run
 - [x] Semana 2, día 1: `allergens.json` con 14 alérgenos UE + lactosa, sinónimos en 6 idiomas, códigos E/INS, frases de trazas y exclusiones
 - [x] Semana 2, día 2: comparador (original + traducción, trazas, códigos INS, falsos amigos) y separación de ingredientes
 - [x] Semana 2, día 3: diseño SanoScan aplicado (tema, 3 pestañas, mascota), perfiles con Drift, grilla de alérgenos y onboarding de 3 pasos
-- [ ] Semana 2, día 4: pantalla de resultado con tres niveles, resaltado y aviso de seguridad
-- [ ] Semana 2, día 5: historial y pasada completa con las etiquetas reales
+- [x] Diseño final SanoScan (`docs/design/DISENO_SANOSCAN.md`): tokens, barra flotante, iconos Lucide, Sano con estados y corona Pro
+- [x] Onboarding con voz o texto, confirmación y elección a mano
+- [x] Semana 2, día 4: escáner en vivo, procesando, resultado con tres niveles, resaltado sobre la foto, regla de calidad y aviso de seguridad
+- [x] Semana 2, día 5: historial (Drift v2 con migración), filtros, límite gratis de 5 escaneos diarios y 30 días de historial
+- [ ] Pasada completa con las etiquetas reales (`test_labels`)
+- [ ] Semana 3: RevenueCat y Pro real, pulido, Crashlytics, ficha de tienda y release

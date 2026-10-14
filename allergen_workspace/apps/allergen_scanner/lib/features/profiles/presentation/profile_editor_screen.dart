@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../app/home_shell.dart';
 import '../../../l10n/generated/app_localizations.dart';
 import '../../../shared/brand/gradient_button.dart';
 import '../domain/profile.dart';
@@ -100,7 +101,7 @@ class _ProfileEditorScreenState extends ConsumerState<ProfileEditorScreen> {
       body: Form(
         key: _form,
         child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+          padding: EdgeInsets.fromLTRB(20, 8, 20, HomeShell.bottomInset(context)),
           children: [
             TextFormField(
               controller: _name,
