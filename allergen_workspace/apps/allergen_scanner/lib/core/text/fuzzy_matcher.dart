@@ -57,6 +57,27 @@ abstract final class FuzzyMatcher {
     return best;
   }
 
+  static Iterable<FuzzyMatch> findAll(
+    List<String> tokens,
+    List<String> phrase, {
+    Set<String> stopWords = const {},
+  }) sync* {
+    if (phrase.isEmpty || tokens.length < phrase.length) return;
+    final target = phrase.join(' ');
+    final allowed = allowedDistance(target);
+    for (var start = 0; start + phrase.length <= tokens.length; start++) {
+      final windowTokens = tokens.sublist(start, start + phrase.length);
+      final window = windowTokens.join(' ');
+      if (window == target) {
+        yield FuzzyMatch(start: start, length: phrase.length, distance: 0);
+        continue;
+      }
+      if (allowed == 0 || windowTokens.any(stopWords.contains)) continue;
+      final distance = levenshtein(window, target, max: allowed);
+      if (distance <= allowed) yield FuzzyMatch(start: start, length: phrase.length, distance: distance);
+    }
+  }
+
   static bool containsPhrase(String text, String phrase) =>
       findPhrase(TextNormalizer.tokens(text), TextNormalizer.tokens(phrase)) != null;
 }

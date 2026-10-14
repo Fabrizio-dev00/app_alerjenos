@@ -1,0 +1,1589 @@
+{
+  "version": 1,
+  "languages": [
+    "es",
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt"
+  ],
+  "fuzzyStopWords": [
+    "nuevo",
+    "nueva",
+    "nuevos",
+    "nuevas",
+    "marina",
+    "marino",
+    "marinas",
+    "arena",
+    "falta",
+    "pesado",
+    "pesada",
+    "ancho",
+    "ancha",
+    "lactasa",
+    "pulpa",
+    "pulpas",
+    "otra",
+    "otras",
+    "otro",
+    "otros",
+    "cloro",
+    "gama",
+    "gamas",
+    "salon",
+    "lecho",
+    "creamy",
+    "better",
+    "batter",
+    "heat",
+    "floor",
+    "four",
+    "custard",
+    "frisch",
+    "latta",
+    "pesca",
+    "pesche",
+    "povo"
+  ],
+  "tracePhrases": {
+    "es": [
+      "puede contener",
+      "puede contener trazas",
+      "trazas de",
+      "puede tener trazas",
+      "elaborado en una planta que",
+      "elaborado en instalaciones que",
+      "fabricado en una planta que",
+      "en una linea que procesa"
+    ],
+    "en": [
+      "may contain",
+      "may contain traces",
+      "traces of",
+      "made in a factory that",
+      "produced in a facility that",
+      "manufactured in a facility that",
+      "processed in a facility that",
+      "made on equipment that"
+    ],
+    "fr": [
+      "peut contenir",
+      "traces de",
+      "traces eventuelles",
+      "traces possibles",
+      "fabrique dans un atelier qui",
+      "fabrique dans une usine qui"
+    ],
+    "de": [
+      "kann spuren",
+      "spuren von",
+      "kann enthalten",
+      "kann spuren von",
+      "hergestellt in einem betrieb der"
+    ],
+    "it": [
+      "puo contenere",
+      "tracce di",
+      "puo contenere tracce",
+      "prodotto in uno stabilimento che"
+    ],
+    "pt": [
+      "pode conter",
+      "pode conter tracos",
+      "tracos de",
+      "vestigios de",
+      "produzido em instalacoes que",
+      "fabricado em linha que"
+    ]
+  },
+  "allergens": [
+    {
+      "id": "gluten",
+      "names": {
+        "es": "Gluten (trigo, cebada, centeno, avena)",
+        "en": "Gluten (wheat, barley, rye, oats)"
+      },
+      "terms": {
+        "es": [
+          "gluten",
+          "trigo",
+          "harina de trigo",
+          "harina",
+          "cebada",
+          "centeno",
+          "avena",
+          "espelta",
+          "kamut",
+          "triticale",
+          "malta",
+          "extracto de malta",
+          "semola",
+          "semolina",
+          "salvado de trigo",
+          "almidon de trigo",
+          "germen de trigo",
+          "bulgur",
+          "cuscus",
+          "seitan",
+          "farro",
+          "escanda",
+          "pan rallado"
+        ],
+        "en": [
+          "gluten",
+          "wheat",
+          "wheat flour",
+          "flour",
+          "barley",
+          "rye",
+          "oats",
+          "oat",
+          "spelt",
+          "kamut",
+          "triticale",
+          "malt",
+          "malt extract",
+          "barley malt",
+          "semolina",
+          "durum",
+          "wheat bran",
+          "wheat starch",
+          "wheat germ",
+          "couscous",
+          "bulgur",
+          "seitan",
+          "farro",
+          "einkorn",
+          "emmer",
+          "breadcrumbs"
+        ],
+        "fr": [
+          "gluten",
+          "ble",
+          "farine de ble",
+          "farine",
+          "orge",
+          "seigle",
+          "avoine",
+          "epeautre",
+          "kamut",
+          "triticale",
+          "malt",
+          "extrait de malt",
+          "semoule",
+          "son de ble",
+          "amidon de ble",
+          "germe de ble",
+          "boulgour",
+          "couscous",
+          "chapelure"
+        ],
+        "de": [
+          "gluten",
+          "weizen",
+          "weizenmehl",
+          "mehl",
+          "gerste",
+          "roggen",
+          "hafer",
+          "haferflocken",
+          "dinkel",
+          "kamut",
+          "triticale",
+          "malz",
+          "malzextrakt",
+          "gerstenmalz",
+          "griess",
+          "hartweizengriess",
+          "weizenstarke",
+          "weizenkleie",
+          "bulgur",
+          "couscous",
+          "grunkern",
+          "emmer",
+          "einkorn",
+          "paniermehl"
+        ],
+        "it": [
+          "glutine",
+          "frumento",
+          "grano tenero",
+          "grano duro",
+          "farina di frumento",
+          "farina di grano",
+          "farina",
+          "orzo",
+          "segale",
+          "avena",
+          "farro",
+          "spelta",
+          "kamut",
+          "triticale",
+          "malto",
+          "estratto di malto",
+          "semola",
+          "crusca",
+          "amido di frumento",
+          "germe di grano",
+          "bulgur",
+          "cuscus",
+          "pangrattato"
+        ],
+        "pt": [
+          "gluten",
+          "trigo",
+          "farinha de trigo",
+          "farinha",
+          "cevada",
+          "centeio",
+          "aveia",
+          "espelta",
+          "kamut",
+          "triticale",
+          "malte",
+          "extrato de malte",
+          "semola",
+          "semolina",
+          "farelo de trigo",
+          "amido de trigo",
+          "germen de trigo",
+          "cuscuz",
+          "bulgur",
+          "farro",
+          "contem gluten"
+        ]
+      },
+      "excludes": [
+        "sin gluten",
+        "libre de gluten",
+        "no contiene gluten",
+        "gluten free",
+        "free from gluten",
+        "sans gluten",
+        "glutenfrei",
+        "senza glutine",
+        "sem gluten",
+        "nao contem gluten",
+        "trigo sarraceno",
+        "buckwheat",
+        "sarrasin",
+        "ble noir",
+        "buchweizen",
+        "grano saraceno",
+        "trigo mourisco",
+        "harina de maiz",
+        "harina de arroz",
+        "harina de garbanzo",
+        "harina de yuca",
+        "harina de almendra",
+        "rice flour",
+        "corn flour",
+        "maize flour",
+        "chickpea flour",
+        "almond flour",
+        "farine de riz",
+        "farine de mais",
+        "reismehl",
+        "maismehl",
+        "farina di riso",
+        "farina di mais",
+        "farinha de arroz",
+        "farinha de milho",
+        "farinha de mandioca"
+      ]
+    },
+    {
+      "id": "crustaceans",
+      "names": {
+        "es": "Crustáceos",
+        "en": "Crustaceans"
+      },
+      "terms": {
+        "es": [
+          "crustaceos",
+          "crustaceo",
+          "camaron",
+          "camarones",
+          "gamba",
+          "gambas",
+          "langostino",
+          "langostinos",
+          "langosta",
+          "cangrejo",
+          "centolla",
+          "cigala",
+          "bogavante",
+          "krill",
+          "quisquilla"
+        ],
+        "en": [
+          "crustacean",
+          "crustaceans",
+          "shrimp",
+          "shrimps",
+          "prawn",
+          "prawns",
+          "lobster",
+          "crab",
+          "crayfish",
+          "krill",
+          "langoustine"
+        ],
+        "fr": [
+          "crustaces",
+          "crustace",
+          "crevette",
+          "crevettes",
+          "homard",
+          "crabe",
+          "langouste",
+          "langoustine",
+          "ecrevisse"
+        ],
+        "de": [
+          "krebstiere",
+          "krebstieren",
+          "garnelen",
+          "garnele",
+          "krabben",
+          "hummer",
+          "languste",
+          "flusskrebs",
+          "shrimps",
+          "scampi"
+        ],
+        "it": [
+          "crostacei",
+          "gamberi",
+          "gamberetti",
+          "aragosta",
+          "astice",
+          "granchio",
+          "scampi",
+          "mazzancolle"
+        ],
+        "pt": [
+          "crustaceos",
+          "camarao",
+          "camaroes",
+          "lagosta",
+          "caranguejo",
+          "lagostim",
+          "siri"
+        ]
+      }
+    },
+    {
+      "id": "eggs",
+      "names": {
+        "es": "Huevo",
+        "en": "Eggs"
+      },
+      "terms": {
+        "es": [
+          "huevo",
+          "huevos",
+          "clara de huevo",
+          "yema de huevo",
+          "yema",
+          "ovoalbumina",
+          "albumina de huevo",
+          "lisozima",
+          "ovomucoide",
+          "huevo en polvo",
+          "merengue"
+        ],
+        "en": [
+          "egg",
+          "eggs",
+          "egg white",
+          "egg yolk",
+          "albumen",
+          "ovalbumin",
+          "lysozyme",
+          "egg powder",
+          "dried egg",
+          "meringue"
+        ],
+        "fr": [
+          "oeuf",
+          "oeufs",
+          "blanc d oeuf",
+          "jaune d oeuf",
+          "ovalbumine",
+          "lysozyme",
+          "poudre d oeuf"
+        ],
+        "de": [
+          "ei",
+          "eier",
+          "eiweiss",
+          "eigelb",
+          "huhnerei",
+          "vollei",
+          "volleipulver",
+          "eipulver",
+          "lysozym"
+        ],
+        "it": [
+          "uovo",
+          "uova",
+          "albume",
+          "tuorlo",
+          "ovoalbumina",
+          "lisozima",
+          "uova in polvere"
+        ],
+        "pt": [
+          "ovo",
+          "ovos",
+          "clara de ovo",
+          "gema de ovo",
+          "gema",
+          "ovoalbumina",
+          "lisozima",
+          "ovo em po"
+        ]
+      },
+      "eCodes": [
+        "E1105"
+      ]
+    },
+    {
+      "id": "fish",
+      "names": {
+        "es": "Pescado",
+        "en": "Fish"
+      },
+      "terms": {
+        "es": [
+          "pescado",
+          "pescados",
+          "pez",
+          "atun",
+          "bacalao",
+          "salmon",
+          "anchoa",
+          "anchoas",
+          "sardina",
+          "sardinas",
+          "merluza",
+          "caballa",
+          "jurel",
+          "aceite de pescado",
+          "gelatina de pescado",
+          "colageno de pescado",
+          "salsa de pescado",
+          "surimi"
+        ],
+        "en": [
+          "fish",
+          "tuna",
+          "codfish",
+          "salmon",
+          "anchovy",
+          "anchovies",
+          "sardine",
+          "sardines",
+          "mackerel",
+          "hake",
+          "pollock",
+          "fish oil",
+          "fish gelatin",
+          "fish gelatine",
+          "fish sauce",
+          "surimi"
+        ],
+        "fr": [
+          "poisson",
+          "poissons",
+          "thon",
+          "cabillaud",
+          "morue",
+          "saumon",
+          "anchois",
+          "sardine",
+          "sardines",
+          "maquereau",
+          "colin",
+          "huile de poisson",
+          "gelatine de poisson"
+        ],
+        "de": [
+          "fisch",
+          "fische",
+          "thunfisch",
+          "kabeljau",
+          "lachs",
+          "sardellen",
+          "sardinen",
+          "makrele",
+          "seelachs",
+          "fischol",
+          "fischgelatine",
+          "fischsauce"
+        ],
+        "it": [
+          "pesce",
+          "tonno",
+          "merluzzo",
+          "salmone",
+          "acciughe",
+          "alici",
+          "sardine",
+          "sgombro",
+          "nasello",
+          "olio di pesce",
+          "gelatina di pesce"
+        ],
+        "pt": [
+          "peixe",
+          "peixes",
+          "atum",
+          "bacalhau",
+          "salmao",
+          "anchova",
+          "sardinha",
+          "cavala",
+          "merluza",
+          "pescada",
+          "oleo de peixe",
+          "gelatina de peixe"
+        ]
+      }
+    },
+    {
+      "id": "peanuts",
+      "names": {
+        "es": "Maní (cacahuete)",
+        "en": "Peanuts"
+      },
+      "terms": {
+        "es": [
+          "mani",
+          "cacahuete",
+          "cacahuetes",
+          "cacahuate",
+          "cacahuates",
+          "crema de mani",
+          "mantequilla de mani",
+          "manteca de mani",
+          "aceite de mani",
+          "aceite de cacahuete"
+        ],
+        "en": [
+          "peanut",
+          "peanuts",
+          "groundnut",
+          "groundnuts",
+          "peanut butter",
+          "peanut oil",
+          "arachis oil",
+          "arachis"
+        ],
+        "fr": [
+          "arachide",
+          "arachides",
+          "cacahuete",
+          "cacahuetes",
+          "huile d arachide",
+          "beurre de cacahuete"
+        ],
+        "de": [
+          "erdnuss",
+          "erdnusse",
+          "erdnusskerne",
+          "erdnussol",
+          "erdnussbutter",
+          "erdnussmus"
+        ],
+        "it": [
+          "arachidi",
+          "arachide",
+          "noccioline americane",
+          "olio di arachidi",
+          "burro di arachidi"
+        ],
+        "pt": [
+          "amendoim",
+          "amendoins",
+          "oleo de amendoim",
+          "pasta de amendoim",
+          "manteiga de amendoim"
+        ]
+      }
+    },
+    {
+      "id": "soy",
+      "names": {
+        "es": "Soja",
+        "en": "Soy"
+      },
+      "terms": {
+        "es": [
+          "soja",
+          "soya",
+          "lecitina de soja",
+          "lecitina de soya",
+          "proteina de soja",
+          "proteina de soya",
+          "harina de soja",
+          "aceite de soja",
+          "aceite de soya",
+          "salsa de soja",
+          "salsa de soya",
+          "tofu",
+          "edamame",
+          "miso",
+          "tempeh"
+        ],
+        "en": [
+          "soy",
+          "soya",
+          "soybean",
+          "soybeans",
+          "soy lecithin",
+          "soya lecithin",
+          "soy protein",
+          "soy flour",
+          "soybean oil",
+          "soy sauce",
+          "tofu",
+          "edamame",
+          "miso",
+          "tempeh"
+        ],
+        "fr": [
+          "soja",
+          "lecithine de soja",
+          "proteines de soja",
+          "farine de soja",
+          "huile de soja",
+          "sauce soja",
+          "tofu"
+        ],
+        "de": [
+          "soja",
+          "sojalecithin",
+          "sojalecithine",
+          "sojabohnen",
+          "sojaeiweiss",
+          "sojamehl",
+          "sojaol",
+          "sojasauce",
+          "tofu"
+        ],
+        "it": [
+          "soia",
+          "lecitina di soia",
+          "proteine di soia",
+          "farina di soia",
+          "olio di soia",
+          "salsa di soia",
+          "tofu"
+        ],
+        "pt": [
+          "soja",
+          "lecitina de soja",
+          "proteina de soja",
+          "farinha de soja",
+          "oleo de soja",
+          "molho de soja",
+          "tofu"
+        ]
+      },
+      "possibleTerms": {
+        "es": [
+          "lecitina"
+        ],
+        "en": [
+          "lecithin",
+          "lecithins"
+        ],
+        "fr": [
+          "lecithine",
+          "lecithines"
+        ],
+        "de": [
+          "lecithin",
+          "lecithine"
+        ],
+        "it": [
+          "lecitina",
+          "lecitine"
+        ],
+        "pt": [
+          "lecitina",
+          "lecitinas"
+        ]
+      },
+      "eCodes": [
+        "E426"
+      ],
+      "possibleECodes": [
+        "E322"
+      ],
+      "excludes": [
+        "lecitina de girasol",
+        "sunflower lecithin",
+        "lecithine de tournesol",
+        "sonnenblumenlecithin",
+        "lecitina di girasole",
+        "lecitina de girassol"
+      ]
+    },
+    {
+      "id": "milk",
+      "names": {
+        "es": "Leche",
+        "en": "Milk"
+      },
+      "terms": {
+        "es": [
+          "leche",
+          "lacteo",
+          "lacteos",
+          "leche en polvo",
+          "leche descremada",
+          "leche entera",
+          "suero de leche",
+          "lactosuero",
+          "suero lacteo",
+          "caseina",
+          "caseinato",
+          "caseinato de sodio",
+          "lactosa",
+          "mantequilla",
+          "manteca",
+          "crema de leche",
+          "nata",
+          "queso",
+          "quesos",
+          "yogur",
+          "yogurt",
+          "lactoalbumina",
+          "lactoglobulina",
+          "ghee",
+          "cuajada",
+          "requeson",
+          "grasa lactea",
+          "solidos lacteos",
+          "solidos de leche",
+          "proteina lactea",
+          "proteina de leche",
+          "leche condensada",
+          "dulce de leche",
+          "manjar blanco"
+        ],
+        "en": [
+          "milk",
+          "milk powder",
+          "skimmed milk",
+          "skim milk",
+          "whole milk",
+          "whey",
+          "whey protein",
+          "whey powder",
+          "casein",
+          "caseinate",
+          "sodium caseinate",
+          "lactose",
+          "butter",
+          "butterfat",
+          "butter oil",
+          "cream",
+          "cheese",
+          "yogurt",
+          "yoghurt",
+          "lactalbumin",
+          "lactoglobulin",
+          "ghee",
+          "curd",
+          "buttermilk",
+          "milk solids",
+          "milk fat",
+          "milk protein",
+          "condensed milk",
+          "dairy"
+        ],
+        "fr": [
+          "lait",
+          "lait en poudre",
+          "lait ecreme",
+          "lactoserum",
+          "petit lait",
+          "caseine",
+          "caseinate",
+          "lactose",
+          "beurre",
+          "creme",
+          "fromage",
+          "yaourt",
+          "yoghourt",
+          "babeurre",
+          "proteines de lait",
+          "matiere grasse laitiere",
+          "lait concentre"
+        ],
+        "de": [
+          "milch",
+          "milchpulver",
+          "magermilch",
+          "magermilchpulver",
+          "vollmilch",
+          "vollmilchpulver",
+          "molke",
+          "molkenpulver",
+          "sussmolkenpulver",
+          "molkeneiweiss",
+          "kasein",
+          "kaseinat",
+          "casein",
+          "laktose",
+          "milchzucker",
+          "butter",
+          "butterreinfett",
+          "sahne",
+          "rahm",
+          "kase",
+          "joghurt",
+          "buttermilch",
+          "milcheiweiss",
+          "milchfett",
+          "quark",
+          "kondensmilch"
+        ],
+        "it": [
+          "latte",
+          "latte in polvere",
+          "latte scremato",
+          "siero di latte",
+          "siero",
+          "caseina",
+          "caseinato",
+          "lattosio",
+          "burro",
+          "panna",
+          "formaggio",
+          "yogurt",
+          "latticello",
+          "proteine del latte",
+          "grassi del latte",
+          "latte condensato"
+        ],
+        "pt": [
+          "leite",
+          "leite em po",
+          "leite desnatado",
+          "soro de leite",
+          "caseina",
+          "caseinato",
+          "lactose",
+          "manteiga",
+          "nata",
+          "creme de leite",
+          "queijo",
+          "iogurte",
+          "leitelho",
+          "proteina do leite",
+          "proteina lactea",
+          "gordura lactea",
+          "leite condensado",
+          "doce de leite",
+          "lacteos"
+        ]
+      },
+      "excludes": [
+        "leche de coco",
+        "coconut milk",
+        "lait de coco",
+        "kokosmilch",
+        "latte di cocco",
+        "leite de coco",
+        "manteca de cacao",
+        "cocoa butter",
+        "cacao butter",
+        "beurre de cacao",
+        "kakaobutter",
+        "burro di cacao",
+        "manteiga de cacau",
+        "manteca vegetal",
+        "manteca de cerdo",
+        "mantequilla de mani",
+        "manteca de mani",
+        "peanut butter",
+        "beurre de cacahuete",
+        "erdnussbutter",
+        "burro di arachidi",
+        "manteiga de amendoim",
+        "leche de almendras",
+        "leche de almendra",
+        "leche de soja",
+        "leche de soya",
+        "leche de avena",
+        "leche de arroz",
+        "almond milk",
+        "soy milk",
+        "oat milk",
+        "rice milk",
+        "cream of tartar",
+        "cremor tartaro",
+        "shea butter"
+      ]
+    },
+    {
+      "id": "lactose",
+      "names": {
+        "es": "Lactosa",
+        "en": "Lactose"
+      },
+      "terms": {
+        "es": [
+          "lactosa",
+          "leche",
+          "leche en polvo",
+          "suero de leche",
+          "lactosuero",
+          "suero lacteo",
+          "solidos lacteos",
+          "solidos de leche",
+          "leche condensada",
+          "dulce de leche",
+          "manjar blanco",
+          "crema de leche",
+          "nata",
+          "yogur",
+          "yogurt",
+          "queso",
+          "mantequilla"
+        ],
+        "en": [
+          "lactose",
+          "milk",
+          "milk powder",
+          "whey",
+          "whey powder",
+          "milk solids",
+          "cream",
+          "yogurt",
+          "yoghurt",
+          "cheese",
+          "butter",
+          "buttermilk",
+          "condensed milk"
+        ],
+        "fr": [
+          "lactose",
+          "lait",
+          "lait en poudre",
+          "lactoserum",
+          "petit lait",
+          "creme",
+          "beurre",
+          "fromage",
+          "yaourt",
+          "lait concentre"
+        ],
+        "de": [
+          "laktose",
+          "lactose",
+          "milchzucker",
+          "milch",
+          "milchpulver",
+          "molke",
+          "molkenpulver",
+          "sussmolkenpulver",
+          "sahne",
+          "rahm",
+          "kase",
+          "joghurt",
+          "butter",
+          "buttermilch",
+          "kondensmilch"
+        ],
+        "it": [
+          "lattosio",
+          "latte",
+          "latte in polvere",
+          "siero di latte",
+          "panna",
+          "formaggio",
+          "yogurt",
+          "burro",
+          "latte condensato"
+        ],
+        "pt": [
+          "lactose",
+          "leite",
+          "leite em po",
+          "soro de leite",
+          "nata",
+          "creme de leite",
+          "queijo",
+          "iogurte",
+          "manteiga",
+          "leite condensado",
+          "doce de leite"
+        ]
+      },
+      "excludes": [
+        "sin lactosa",
+        "libre de lactosa",
+        "lactose free",
+        "sans lactose",
+        "laktosefrei",
+        "senza lattosio",
+        "sem lactose",
+        "zero lactose",
+        "leche de coco",
+        "coconut milk",
+        "lait de coco",
+        "kokosmilch",
+        "latte di cocco",
+        "leite de coco",
+        "manteca de cacao",
+        "cocoa butter",
+        "cacao butter",
+        "beurre de cacao",
+        "kakaobutter",
+        "burro di cacao",
+        "manteiga de cacau",
+        "mantequilla de mani",
+        "peanut butter",
+        "beurre de cacahuete",
+        "erdnussbutter",
+        "burro di arachidi",
+        "manteiga de amendoim",
+        "leche de almendras",
+        "leche de almendra",
+        "leche de soja",
+        "leche de soya",
+        "leche de avena",
+        "leche de arroz",
+        "almond milk",
+        "soy milk",
+        "oat milk",
+        "rice milk",
+        "shea butter"
+      ]
+    },
+    {
+      "id": "tree_nuts",
+      "names": {
+        "es": "Frutos secos (de cáscara)",
+        "en": "Tree nuts"
+      },
+      "terms": {
+        "es": [
+          "frutos secos",
+          "frutos de cascara",
+          "almendra",
+          "almendras",
+          "avellana",
+          "avellanas",
+          "nuez",
+          "nueces",
+          "anacardo",
+          "anacardos",
+          "castana de caju",
+          "maranon",
+          "pacana",
+          "pecana",
+          "nuez pecana",
+          "nuez de brasil",
+          "castana de para",
+          "pistacho",
+          "pistachos",
+          "macadamia",
+          "praline",
+          "mazapan",
+          "turron",
+          "gianduja"
+        ],
+        "en": [
+          "tree nuts",
+          "tree nut",
+          "nuts",
+          "nut",
+          "almond",
+          "almonds",
+          "hazelnut",
+          "hazelnuts",
+          "walnut",
+          "walnuts",
+          "cashew",
+          "cashews",
+          "pecan",
+          "pecans",
+          "brazil nut",
+          "brazil nuts",
+          "pistachio",
+          "pistachios",
+          "macadamia",
+          "praline",
+          "marzipan",
+          "gianduja"
+        ],
+        "fr": [
+          "fruits a coque",
+          "amande",
+          "amandes",
+          "noisette",
+          "noisettes",
+          "noix",
+          "noix de cajou",
+          "noix de pecan",
+          "noix du bresil",
+          "pistache",
+          "pistaches",
+          "macadamia",
+          "praline",
+          "massepain",
+          "gianduja"
+        ],
+        "de": [
+          "schalenfruchte",
+          "nusse",
+          "nuss",
+          "mandel",
+          "mandeln",
+          "haselnuss",
+          "haselnusse",
+          "walnuss",
+          "walnusse",
+          "cashew",
+          "cashewkerne",
+          "pekannuss",
+          "paranuss",
+          "pistazie",
+          "pistazien",
+          "macadamia",
+          "marzipan",
+          "nougat",
+          "krokant"
+        ],
+        "it": [
+          "frutta a guscio",
+          "mandorla",
+          "mandorle",
+          "nocciola",
+          "nocciole",
+          "noce",
+          "noci",
+          "anacardi",
+          "noci pecan",
+          "noce del brasile",
+          "pistacchio",
+          "pistacchi",
+          "macadamia",
+          "marzapane",
+          "gianduia",
+          "pralinato"
+        ],
+        "pt": [
+          "frutos de casca rija",
+          "frutos secos",
+          "amendoa",
+          "amendoas",
+          "avela",
+          "avelas",
+          "noz",
+          "nozes",
+          "caju",
+          "castanha de caju",
+          "noz peca",
+          "castanha do para",
+          "castanha do brasil",
+          "pistache",
+          "pistacio",
+          "macadamia",
+          "marzipa",
+          "praline",
+          "oleaginosas"
+        ]
+      },
+      "excludes": [
+        "nuez moscada",
+        "nutmeg",
+        "noix de muscade",
+        "muskatnuss",
+        "noce moscata",
+        "noz moscada",
+        "nuez de coco",
+        "noix de coco",
+        "noce di cocco",
+        "noz de coco",
+        "coconut"
+      ]
+    },
+    {
+      "id": "celery",
+      "names": {
+        "es": "Apio",
+        "en": "Celery"
+      },
+      "terms": {
+        "es": [
+          "apio",
+          "apionabo",
+          "sal de apio",
+          "semillas de apio"
+        ],
+        "en": [
+          "celery",
+          "celeriac",
+          "celery salt",
+          "celery seed"
+        ],
+        "fr": [
+          "celeri",
+          "celeri rave"
+        ],
+        "de": [
+          "sellerie",
+          "knollensellerie",
+          "staudensellerie",
+          "selleriesalz"
+        ],
+        "it": [
+          "sedano",
+          "sedano rapa"
+        ],
+        "pt": [
+          "aipo",
+          "salsao"
+        ]
+      }
+    },
+    {
+      "id": "mustard",
+      "names": {
+        "es": "Mostaza",
+        "en": "Mustard"
+      },
+      "terms": {
+        "es": [
+          "mostaza",
+          "semillas de mostaza",
+          "harina de mostaza"
+        ],
+        "en": [
+          "mustard",
+          "mustard seed",
+          "mustard seeds",
+          "mustard flour"
+        ],
+        "fr": [
+          "moutarde",
+          "graines de moutarde"
+        ],
+        "de": [
+          "senf",
+          "senfsaat",
+          "senfkorner",
+          "senfmehl"
+        ],
+        "it": [
+          "senape",
+          "semi di senape"
+        ],
+        "pt": [
+          "mostarda",
+          "sementes de mostarda"
+        ]
+      }
+    },
+    {
+      "id": "sesame",
+      "names": {
+        "es": "Sésamo (ajonjolí)",
+        "en": "Sesame"
+      },
+      "terms": {
+        "es": [
+          "sesamo",
+          "ajonjoli",
+          "tahini",
+          "tahin",
+          "aceite de sesamo",
+          "semillas de sesamo"
+        ],
+        "en": [
+          "sesame",
+          "sesame seeds",
+          "sesame oil",
+          "tahini",
+          "tahina"
+        ],
+        "fr": [
+          "sesame",
+          "graines de sesame",
+          "huile de sesame",
+          "tahini"
+        ],
+        "de": [
+          "sesam",
+          "sesamsaat",
+          "sesamol",
+          "tahin",
+          "tahini"
+        ],
+        "it": [
+          "sesamo",
+          "semi di sesamo",
+          "olio di sesamo",
+          "tahina"
+        ],
+        "pt": [
+          "gergelim",
+          "sesamo",
+          "oleo de gergelim",
+          "tahine"
+        ]
+      }
+    },
+    {
+      "id": "sulphites",
+      "names": {
+        "es": "Sulfitos",
+        "en": "Sulphites"
+      },
+      "terms": {
+        "es": [
+          "sulfito",
+          "sulfitos",
+          "dioxido de azufre",
+          "anhidrido sulfuroso",
+          "bisulfito",
+          "metabisulfito",
+          "metabisulfito de sodio",
+          "metabisulfito de potasio"
+        ],
+        "en": [
+          "sulphite",
+          "sulphites",
+          "sulfite",
+          "sulfites",
+          "sulphur dioxide",
+          "sulfur dioxide",
+          "metabisulphite",
+          "metabisulfite",
+          "bisulphite",
+          "bisulfite"
+        ],
+        "fr": [
+          "sulfite",
+          "sulfites",
+          "anhydride sulfureux",
+          "dioxyde de soufre",
+          "metabisulfite",
+          "bisulfite"
+        ],
+        "de": [
+          "sulfit",
+          "sulfite",
+          "schwefeldioxid",
+          "geschwefelt",
+          "disulfit",
+          "natriummetabisulfit",
+          "kaliummetabisulfit"
+        ],
+        "it": [
+          "solfito",
+          "solfiti",
+          "anidride solforosa",
+          "metabisolfito",
+          "bisolfito"
+        ],
+        "pt": [
+          "sulfito",
+          "sulfitos",
+          "dioxido de enxofre",
+          "anidrido sulfuroso",
+          "metabissulfito",
+          "bissulfito"
+        ]
+      },
+      "eCodes": [
+        "E220",
+        "E221",
+        "E222",
+        "E223",
+        "E224",
+        "E225",
+        "E226",
+        "E227",
+        "E228"
+      ]
+    },
+    {
+      "id": "lupin",
+      "names": {
+        "es": "Altramuz",
+        "en": "Lupin"
+      },
+      "terms": {
+        "es": [
+          "altramuz",
+          "altramuces",
+          "lupino",
+          "lupinos",
+          "harina de altramuz",
+          "chocho",
+          "chochos",
+          "tarwi"
+        ],
+        "en": [
+          "lupin",
+          "lupine",
+          "lupins",
+          "lupin flour"
+        ],
+        "fr": [
+          "lupin",
+          "farine de lupin"
+        ],
+        "de": [
+          "lupine",
+          "lupinen",
+          "lupinenmehl"
+        ],
+        "it": [
+          "lupino",
+          "lupini",
+          "farina di lupino"
+        ],
+        "pt": [
+          "tremoco",
+          "tremocos",
+          "lupino",
+          "farinha de tremoco"
+        ]
+      }
+    },
+    {
+      "id": "molluscs",
+      "names": {
+        "es": "Moluscos",
+        "en": "Molluscs"
+      },
+      "terms": {
+        "es": [
+          "moluscos",
+          "molusco",
+          "mejillon",
+          "mejillones",
+          "choro",
+          "choros",
+          "almeja",
+          "almejas",
+          "ostra",
+          "ostras",
+          "calamar",
+          "calamares",
+          "pulpo",
+          "sepia",
+          "caracol",
+          "caracoles",
+          "vieira",
+          "vieiras",
+          "conchas de abanico",
+          "berberecho",
+          "chipirones"
+        ],
+        "en": [
+          "mollusc",
+          "molluscs",
+          "mollusk",
+          "mollusks",
+          "mussel",
+          "mussels",
+          "clam",
+          "clams",
+          "oyster",
+          "oysters",
+          "squid",
+          "octopus",
+          "cuttlefish",
+          "snail",
+          "snails",
+          "scallop",
+          "scallops",
+          "calamari",
+          "whelk",
+          "oyster sauce"
+        ],
+        "fr": [
+          "mollusques",
+          "mollusque",
+          "moule",
+          "moules",
+          "palourde",
+          "palourdes",
+          "huitre",
+          "huitres",
+          "calmar",
+          "encornet",
+          "poulpe",
+          "seiche",
+          "escargot",
+          "escargots",
+          "coquille saint jacques",
+          "petoncle"
+        ],
+        "de": [
+          "weichtiere",
+          "weichtieren",
+          "muscheln",
+          "miesmuscheln",
+          "venusmuscheln",
+          "austern",
+          "auster",
+          "tintenfisch",
+          "kalmar",
+          "oktopus",
+          "krake",
+          "schnecken",
+          "jakobsmuscheln"
+        ],
+        "it": [
+          "molluschi",
+          "cozze",
+          "vongole",
+          "ostriche",
+          "calamari",
+          "polpo",
+          "seppia",
+          "lumache",
+          "capesante"
+        ],
+        "pt": [
+          "moluscos",
+          "mexilhao",
+          "mexilhoes",
+          "ameijoa",
+          "ameijoas",
+          "ostra",
+          "ostras",
+          "lula",
+          "lulas",
+          "polvo",
+          "caracol",
+          "vieira",
+          "berbigao"
+        ]
+      },
+      "excludes": [
+        "en polvo",
+        "polvo de hornear",
+        "polvo para hornear",
+        "polvos de hornear",
+        "cacao en polvo",
+        "leche en polvo",
+        "huevo en polvo"
+      ]
+    }
+  ]
+}

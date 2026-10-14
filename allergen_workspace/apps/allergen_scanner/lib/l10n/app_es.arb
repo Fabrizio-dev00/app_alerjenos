@@ -1,6 +1,6 @@
 {
   "@@locale": "es",
-  "appTitle": "Escáner de alérgenos",
+  "appTitle": "SanoScan",
   "navScan": "Escanear",
   "navHistory": "Historial",
   "navProfiles": "Perfiles",
@@ -14,7 +14,7 @@
   "profilesEmpty": "Crea tu perfil para elegir tus alérgenos.",
   "settingsLanguage": "Idioma de la app",
   "settingsLanguageSystem": "Usar el del sistema",
-  "paywallTitle": "Escáner Pro",
+  "paywallTitle": "SanoScan Pro",
   "paywallDescription": "Escaneos ilimitados y perfiles para toda la familia con un solo pago.",
   "resultContains": "Contiene",
   "resultMayContain": "Puede contener trazas",
@@ -109,5 +109,102 @@
   "translationFailed": "No pudimos traducir. Se muestra el texto original.",
   "languageUndetermined": "No pudimos identificar el idioma del texto.",
   "ingredientsFound": "Lista de ingredientes encontrada",
-  "ingredientsNotFound": "No encontramos la palabra «Ingredientes». Acerca la cámara a la lista o recorta solo esa parte para leerla mejor."
+  "ingredientsNotFound": "No encontramos la palabra «Ingredientes». Acerca la cámara a la lista o recorta solo esa parte para leerla mejor.",
+  "tagline": "Lee la etiqueta. Cuida lo que comes.",
+  "onboardingIntro": "Fotografía los ingredientes en cualquier idioma y SanoScan busca tus alérgenos al instante.",
+  "statLanguages": "idiomas",
+  "statAccounts": "cuentas",
+  "statOnDevice": "en tu móvil",
+  "onboardingNoSignup": "Sin registro, sin anuncios",
+  "onboardingStart": "Comenzar",
+  "onboardingStep": "Paso {step} de {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "allergensQuestion": "¿Qué alérgenos evitas?",
+  "allergensSearch": "Buscar alérgeno",
+  "allergensSelected": "{count, plural, =0{Ninguno elegido.} =1{1 elegido.} other{{count} elegidos.}}",
+  "@allergensSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "profileStoredLocally": "Tu perfil se guarda solo en este móvil.",
+  "saveProfile": "Guardar perfil",
+  "onboardingReadyTitle": "Antes de empezar",
+  "onboardingReadyBody": "SanoScan te ayuda a revisar etiquetas, pero el reconocimiento de texto puede fallar.",
+  "onboardingReadyRule": "«No detectado» no significa seguro. Revisa siempre la etiqueta física.",
+  "onboardingLanguagesHint": "¿Vas a viajar? Descarga los idiomas de las etiquetas en Ajustes para traducir sin internet.",
+  "onboardingAccept": "Entendido, empezar",
+  "defaultProfileName": "Yo",
+  "allergenMilk": "Leche",
+  "allergenEggs": "Huevo",
+  "allergenGluten": "Gluten",
+  "allergenPeanuts": "Maní",
+  "allergenTreeNuts": "Frutos secos",
+  "allergenSoy": "Soja",
+  "allergenFish": "Pescado",
+  "allergenShellfish": "Mariscos",
+  "allergenSesame": "Ajonjolí",
+  "allergenMustard": "Mostaza",
+  "allergenCelery": "Apio",
+  "allergenSulphites": "Sulfitos",
+  "allergenLactose": "Lactosa",
+  "allergenLupin": "Tarwi (altramuz)",
+  "allergensNone": "Sin alérgenos elegidos",
+  "activeProfile": "Perfil activo",
+  "profilesTitle": "Perfiles",
+  "addProfile": "Agregar perfil",
+  "editProfile": "Editar perfil",
+  "newProfile": "Nuevo perfil",
+  "profileName": "Nombre del perfil",
+  "profileNameRequired": "Escribe un nombre",
+  "deleteProfile": "Eliminar perfil",
+  "deleteProfileConfirm": "¿Eliminar el perfil {name}? No se puede deshacer.",
+  "@deleteProfileConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "profileActiveBadge": "Activo",
+  "useProfile": "Usar este perfil",
+  "scanProfile": "Perfil: {name}",
+  "@scanProfile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "proBannerTitle": "SanoScan Pro",
+  "proBannerSubtitle": "Sin límite de escaneos · USD 3.99 una vez",
+  "profilesProHint": "Con Pro puedes tener hasta 6 perfiles para toda la familia.",
+  "settingsOfflineReady": "{count, plural, =0{Ninguno} =1{1 listo} other{{count} listos}}",
+  "@settingsOfflineReady": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsAbout": "Acerca de",
+  "settingsVersion": "Versión {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  }
 }

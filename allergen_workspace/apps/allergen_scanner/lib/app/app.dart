@@ -20,7 +20,6 @@ class AllergenScannerApp extends ConsumerWidget {
       onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
-      darkTheme: AppTheme.dark(),
       locale: language?.locale,
       supportedLocales: AppLanguage.interfaceLanguages.map((l) => l.locale),
       localizationsDelegates: const [

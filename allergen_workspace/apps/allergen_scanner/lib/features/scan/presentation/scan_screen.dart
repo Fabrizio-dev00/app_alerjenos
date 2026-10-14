@@ -3,8 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../app/routes.dart';
+import '../../../app/theme.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import '../../../shared/brand/gradient_button.dart';
+import '../../../shared/brand/sano_mascot.dart';
 import '../../../shared/safety_notice.dart';
+import '../../profiles/presentation/allergen_labels.dart';
+import '../../profiles/presentation/profiles_providers.dart';
 import 'scan_controller.dart';
 
 class ScanScreen extends ConsumerWidget {
@@ -34,22 +39,44 @@ class ScanScreen extends ConsumerWidget {
     final textTheme = Theme.of(context).textTheme;
     final status = ref.watch(scanControllerProvider);
     final working = status == ScanStatus.working;
+    final profile = ref.watch(activeProfileProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.appTitle)),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(24),
           children: [
+            if (profile != null)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: ActionChip(
+                  avatar: CircleAvatar(
+                    backgroundColor: SanoColors.cream,
+                    child: Text(
+                      profile.name.characters.first.toUpperCase(),
+                      style: const TextStyle(fontWeight: FontWeight.w800, color: SanoColors.traces),
+                    ),
+                  ),
+                  label: Text(l10n.scanProfile(profile.name)),
+                  tooltip: profile.summary(l10n),
+                  backgroundColor: SanoColors.card,
+                  side: const BorderSide(color: SanoColors.line),
+                  shape: const StadiumBorder(),
+                  onPressed: () => context.push(AppRoutes.profiles),
+                ),
+              ),
+            const SizedBox(height: 16),
+            const Center(child: SanoMascot(size: 96)),
+            const SizedBox(height: 16),
             Text(l10n.scanHeadline, style: textTheme.headlineMedium),
             const SizedBox(height: 12),
             Text(l10n.scanDescription, style: textTheme.bodyLarge),
             const SizedBox(height: 32),
             _StatusMessage(status: status),
-            FilledButton.icon(
+            GradientButton(
               onPressed: working ? null : () => _takePhoto(context, ref),
-              icon: const Icon(Icons.photo_camera),
-              label: Text(l10n.scanTakePhoto),
+              icon: Icons.photo_camera,
+              label: l10n.scanTakePhoto,
             ),
             const SizedBox(height: 12),
             OutlinedButton.icon(

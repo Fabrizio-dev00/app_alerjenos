@@ -49,3 +49,8 @@ flutter run
 - [x] Semana 1, día 3: OCR con ML Kit y bloques sobre la foto
 - [x] Semana 1, día 4: detección de idioma, traducción y gestión de idiomas descargados
 - [x] Semana 1, día 5: localizador de la lista de ingredientes, comparación tolerante a errores de OCR y banco de etiquetas reales (`apps/allergen_scanner/test_labels`)
+- [x] Semana 2, día 1: `allergens.json` con 14 alérgenos UE + lactosa, sinónimos en 6 idiomas, códigos E/INS, frases de trazas y exclusiones
+- [x] Semana 2, día 2: comparador (original + traducción, trazas, códigos INS, falsos amigos) y separación de ingredientes
+- [x] Semana 2, día 3: diseño SanoScan aplicado (tema, 3 pestañas, mascota), perfiles con Drift, grilla de alérgenos y onboarding de 3 pasos
+- [ ] Semana 2, día 4: pantalla de resultado con tres niveles, resaltado y aviso de seguridad
+- [ ] Semana 2, día 5: historial y pasada completa con las etiquetas reales

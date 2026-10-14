@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In es, this message translates to:
-  /// **'Escáner de alérgenos'**
+  /// **'SanoScan'**
   String get appTitle;
 
   /// No description provided for @navScan.
@@ -185,7 +185,7 @@ abstract class AppLocalizations {
   /// No description provided for @paywallTitle.
   ///
   /// In es, this message translates to:
-  /// **'Escáner Pro'**
+  /// **'SanoScan Pro'**
   String get paywallTitle;
 
   /// No description provided for @paywallDescription.
@@ -487,6 +487,318 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No encontramos la palabra «Ingredientes». Acerca la cámara a la lista o recorta solo esa parte para leerla mejor.'**
   String get ingredientsNotFound;
+
+  /// No description provided for @tagline.
+  ///
+  /// In es, this message translates to:
+  /// **'Lee la etiqueta. Cuida lo que comes.'**
+  String get tagline;
+
+  /// No description provided for @onboardingIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Fotografía los ingredientes en cualquier idioma y SanoScan busca tus alérgenos al instante.'**
+  String get onboardingIntro;
+
+  /// No description provided for @statLanguages.
+  ///
+  /// In es, this message translates to:
+  /// **'idiomas'**
+  String get statLanguages;
+
+  /// No description provided for @statAccounts.
+  ///
+  /// In es, this message translates to:
+  /// **'cuentas'**
+  String get statAccounts;
+
+  /// No description provided for @statOnDevice.
+  ///
+  /// In es, this message translates to:
+  /// **'en tu móvil'**
+  String get statOnDevice;
+
+  /// No description provided for @onboardingNoSignup.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin registro, sin anuncios'**
+  String get onboardingNoSignup;
+
+  /// No description provided for @onboardingStart.
+  ///
+  /// In es, this message translates to:
+  /// **'Comenzar'**
+  String get onboardingStart;
+
+  /// No description provided for @onboardingStep.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso {step} de {total}'**
+  String onboardingStep(int step, int total);
+
+  /// No description provided for @allergensQuestion.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Qué alérgenos evitas?'**
+  String get allergensQuestion;
+
+  /// No description provided for @allergensSearch.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar alérgeno'**
+  String get allergensSearch;
+
+  /// No description provided for @allergensSelected.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =0{Ninguno elegido.} =1{1 elegido.} other{{count} elegidos.}}'**
+  String allergensSelected(int count);
+
+  /// No description provided for @profileStoredLocally.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu perfil se guarda solo en este móvil.'**
+  String get profileStoredLocally;
+
+  /// No description provided for @saveProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar perfil'**
+  String get saveProfile;
+
+  /// No description provided for @onboardingReadyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Antes de empezar'**
+  String get onboardingReadyTitle;
+
+  /// No description provided for @onboardingReadyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'SanoScan te ayuda a revisar etiquetas, pero el reconocimiento de texto puede fallar.'**
+  String get onboardingReadyBody;
+
+  /// No description provided for @onboardingReadyRule.
+  ///
+  /// In es, this message translates to:
+  /// **'«No detectado» no significa seguro. Revisa siempre la etiqueta física.'**
+  String get onboardingReadyRule;
+
+  /// No description provided for @onboardingLanguagesHint.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Vas a viajar? Descarga los idiomas de las etiquetas en Ajustes para traducir sin internet.'**
+  String get onboardingLanguagesHint;
+
+  /// No description provided for @onboardingAccept.
+  ///
+  /// In es, this message translates to:
+  /// **'Entendido, empezar'**
+  String get onboardingAccept;
+
+  /// No description provided for @defaultProfileName.
+  ///
+  /// In es, this message translates to:
+  /// **'Yo'**
+  String get defaultProfileName;
+
+  /// No description provided for @allergenMilk.
+  ///
+  /// In es, this message translates to:
+  /// **'Leche'**
+  String get allergenMilk;
+
+  /// No description provided for @allergenEggs.
+  ///
+  /// In es, this message translates to:
+  /// **'Huevo'**
+  String get allergenEggs;
+
+  /// No description provided for @allergenGluten.
+  ///
+  /// In es, this message translates to:
+  /// **'Gluten'**
+  String get allergenGluten;
+
+  /// No description provided for @allergenPeanuts.
+  ///
+  /// In es, this message translates to:
+  /// **'Maní'**
+  String get allergenPeanuts;
+
+  /// No description provided for @allergenTreeNuts.
+  ///
+  /// In es, this message translates to:
+  /// **'Frutos secos'**
+  String get allergenTreeNuts;
+
+  /// No description provided for @allergenSoy.
+  ///
+  /// In es, this message translates to:
+  /// **'Soja'**
+  String get allergenSoy;
+
+  /// No description provided for @allergenFish.
+  ///
+  /// In es, this message translates to:
+  /// **'Pescado'**
+  String get allergenFish;
+
+  /// No description provided for @allergenShellfish.
+  ///
+  /// In es, this message translates to:
+  /// **'Mariscos'**
+  String get allergenShellfish;
+
+  /// No description provided for @allergenSesame.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajonjolí'**
+  String get allergenSesame;
+
+  /// No description provided for @allergenMustard.
+  ///
+  /// In es, this message translates to:
+  /// **'Mostaza'**
+  String get allergenMustard;
+
+  /// No description provided for @allergenCelery.
+  ///
+  /// In es, this message translates to:
+  /// **'Apio'**
+  String get allergenCelery;
+
+  /// No description provided for @allergenSulphites.
+  ///
+  /// In es, this message translates to:
+  /// **'Sulfitos'**
+  String get allergenSulphites;
+
+  /// No description provided for @allergenLactose.
+  ///
+  /// In es, this message translates to:
+  /// **'Lactosa'**
+  String get allergenLactose;
+
+  /// No description provided for @allergenLupin.
+  ///
+  /// In es, this message translates to:
+  /// **'Tarwi (altramuz)'**
+  String get allergenLupin;
+
+  /// No description provided for @allergensNone.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin alérgenos elegidos'**
+  String get allergensNone;
+
+  /// No description provided for @activeProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Perfil activo'**
+  String get activeProfile;
+
+  /// No description provided for @profilesTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Perfiles'**
+  String get profilesTitle;
+
+  /// No description provided for @addProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Agregar perfil'**
+  String get addProfile;
+
+  /// No description provided for @editProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Editar perfil'**
+  String get editProfile;
+
+  /// No description provided for @newProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Nuevo perfil'**
+  String get newProfile;
+
+  /// No description provided for @profileName.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombre del perfil'**
+  String get profileName;
+
+  /// No description provided for @profileNameRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un nombre'**
+  String get profileNameRequired;
+
+  /// No description provided for @deleteProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Eliminar perfil'**
+  String get deleteProfile;
+
+  /// No description provided for @deleteProfileConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Eliminar el perfil {name}? No se puede deshacer.'**
+  String deleteProfileConfirm(String name);
+
+  /// No description provided for @profileActiveBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Activo'**
+  String get profileActiveBadge;
+
+  /// No description provided for @useProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Usar este perfil'**
+  String get useProfile;
+
+  /// No description provided for @scanProfile.
+  ///
+  /// In es, this message translates to:
+  /// **'Perfil: {name}'**
+  String scanProfile(String name);
+
+  /// No description provided for @proBannerTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'SanoScan Pro'**
+  String get proBannerTitle;
+
+  /// No description provided for @proBannerSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin límite de escaneos · USD 3.99 una vez'**
+  String get proBannerSubtitle;
+
+  /// No description provided for @profilesProHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Con Pro puedes tener hasta 6 perfiles para toda la familia.'**
+  String get profilesProHint;
+
+  /// No description provided for @settingsOfflineReady.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =0{Ninguno} =1{1 listo} other{{count} listos}}'**
+  String settingsOfflineReady(int count);
+
+  /// No description provided for @settingsAbout.
+  ///
+  /// In es, this message translates to:
+  /// **'Acerca de'**
+  String get settingsAbout;
+
+  /// No description provided for @settingsVersion.
+  ///
+  /// In es, this message translates to:
+  /// **'Versión {version}'**
+  String settingsVersion(String version);
 }
 
 class _AppLocalizationsDelegate

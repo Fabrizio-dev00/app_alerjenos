@@ -1,12 +1,10 @@
-import 'package:allergen_scanner/app/app.dart';
-import 'package:allergen_scanner/core/preferences_provider.dart';
 import 'package:allergen_scanner/features/scan/domain/camera_permission_repository.dart';
 import 'package:allergen_scanner/features/scan/domain/label_image_repository.dart';
 import 'package:allergen_scanner/features/scan/presentation/scan_controller.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+import 'helpers/pump_app.dart';
 
 class _MockPermissions extends Mock implements CameraPermissionRepository {}
 
@@ -15,21 +13,13 @@ class _MockImages extends Mock implements LabelImageRepository {}
 void main() {
   late _MockPermissions permissions;
 
-  Future<void> pumpScan(WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({'interface_language': 'es'});
-    final preferences = await SharedPreferences.getInstance();
-    await tester.pumpWidget(
-      ProviderScope(
+  Future<void> pumpScan(WidgetTester tester) => pumpApp(
+        tester,
         overrides: [
-          sharedPreferencesProvider.overrideWithValue(preferences),
           cameraPermissionRepositoryProvider.overrideWithValue(permissions),
           labelImageRepositoryProvider.overrideWithValue(_MockImages()),
         ],
-        child: const AllergenScannerApp(),
-      ),
-    );
-    await tester.pumpAndSettle();
-  }
+      );
 
   setUp(() => permissions = _MockPermissions());
 
